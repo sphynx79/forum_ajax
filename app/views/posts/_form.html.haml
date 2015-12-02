@@ -1,0 +1,9 @@
+= simple_form_for(@post) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :title
+    .form-group
+      = f.text_area :content, rows: 6, class: 'form-control' 
+  .form-actions
+    = f.button :submit

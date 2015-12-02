@@ -1,0 +1,139 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+// "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+body {
+   font-family: 'Lato', sans-serif;
+   background: #EDEFF0;
+}
+
+.clearfix:before, .clearfix:after {
+   content: " ";
+   display: table;
+}
+
+.clearfix:after {
+   clear: both;
+}
+
+.navbar-brand {
+   text-transform: uppercase;
+   font-weight: 700;
+   letter-spacing: -1px;
+   font-size: 1.6rem;
+   text-decoration: none;
+   color: #397CAC;
+
+   a:visited {
+      color: #397CAC;
+   }
+}
+
+.navbar-brand:visited {
+   color: #397CAC;
+}
+
+#posts {
+   background: white;
+   padding: 2em 5%;
+   border-radius: .5em;
+
+   .post {
+      margin: 1em 0;
+      padding: 1em 0;
+      border-bottom: 1px solid #D1d1d1;
+
+      .title {
+         margin: 0;
+
+         a {
+            color: #397CAC;
+            text-decoration: none;
+            font-weight: 100;
+            font-size: 1.9rem;
+         }
+      }
+
+      .date {
+         margin-top: .25rem;
+         font-size: 1.2rem;
+         color: #B2BAC2;
+      }
+
+      .buttons {
+         float: right;
+         bottom: 16px;
+      }
+   }
+}
+
+#post_contents {
+   background: white;
+   padding: 2em 5%;
+   border-radius: .5em;
+
+   h1 {
+      font-weight: 100;
+      font-size: 2em;
+      color: #397CAC;
+      margin-top: 0;
+   }
+
+   p {
+      color: #B2BAC2;
+      font-size: 1.8em;
+      font-weight: 100;
+      line-height: 1.5;
+      margin-bottom: 30px;
+   }
+
+   #comments {
+      .comment {
+         border-bottom: 1px solid #D1d1d1;
+         margin-bottom: 1.2em;
+         margin-top: 20px;
+
+         .content {
+            width: 98%;
+         }
+
+         .buttons {
+            float: right;
+            bottom: 34px;
+         }
+
+         .comment_content {
+            font-size: 1.1em;
+            margin: 0;
+            padding: 0;
+            width: 70%;
+            margin: 0px;
+         }
+
+         .comment_author {
+            color: #397CAC;
+            margin-top: .5rem;
+            font-size: 0.8em;
+            font-weight: 700;
+            width: 70%;
+            margin-bottom: 20px;
+         }
+      }
+   }
+}

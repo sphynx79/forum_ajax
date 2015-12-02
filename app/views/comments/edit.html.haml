@@ -1,0 +1,12 @@
+%h1 Edit Reply
+
+= simple_form_for([@post, @comment]) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :comment
+
+  .form-actions
+    = f.button :submit
+
+= link_to 'Back', post_path(@post)
