@@ -2,7 +2,8 @@
   .content
     %p.comment_content= comment.comment
     %p.comment_author=  comment.user.email
-    .buttons.btn-group.btn-group-xs
-      = link_to 'Edit', edit_post_comment_path(comment.post, comment), class: "btn btn-default"
-      = link_to "Delete", post_comment_path(comment.post, comment), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-default"
+    - if user_signed_in?
+      .buttons.btn-group.btn-group-xs
+        = link_to 'Edit', edit_post_comment_path(comment.post, comment), class: "btn btn-default"
+        = link_to "Delete", post_comment_path(comment.post, comment), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-default"
 

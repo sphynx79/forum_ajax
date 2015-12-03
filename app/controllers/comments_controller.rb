@@ -20,8 +20,14 @@ class CommentsController < ApplicationController
       respond_to do |format|
          if @comment.save
             format.html { redirect_to post_path(@post), notice: 'Comment was successfully created.' }
+            format.js{}
          else
             format.html { render :new }
+            format.js {
+            flash[:alert] = @comment.errors.full_messages.to_sentence
+            render :template => "comments/errors.js.erb"
+            flash.discard
+            }
          end
       end
    end
