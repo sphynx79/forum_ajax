@@ -15606,3 +15606,2005 @@ Processing by SessionsController#failure as JS
   Rendered application/_flashes.html.haml (1.0ms)
   Rendered remote_content/devise_errors.js.erb (230.0ms)
 Completed 200 OK in 265ms (Views: 264.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/remote_sign_in" for ::1 at 2015-12-03 23:08:58 +0100
+Processing by RemoteContentController#remote_sign_in as JS
+  Rendered remote_content/_remote_sign_in.html.haml (42.0ms)
+  Rendered remote_content/remote_sign_in.js.erb (62.0ms)
+Completed 200 OK in 88ms (Views: 87.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2015-12-03 23:09:05 +0100
+Processing by SessionsController#create as JS
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"browserino@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["email", "browserino@gmail.com"]]
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  UPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["last_sign_in_at", "2015-12-03 20:38:05.651028"], ["current_sign_in_at", "2015-12-03 22:09:05.912713"], ["sign_in_count", 16], ["updated_at", "2015-12-03 22:09:05.923714"], ["id", 2]]
+  [1m[36m (14.0ms)[0m  [1mcommit transaction[0m
+Completed 200 OK in 299ms (Views: 1.0ms | ActiveRecord: 16.0ms)
+
+
+Started GET "/" for ::1 at 2015-12-03 23:09:06 +0100
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts"  ORDER BY created_at DESC
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered posts/index.html.haml within layouts/application (167.0ms)
+  Rendered layouts/_header.html.haml (0.0ms)
+Completed 200 OK in 362ms (Views: 352.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/" for ::1 at 2015-12-03 23:13:57 +0100
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts"  ORDER BY created_at DESC
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered posts/index.html.haml within layouts/application (161.0ms)
+  Rendered layouts/_header.html.haml (1.0ms)
+Completed 200 OK in 379ms (Views: 376.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/application-eee81fb940936a9dc5663c28e67016695dd5a74e95f9e338c8e9cfefde809cae.css" for ::1 at 2015-12-03 23:13:58 +0100
+
+
+Started GET "/assets/application-036559687db6907c7f7c0c8def86162601ad92180292bbbd7bc62b764b8aea1d.js" for ::1 at 2015-12-03 23:13:58 +0100
+
+
+Started GET "/posts/6" for ::1 at 2015-12-03 23:14:17 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mPost Load (1.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 6]]
+  [1m[35mComment Load (1.0ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 6]]
+  Rendered collection (0.0ms)
+  Rendered comments/_form.html.haml (26.0ms)
+  Rendered posts/show.html.haml within layouts/application (94.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  Rendered layouts/_header.html.haml (31.0ms)
+Completed 200 OK in 339ms (Views: 317.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/posts/3" for ::1 at 2015-12-03 23:14:24 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mPost Load (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 3]]
+  [1m[35mComment Load (1.0ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 3]]
+  Rendered comments/_comment.html.haml (4.0ms)
+  Rendered posts/show.html.haml within layouts/application (55.0ms)
+Completed 500 Internal Server Error in 88ms (ActiveRecord: 1.0ms)
+
+SyntaxError - syntax error, unexpected ','
+...confirm: "Delete comment?" }, , remote: true, class: "btn bt...
+...                               ^
+K:/Dropbox/progetti_libri/12_web_apps/forum/app/views/comments/_comment.html.haml:8: Can't assign to true
+...te comment?" }, , remote: true, class: "btn btn-default"
+...                               ^:
+  app/views/comments/_comment.html.haml:8:in `'
+  actionview (4.2.3) lib/action_view/template.rb:296:in `compile'
+  actionview (4.2.3) lib/action_view/template.rb:245:in `block (2 levels) in compile!'
+  activesupport (4.2.3) lib/active_support/notifications.rb:166:in `instrument'
+  actionview (4.2.3) lib/action_view/template.rb:333:in `instrument'
+  actionview (4.2.3) lib/action_view/template.rb:244:in `block in compile!'
+  actionview (4.2.3) lib/action_view/template.rb:232:in `compile!'
+  actionview (4.2.3) lib/action_view/template.rb:144:in `block in render'
+  activesupport (4.2.3) lib/active_support/notifications.rb:166:in `instrument'
+  actionview (4.2.3) lib/action_view/template.rb:333:in `instrument'
+  actionview (4.2.3) lib/action_view/template.rb:143:in `render'
+  actionview (4.2.3) lib/action_view/renderer/partial_renderer.rb:436:in `block in collection_with_template'
+  actionview (4.2.3) lib/action_view/renderer/partial_renderer.rb:432:in `collection_with_template'
+  actionview (4.2.3) lib/action_view/renderer/partial_renderer.rb:324:in `render_collection'
+  actionview (4.2.3) lib/action_view/renderer/partial_renderer.rb:306:in `block in render'
+  actionview (4.2.3) lib/action_view/renderer/abstract_renderer.rb:39:in `block in instrument'
+  activesupport (4.2.3) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.3) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.3) lib/active_support/notifications.rb:164:in `instrument'
+  actionview (4.2.3) lib/action_view/renderer/abstract_renderer.rb:39:in `instrument'
+  actionview (4.2.3) lib/action_view/renderer/partial_renderer.rb:305:in `render'
+  actionview (4.2.3) lib/action_view/renderer/renderer.rb:47:in `render_partial'
+  actionview (4.2.3) lib/action_view/helpers/rendering_helper.rb:35:in `render'
+  haml (4.0.7) lib/haml/helpers/action_view_mods.rb:10:in `block in render_with_haml'
+  haml (4.0.7) lib/haml/helpers.rb:89:in `non_haml'
+  haml (4.0.7) lib/haml/helpers/action_view_mods.rb:10:in `render_with_haml'
+  app/views/posts/show.html.haml:7:in `_app_views_posts_show_html_haml___473413374_87336000'
+  actionview (4.2.3) lib/action_view/template.rb:145:in `block in render'
+  activesupport (4.2.3) lib/active_support/notifications.rb:166:in `instrument'
+  actionview (4.2.3) lib/action_view/template.rb:333:in `instrument'
+  actionview (4.2.3) lib/action_view/template.rb:143:in `render'
+  actionview (4.2.3) lib/action_view/renderer/template_renderer.rb:54:in `block (2 levels) in render_template'
+  actionview (4.2.3) lib/action_view/renderer/abstract_renderer.rb:39:in `block in instrument'
+  activesupport (4.2.3) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.3) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.3) lib/active_support/notifications.rb:164:in `instrument'
+  actionview (4.2.3) lib/action_view/renderer/abstract_renderer.rb:39:in `instrument'
+  actionview (4.2.3) lib/action_view/renderer/template_renderer.rb:53:in `block in render_template'
+  actionview (4.2.3) lib/action_view/renderer/template_renderer.rb:61:in `render_with_layout'
+  actionview (4.2.3) lib/action_view/renderer/template_renderer.rb:52:in `render_template'
+  actionview (4.2.3) lib/action_view/renderer/template_renderer.rb:14:in `render'
+  actionview (4.2.3) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionview (4.2.3) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionview (4.2.3) lib/action_view/rendering.rb:100:in `_render_template'
+  actionpack (4.2.3) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.2.3) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (4.2.3) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.2.3) lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+  actionpack (4.2.3) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.2.3) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (4.2.3) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  C:/Ruby21/lib/ruby/2.1.0/benchmark.rb:294:in `realtime'
+  activesupport (4.2.3) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  activerecord (4.2.3) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  actionpack (4.2.3) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.2.3) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.2.3) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.3) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.3) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:115:in `call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:553:in `block (2 levels) in compile'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:503:in `call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:88:in `run_callbacks'
+  actionpack (4.2.3) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.3) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.3) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.3) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.3) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.3) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.3) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.3) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.3) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.3) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.3) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.3) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:76:in `dispatch'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:45:in `serve'
+  actionpack (4.2.3) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.3) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:821:in `call'
+  meta_request (0.3.4) lib/meta_request/middlewares/app_request_handler.rb:13:in `call'
+  meta_request (0.3.4) lib/meta_request/middlewares/meta_request_handler.rb:13:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.3) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.3) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:84:in `run_callbacks'
+  actionpack (4.2.3) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+  rack-contrib (1.4.0) lib/rack/contrib/response_headers.rb:17:in `call'
+  meta_request (0.3.4) lib/meta_request/middlewares/headers.rb:16:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  C:/Ruby21/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  C:/Ruby21/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  C:/Ruby21/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+
+Started GET "/posts/3" for ::1 at 2015-12-03 23:14:25 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 3]]
+  [1m[36mComment Load (1.0ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 3]]
+  Rendered comments/_comment.html.haml (4.0ms)
+  Rendered posts/show.html.haml within layouts/application (51.0ms)
+Completed 500 Internal Server Error in 183ms (ActiveRecord: 1.0ms)
+
+SyntaxError - syntax error, unexpected ','
+...confirm: "Delete comment?" }, , remote: true, class: "btn bt...
+...                               ^
+K:/Dropbox/progetti_libri/12_web_apps/forum/app/views/comments/_comment.html.haml:8: Can't assign to true
+...te comment?" }, , remote: true, class: "btn btn-default"
+...                               ^:
+  app/views/comments/_comment.html.haml:8:in `'
+  actionview (4.2.3) lib/action_view/template.rb:296:in `compile'
+  actionview (4.2.3) lib/action_view/template.rb:245:in `block (2 levels) in compile!'
+  activesupport (4.2.3) lib/active_support/notifications.rb:166:in `instrument'
+  actionview (4.2.3) lib/action_view/template.rb:333:in `instrument'
+  actionview (4.2.3) lib/action_view/template.rb:244:in `block in compile!'
+  actionview (4.2.3) lib/action_view/template.rb:232:in `compile!'
+  actionview (4.2.3) lib/action_view/template.rb:144:in `block in render'
+  activesupport (4.2.3) lib/active_support/notifications.rb:166:in `instrument'
+  actionview (4.2.3) lib/action_view/template.rb:333:in `instrument'
+  actionview (4.2.3) lib/action_view/template.rb:143:in `render'
+  actionview (4.2.3) lib/action_view/renderer/partial_renderer.rb:436:in `block in collection_with_template'
+  actionview (4.2.3) lib/action_view/renderer/partial_renderer.rb:432:in `collection_with_template'
+  actionview (4.2.3) lib/action_view/renderer/partial_renderer.rb:324:in `render_collection'
+  actionview (4.2.3) lib/action_view/renderer/partial_renderer.rb:306:in `block in render'
+  actionview (4.2.3) lib/action_view/renderer/abstract_renderer.rb:39:in `block in instrument'
+  activesupport (4.2.3) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.3) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.3) lib/active_support/notifications.rb:164:in `instrument'
+  actionview (4.2.3) lib/action_view/renderer/abstract_renderer.rb:39:in `instrument'
+  actionview (4.2.3) lib/action_view/renderer/partial_renderer.rb:305:in `render'
+  actionview (4.2.3) lib/action_view/renderer/renderer.rb:47:in `render_partial'
+  actionview (4.2.3) lib/action_view/helpers/rendering_helper.rb:35:in `render'
+  haml (4.0.7) lib/haml/helpers/action_view_mods.rb:10:in `block in render_with_haml'
+  haml (4.0.7) lib/haml/helpers.rb:89:in `non_haml'
+  haml (4.0.7) lib/haml/helpers/action_view_mods.rb:10:in `render_with_haml'
+  app/views/posts/show.html.haml:7:in `_app_views_posts_show_html_haml___473413374_66181548'
+  actionview (4.2.3) lib/action_view/template.rb:145:in `block in render'
+  activesupport (4.2.3) lib/active_support/notifications.rb:166:in `instrument'
+  actionview (4.2.3) lib/action_view/template.rb:333:in `instrument'
+  actionview (4.2.3) lib/action_view/template.rb:143:in `render'
+  actionview (4.2.3) lib/action_view/renderer/template_renderer.rb:54:in `block (2 levels) in render_template'
+  actionview (4.2.3) lib/action_view/renderer/abstract_renderer.rb:39:in `block in instrument'
+  activesupport (4.2.3) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.3) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.3) lib/active_support/notifications.rb:164:in `instrument'
+  actionview (4.2.3) lib/action_view/renderer/abstract_renderer.rb:39:in `instrument'
+  actionview (4.2.3) lib/action_view/renderer/template_renderer.rb:53:in `block in render_template'
+  actionview (4.2.3) lib/action_view/renderer/template_renderer.rb:61:in `render_with_layout'
+  actionview (4.2.3) lib/action_view/renderer/template_renderer.rb:52:in `render_template'
+  actionview (4.2.3) lib/action_view/renderer/template_renderer.rb:14:in `render'
+  actionview (4.2.3) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionview (4.2.3) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionview (4.2.3) lib/action_view/rendering.rb:100:in `_render_template'
+  actionpack (4.2.3) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.2.3) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (4.2.3) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.2.3) lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+  actionpack (4.2.3) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.2.3) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (4.2.3) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  C:/Ruby21/lib/ruby/2.1.0/benchmark.rb:294:in `realtime'
+  activesupport (4.2.3) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  activerecord (4.2.3) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  actionpack (4.2.3) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.2.3) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.2.3) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.3) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.3) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:115:in `call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:553:in `block (2 levels) in compile'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:503:in `call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:88:in `run_callbacks'
+  actionpack (4.2.3) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.3) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.3) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.3) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.3) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.3) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.3) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.3) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.3) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.3) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.3) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.3) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:76:in `dispatch'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:45:in `serve'
+  actionpack (4.2.3) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.3) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:821:in `call'
+  meta_request (0.3.4) lib/meta_request/middlewares/app_request_handler.rb:13:in `call'
+  meta_request (0.3.4) lib/meta_request/middlewares/meta_request_handler.rb:13:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.3) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.3) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:84:in `run_callbacks'
+  actionpack (4.2.3) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+  rack-contrib (1.4.0) lib/rack/contrib/response_headers.rb:17:in `call'
+  meta_request (0.3.4) lib/meta_request/middlewares/headers.rb:16:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  C:/Ruby21/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  C:/Ruby21/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  C:/Ruby21/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+
+Started POST "/__better_errors/55c534ff259c1946/variables" for ::1 at 2015-12-03 23:14:28 +0100
+
+
+Started GET "/posts/3" for ::1 at 2015-12-03 23:15:21 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mPost Load (1.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 3]]
+  [1m[35mComment Load (0.0ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 3]]
+  Rendered comments/_comment.html.haml (4.0ms)
+  Rendered posts/show.html.haml within layouts/application (124.0ms)
+Completed 500 Internal Server Error in 157ms (ActiveRecord: 1.0ms)
+
+SyntaxError - syntax error, unexpected ','
+...confirm: "Delete comment?" }, , remote: true, class: "btn bt...
+...                               ^
+K:/Dropbox/progetti_libri/12_web_apps/forum/app/views/comments/_comment.html.haml:8: Can't assign to true
+...te comment?" }, , remote: true, class: "btn btn-default"
+...                               ^:
+  app/views/comments/_comment.html.haml:8:in `'
+  actionview (4.2.3) lib/action_view/template.rb:296:in `compile'
+  actionview (4.2.3) lib/action_view/template.rb:245:in `block (2 levels) in compile!'
+  activesupport (4.2.3) lib/active_support/notifications.rb:166:in `instrument'
+  actionview (4.2.3) lib/action_view/template.rb:333:in `instrument'
+  actionview (4.2.3) lib/action_view/template.rb:244:in `block in compile!'
+  actionview (4.2.3) lib/action_view/template.rb:232:in `compile!'
+  actionview (4.2.3) lib/action_view/template.rb:144:in `block in render'
+  activesupport (4.2.3) lib/active_support/notifications.rb:166:in `instrument'
+  actionview (4.2.3) lib/action_view/template.rb:333:in `instrument'
+  actionview (4.2.3) lib/action_view/template.rb:143:in `render'
+  actionview (4.2.3) lib/action_view/renderer/partial_renderer.rb:436:in `block in collection_with_template'
+  actionview (4.2.3) lib/action_view/renderer/partial_renderer.rb:432:in `collection_with_template'
+  actionview (4.2.3) lib/action_view/renderer/partial_renderer.rb:324:in `render_collection'
+  actionview (4.2.3) lib/action_view/renderer/partial_renderer.rb:306:in `block in render'
+  actionview (4.2.3) lib/action_view/renderer/abstract_renderer.rb:39:in `block in instrument'
+  activesupport (4.2.3) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.3) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.3) lib/active_support/notifications.rb:164:in `instrument'
+  actionview (4.2.3) lib/action_view/renderer/abstract_renderer.rb:39:in `instrument'
+  actionview (4.2.3) lib/action_view/renderer/partial_renderer.rb:305:in `render'
+  actionview (4.2.3) lib/action_view/renderer/renderer.rb:47:in `render_partial'
+  actionview (4.2.3) lib/action_view/helpers/rendering_helper.rb:35:in `render'
+  haml (4.0.7) lib/haml/helpers/action_view_mods.rb:10:in `block in render_with_haml'
+  haml (4.0.7) lib/haml/helpers.rb:89:in `non_haml'
+  haml (4.0.7) lib/haml/helpers/action_view_mods.rb:10:in `render_with_haml'
+  app/views/posts/show.html.haml:7:in `_app_views_posts_show_html_haml___473413374_66181548'
+  actionview (4.2.3) lib/action_view/template.rb:145:in `block in render'
+  activesupport (4.2.3) lib/active_support/notifications.rb:166:in `instrument'
+  actionview (4.2.3) lib/action_view/template.rb:333:in `instrument'
+  actionview (4.2.3) lib/action_view/template.rb:143:in `render'
+  actionview (4.2.3) lib/action_view/renderer/template_renderer.rb:54:in `block (2 levels) in render_template'
+  actionview (4.2.3) lib/action_view/renderer/abstract_renderer.rb:39:in `block in instrument'
+  activesupport (4.2.3) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.3) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.3) lib/active_support/notifications.rb:164:in `instrument'
+  actionview (4.2.3) lib/action_view/renderer/abstract_renderer.rb:39:in `instrument'
+  actionview (4.2.3) lib/action_view/renderer/template_renderer.rb:53:in `block in render_template'
+  actionview (4.2.3) lib/action_view/renderer/template_renderer.rb:61:in `render_with_layout'
+  actionview (4.2.3) lib/action_view/renderer/template_renderer.rb:52:in `render_template'
+  actionview (4.2.3) lib/action_view/renderer/template_renderer.rb:14:in `render'
+  actionview (4.2.3) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionview (4.2.3) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionview (4.2.3) lib/action_view/rendering.rb:100:in `_render_template'
+  actionpack (4.2.3) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.2.3) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (4.2.3) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.2.3) lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+  actionpack (4.2.3) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.2.3) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (4.2.3) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  C:/Ruby21/lib/ruby/2.1.0/benchmark.rb:294:in `realtime'
+  activesupport (4.2.3) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  activerecord (4.2.3) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  actionpack (4.2.3) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.2.3) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.2.3) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.3) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.3) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:115:in `call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:553:in `block (2 levels) in compile'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:503:in `call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:88:in `run_callbacks'
+  actionpack (4.2.3) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.3) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.3) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.3) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.3) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.3) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.3) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.3) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.3) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.3) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.3) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.3) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:76:in `dispatch'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:45:in `serve'
+  actionpack (4.2.3) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.3) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:821:in `call'
+  meta_request (0.3.4) lib/meta_request/middlewares/app_request_handler.rb:13:in `call'
+  meta_request (0.3.4) lib/meta_request/middlewares/meta_request_handler.rb:13:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.3) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.3) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:84:in `run_callbacks'
+  actionpack (4.2.3) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+  rack-contrib (1.4.0) lib/rack/contrib/response_headers.rb:17:in `call'
+  meta_request (0.3.4) lib/meta_request/middlewares/headers.rb:16:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  C:/Ruby21/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  C:/Ruby21/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  C:/Ruby21/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+
+Started POST "/__better_errors/cb9efc36a92c6f85/variables" for ::1 at 2015-12-03 23:15:23 +0100
+
+
+Started GET "/posts/3" for ::1 at 2015-12-03 23:15:44 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35m (1.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 3]]
+  [1m[36mComment Load (1.0ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 3]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered comments/_comment.html.haml (127.0ms)
+  Rendered comments/_form.html.haml (8.0ms)
+  Rendered posts/show.html.haml within layouts/application (191.0ms)
+  Rendered layouts/_header.html.haml (0.0ms)
+Completed 200 OK in 432ms (Views: 411.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/posts/3" for ::1 at 2015-12-03 23:19:01 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mPost Load (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36m (1.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 3]]
+  [1m[35mComment Load (0.0ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 3]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered comments/_comment.html.haml (113.0ms)
+  Rendered comments/_form.html.haml (7.0ms)
+  Rendered posts/show.html.haml within layouts/application (174.0ms)
+  Rendered layouts/_header.html.haml (1.0ms)
+Completed 200 OK in 386ms (Views: 370.0ms | ActiveRecord: 1.0ms)
+
+
+Started DELETE "/posts/3/comments/8" for ::1 at 2015-12-03 23:19:07 +0100
+Processing by CommentsController#destroy as JS
+  Parameters: {"post_id"=>"3", "id"=>"8"}
+  [1m[36mComment Load (0.0ms)[0m  [1mSELECT  "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mComment Load (1.0ms)[0m  SELECT  "comments".* FROM "comments" WHERE "comments"."post_id" = ? AND "comments"."id" = ? LIMIT 1  [["post_id", 3], ["id", 8]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  DELETE FROM "comments" WHERE "comments"."id" = ?  [["id", 8]]
+  [1m[36m (12.0ms)[0m  [1mcommit transaction[0m
+  Rendered comments/destroy.js (1.0ms)
+Completed 500 Internal Server Error in 145ms (ActiveRecord: 14.0ms)
+
+SyntaxError - `$(' is not allowed as a global variable name
+K:/Dropbox/progetti_libri/12_web_apps/forum/app/views/comments/destroy.js:2: syntax error, unexpected end-of-input, expecting ')'
+        $(this).remove();
+         ^:
+  app/views/comments/destroy.js:2:in `'
+  actionview (4.2.3) lib/action_view/template.rb:296:in `compile'
+  actionview (4.2.3) lib/action_view/template.rb:245:in `block (2 levels) in compile!'
+  activesupport (4.2.3) lib/active_support/notifications.rb:166:in `instrument'
+  actionview (4.2.3) lib/action_view/template.rb:333:in `instrument'
+  actionview (4.2.3) lib/action_view/template.rb:244:in `block in compile!'
+  actionview (4.2.3) lib/action_view/template.rb:232:in `compile!'
+  actionview (4.2.3) lib/action_view/template.rb:144:in `block in render'
+  activesupport (4.2.3) lib/active_support/notifications.rb:166:in `instrument'
+  actionview (4.2.3) lib/action_view/template.rb:333:in `instrument'
+  actionview (4.2.3) lib/action_view/template.rb:143:in `render'
+  actionview (4.2.3) lib/action_view/renderer/template_renderer.rb:54:in `block (2 levels) in render_template'
+  actionview (4.2.3) lib/action_view/renderer/abstract_renderer.rb:39:in `block in instrument'
+  activesupport (4.2.3) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.3) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.3) lib/active_support/notifications.rb:164:in `instrument'
+  actionview (4.2.3) lib/action_view/renderer/abstract_renderer.rb:39:in `instrument'
+  actionview (4.2.3) lib/action_view/renderer/template_renderer.rb:53:in `block in render_template'
+  actionview (4.2.3) lib/action_view/renderer/template_renderer.rb:61:in `render_with_layout'
+  actionview (4.2.3) lib/action_view/renderer/template_renderer.rb:52:in `render_template'
+  actionview (4.2.3) lib/action_view/renderer/template_renderer.rb:14:in `render'
+  actionview (4.2.3) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionview (4.2.3) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionview (4.2.3) lib/action_view/rendering.rb:100:in `_render_template'
+  actionpack (4.2.3) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.2.3) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (4.2.3) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.2.3) lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+  actionpack (4.2.3) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.2.3) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (4.2.3) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  C:/Ruby21/lib/ruby/2.1.0/benchmark.rb:294:in `realtime'
+  activesupport (4.2.3) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  activerecord (4.2.3) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  actionpack (4.2.3) lib/action_controller/metal/mime_responds.rb:215:in `respond_to'
+  app/controllers/comments_controller.rb:57:in `destroy'
+  actionpack (4.2.3) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (4.2.3) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.3) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.3) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:115:in `call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:553:in `block (2 levels) in compile'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:503:in `call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:88:in `run_callbacks'
+  actionpack (4.2.3) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.3) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.3) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.3) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.3) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.3) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.3) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.3) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.3) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.3) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.3) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.3) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:76:in `dispatch'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:45:in `serve'
+  actionpack (4.2.3) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.3) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:821:in `call'
+  meta_request (0.3.4) lib/meta_request/middlewares/app_request_handler.rb:13:in `call'
+  meta_request (0.3.4) lib/meta_request/middlewares/meta_request_handler.rb:13:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:38:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.3) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.3) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:84:in `run_callbacks'
+  actionpack (4.2.3) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+  rack-contrib (1.4.0) lib/rack/contrib/response_headers.rb:17:in `call'
+  meta_request (0.3.4) lib/meta_request/middlewares/headers.rb:16:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  C:/Ruby21/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  C:/Ruby21/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  C:/Ruby21/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+
+Started GET "/posts/3" for ::1 at 2015-12-03 23:20:05 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mPost Load (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36m (1.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 3]]
+  [1m[35mComment Load (0.0ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 3]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered comments/_comment.html.haml (97.0ms)
+  Rendered comments/_form.html.haml (7.0ms)
+  Rendered posts/show.html.haml within layouts/application (161.0ms)
+  Rendered layouts/_header.html.haml (1.0ms)
+Completed 200 OK in 375ms (Views: 356.0ms | ActiveRecord: 1.0ms)
+
+
+Started DELETE "/posts/3/comments/7" for ::1 at 2015-12-03 23:20:10 +0100
+Processing by CommentsController#destroy as JS
+  Parameters: {"post_id"=>"3", "id"=>"7"}
+  [1m[35mComment Load (0.0ms)[0m  SELECT  "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mPost Load (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mComment Load (0.0ms)[0m  [1mSELECT  "comments".* FROM "comments" WHERE "comments"."post_id" = ? AND "comments"."id" = ? LIMIT 1[0m  [["post_id", 3], ["id", 7]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mDELETE FROM "comments" WHERE "comments"."id" = ?[0m  [["id", 7]]
+  [1m[35m (11.0ms)[0m  commit transaction
+  Rendered comments/destroy.js (2.0ms)
+Completed 500 Internal Server Error in 133ms (ActiveRecord: 12.0ms)
+
+SyntaxError - `$(' is not allowed as a global variable name
+K:/Dropbox/progetti_libri/12_web_apps/forum/app/views/comments/destroy.js:3: syntax error, unexpected end-of-input, expecting ')'
+        $(this).remove();
+         ^:
+  app/views/comments/destroy.js:3:in `'
+  actionview (4.2.3) lib/action_view/template.rb:296:in `compile'
+  actionview (4.2.3) lib/action_view/template.rb:245:in `block (2 levels) in compile!'
+  activesupport (4.2.3) lib/active_support/notifications.rb:166:in `instrument'
+  actionview (4.2.3) lib/action_view/template.rb:333:in `instrument'
+  actionview (4.2.3) lib/action_view/template.rb:244:in `block in compile!'
+  actionview (4.2.3) lib/action_view/template.rb:232:in `compile!'
+  actionview (4.2.3) lib/action_view/template.rb:144:in `block in render'
+  activesupport (4.2.3) lib/active_support/notifications.rb:166:in `instrument'
+  actionview (4.2.3) lib/action_view/template.rb:333:in `instrument'
+  actionview (4.2.3) lib/action_view/template.rb:143:in `render'
+  actionview (4.2.3) lib/action_view/renderer/template_renderer.rb:54:in `block (2 levels) in render_template'
+  actionview (4.2.3) lib/action_view/renderer/abstract_renderer.rb:39:in `block in instrument'
+  activesupport (4.2.3) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.3) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.3) lib/active_support/notifications.rb:164:in `instrument'
+  actionview (4.2.3) lib/action_view/renderer/abstract_renderer.rb:39:in `instrument'
+  actionview (4.2.3) lib/action_view/renderer/template_renderer.rb:53:in `block in render_template'
+  actionview (4.2.3) lib/action_view/renderer/template_renderer.rb:61:in `render_with_layout'
+  actionview (4.2.3) lib/action_view/renderer/template_renderer.rb:52:in `render_template'
+  actionview (4.2.3) lib/action_view/renderer/template_renderer.rb:14:in `render'
+  actionview (4.2.3) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionview (4.2.3) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionview (4.2.3) lib/action_view/rendering.rb:100:in `_render_template'
+  actionpack (4.2.3) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.2.3) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (4.2.3) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.2.3) lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+  actionpack (4.2.3) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.2.3) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (4.2.3) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  C:/Ruby21/lib/ruby/2.1.0/benchmark.rb:294:in `realtime'
+  activesupport (4.2.3) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  activerecord (4.2.3) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  actionpack (4.2.3) lib/action_controller/metal/mime_responds.rb:215:in `respond_to'
+  app/controllers/comments_controller.rb:57:in `destroy'
+  actionpack (4.2.3) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (4.2.3) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.3) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.3) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:115:in `call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:553:in `block (2 levels) in compile'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:503:in `call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:88:in `run_callbacks'
+  actionpack (4.2.3) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.3) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.3) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.3) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.3) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.3) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.3) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.3) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.3) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.3) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.3) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.3) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:76:in `dispatch'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:45:in `serve'
+  actionpack (4.2.3) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.3) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:821:in `call'
+  meta_request (0.3.4) lib/meta_request/middlewares/app_request_handler.rb:13:in `call'
+  meta_request (0.3.4) lib/meta_request/middlewares/meta_request_handler.rb:13:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:38:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.3) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.3) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:84:in `run_callbacks'
+  actionpack (4.2.3) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+  rack-contrib (1.4.0) lib/rack/contrib/response_headers.rb:17:in `call'
+  meta_request (0.3.4) lib/meta_request/middlewares/headers.rb:16:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  C:/Ruby21/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  C:/Ruby21/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  C:/Ruby21/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+
+Started GET "/posts/3" for ::1 at 2015-12-03 23:20:24 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35m (1.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 3]]
+  [1m[36mComment Load (0.0ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 3]]
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered comments/_comment.html.haml (89.0ms)
+  Rendered comments/_form.html.haml (7.0ms)
+  Rendered posts/show.html.haml within layouts/application (154.0ms)
+  Rendered layouts/_header.html.haml (1.0ms)
+Completed 200 OK in 347ms (Views: 322.0ms | ActiveRecord: 3.0ms)
+
+
+Started DELETE "/posts/3/comments/14" for ::1 at 2015-12-03 23:20:29 +0100
+Processing by CommentsController#destroy as JS
+  Parameters: {"post_id"=>"3", "id"=>"14"}
+  [1m[35mComment Load (0.0ms)[0m  SELECT  "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT 1  [["id", 14]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mPost Load (1.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mComment Load (0.0ms)[0m  [1mSELECT  "comments".* FROM "comments" WHERE "comments"."post_id" = ? AND "comments"."id" = ? LIMIT 1[0m  [["post_id", 3], ["id", 14]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mDELETE FROM "comments" WHERE "comments"."id" = ?[0m  [["id", 14]]
+  [1m[35m (13.0ms)[0m  commit transaction
+  Rendered comments/destroy.js (1.0ms)
+Completed 500 Internal Server Error in 142ms (ActiveRecord: 15.0ms)
+
+SyntaxError - `$(' is not allowed as a global variable name
+K:/Dropbox/progetti_libri/12_web_apps/forum/app/views/comments/destroy.js:3: syntax error, unexpected end-of-input, expecting ')'
+        $(this).remove();
+         ^:
+  app/views/comments/destroy.js:3:in `'
+  actionview (4.2.3) lib/action_view/template.rb:296:in `compile'
+  actionview (4.2.3) lib/action_view/template.rb:245:in `block (2 levels) in compile!'
+  activesupport (4.2.3) lib/active_support/notifications.rb:166:in `instrument'
+  actionview (4.2.3) lib/action_view/template.rb:333:in `instrument'
+  actionview (4.2.3) lib/action_view/template.rb:244:in `block in compile!'
+  actionview (4.2.3) lib/action_view/template.rb:232:in `compile!'
+  actionview (4.2.3) lib/action_view/template.rb:144:in `block in render'
+  activesupport (4.2.3) lib/active_support/notifications.rb:166:in `instrument'
+  actionview (4.2.3) lib/action_view/template.rb:333:in `instrument'
+  actionview (4.2.3) lib/action_view/template.rb:143:in `render'
+  actionview (4.2.3) lib/action_view/renderer/template_renderer.rb:54:in `block (2 levels) in render_template'
+  actionview (4.2.3) lib/action_view/renderer/abstract_renderer.rb:39:in `block in instrument'
+  activesupport (4.2.3) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.3) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.3) lib/active_support/notifications.rb:164:in `instrument'
+  actionview (4.2.3) lib/action_view/renderer/abstract_renderer.rb:39:in `instrument'
+  actionview (4.2.3) lib/action_view/renderer/template_renderer.rb:53:in `block in render_template'
+  actionview (4.2.3) lib/action_view/renderer/template_renderer.rb:61:in `render_with_layout'
+  actionview (4.2.3) lib/action_view/renderer/template_renderer.rb:52:in `render_template'
+  actionview (4.2.3) lib/action_view/renderer/template_renderer.rb:14:in `render'
+  actionview (4.2.3) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionview (4.2.3) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionview (4.2.3) lib/action_view/rendering.rb:100:in `_render_template'
+  actionpack (4.2.3) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.2.3) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (4.2.3) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.2.3) lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+  actionpack (4.2.3) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.2.3) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (4.2.3) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  C:/Ruby21/lib/ruby/2.1.0/benchmark.rb:294:in `realtime'
+  activesupport (4.2.3) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  activerecord (4.2.3) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  actionpack (4.2.3) lib/action_controller/metal/mime_responds.rb:215:in `respond_to'
+  app/controllers/comments_controller.rb:57:in `destroy'
+  actionpack (4.2.3) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (4.2.3) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.3) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.3) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:115:in `call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:553:in `block (2 levels) in compile'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:503:in `call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:88:in `run_callbacks'
+  actionpack (4.2.3) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.3) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.3) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.3) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.3) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.3) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.3) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.3) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.3) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.3) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.3) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.3) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:76:in `dispatch'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:45:in `serve'
+  actionpack (4.2.3) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.3) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:821:in `call'
+  meta_request (0.3.4) lib/meta_request/middlewares/app_request_handler.rb:13:in `call'
+  meta_request (0.3.4) lib/meta_request/middlewares/meta_request_handler.rb:13:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:38:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.3) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.3) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:84:in `run_callbacks'
+  actionpack (4.2.3) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+  rack-contrib (1.4.0) lib/rack/contrib/response_headers.rb:17:in `call'
+  meta_request (0.3.4) lib/meta_request/middlewares/headers.rb:16:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  C:/Ruby21/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  C:/Ruby21/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  C:/Ruby21/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+
+Started GET "/posts/3" for ::1 at 2015-12-03 23:20:42 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 3]]
+  [1m[36mComment Load (0.0ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 3]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered comments/_comment.html.haml (64.0ms)
+  Rendered comments/_form.html.haml (7.0ms)
+  Rendered posts/show.html.haml within layouts/application (131.0ms)
+  Rendered layouts/_header.html.haml (1.0ms)
+Completed 200 OK in 351ms (Views: 335.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application-eee81fb940936a9dc5663c28e67016695dd5a74e95f9e338c8e9cfefde809cae.css" for ::1 at 2015-12-03 23:20:42 +0100
+
+
+Started GET "/assets/application-036559687db6907c7f7c0c8def86162601ad92180292bbbd7bc62b764b8aea1d.js" for ::1 at 2015-12-03 23:20:43 +0100
+
+
+Started DELETE "/posts/3/comments/15" for ::1 at 2015-12-03 23:20:45 +0100
+Processing by CommentsController#destroy as JS
+  Parameters: {"post_id"=>"3", "id"=>"15"}
+  [1m[36mComment Load (0.0ms)[0m  [1mSELECT  "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT 1[0m  [["id", 15]]
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mComment Load (1.0ms)[0m  SELECT  "comments".* FROM "comments" WHERE "comments"."post_id" = ? AND "comments"."id" = ? LIMIT 1  [["post_id", 3], ["id", 15]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  DELETE FROM "comments" WHERE "comments"."id" = ?  [["id", 15]]
+  [1m[36m (13.0ms)[0m  [1mcommit transaction[0m
+  Rendered comments/destroy.js (2.0ms)
+Completed 500 Internal Server Error in 176ms (ActiveRecord: 16.0ms)
+
+SyntaxError - syntax error, unexpected tSTRING_DEND, expecting ')'
+K:/Dropbox/progetti_libri/12_web_apps/forum/app/views/comments/destroy.js:4: `$(' is not allowed as a global variable name:
+  app/views/comments/destroy.js:3:in `'
+  actionview (4.2.3) lib/action_view/template.rb:296:in `compile'
+  actionview (4.2.3) lib/action_view/template.rb:245:in `block (2 levels) in compile!'
+  activesupport (4.2.3) lib/active_support/notifications.rb:166:in `instrument'
+  actionview (4.2.3) lib/action_view/template.rb:333:in `instrument'
+  actionview (4.2.3) lib/action_view/template.rb:244:in `block in compile!'
+  actionview (4.2.3) lib/action_view/template.rb:232:in `compile!'
+  actionview (4.2.3) lib/action_view/template.rb:144:in `block in render'
+  activesupport (4.2.3) lib/active_support/notifications.rb:166:in `instrument'
+  actionview (4.2.3) lib/action_view/template.rb:333:in `instrument'
+  actionview (4.2.3) lib/action_view/template.rb:143:in `render'
+  actionview (4.2.3) lib/action_view/renderer/template_renderer.rb:54:in `block (2 levels) in render_template'
+  actionview (4.2.3) lib/action_view/renderer/abstract_renderer.rb:39:in `block in instrument'
+  activesupport (4.2.3) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.3) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.3) lib/active_support/notifications.rb:164:in `instrument'
+  actionview (4.2.3) lib/action_view/renderer/abstract_renderer.rb:39:in `instrument'
+  actionview (4.2.3) lib/action_view/renderer/template_renderer.rb:53:in `block in render_template'
+  actionview (4.2.3) lib/action_view/renderer/template_renderer.rb:61:in `render_with_layout'
+  actionview (4.2.3) lib/action_view/renderer/template_renderer.rb:52:in `render_template'
+  actionview (4.2.3) lib/action_view/renderer/template_renderer.rb:14:in `render'
+  actionview (4.2.3) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionview (4.2.3) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionview (4.2.3) lib/action_view/rendering.rb:100:in `_render_template'
+  actionpack (4.2.3) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.2.3) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (4.2.3) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.2.3) lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+  actionpack (4.2.3) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.2.3) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (4.2.3) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  C:/Ruby21/lib/ruby/2.1.0/benchmark.rb:294:in `realtime'
+  activesupport (4.2.3) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  activerecord (4.2.3) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  actionpack (4.2.3) lib/action_controller/metal/mime_responds.rb:215:in `respond_to'
+  app/controllers/comments_controller.rb:57:in `destroy'
+  actionpack (4.2.3) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (4.2.3) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.3) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.3) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:115:in `call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:553:in `block (2 levels) in compile'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:503:in `call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:88:in `run_callbacks'
+  actionpack (4.2.3) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.3) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.3) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.3) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.3) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.3) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.3) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.3) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.3) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.3) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.3) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.3) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:76:in `dispatch'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:45:in `serve'
+  actionpack (4.2.3) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.3) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:821:in `call'
+  meta_request (0.3.4) lib/meta_request/middlewares/app_request_handler.rb:13:in `call'
+  meta_request (0.3.4) lib/meta_request/middlewares/meta_request_handler.rb:13:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:38:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.3) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.3) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:84:in `run_callbacks'
+  actionpack (4.2.3) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+  rack-contrib (1.4.0) lib/rack/contrib/response_headers.rb:17:in `call'
+  meta_request (0.3.4) lib/meta_request/middlewares/headers.rb:16:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  C:/Ruby21/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  C:/Ruby21/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  C:/Ruby21/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+
+Started GET "/posts/3" for ::1 at 2015-12-03 23:21:42 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mPost Load (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36m (1.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 3]]
+  [1m[35mComment Load (0.0ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 3]]
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  Rendered comments/_comment.html.haml (45.0ms)
+  Rendered comments/_form.html.haml (6.0ms)
+  Rendered posts/show.html.haml within layouts/application (108.0ms)
+  Rendered layouts/_header.html.haml (1.0ms)
+Completed 200 OK in 331ms (Views: 309.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/application-eee81fb940936a9dc5663c28e67016695dd5a74e95f9e338c8e9cfefde809cae.css" for ::1 at 2015-12-03 23:21:43 +0100
+
+
+Started GET "/assets/application-036559687db6907c7f7c0c8def86162601ad92180292bbbd7bc62b764b8aea1d.js" for ::1 at 2015-12-03 23:21:43 +0100
+
+
+Started DELETE "/posts/3/comments/16" for ::1 at 2015-12-03 23:21:47 +0100
+Processing by CommentsController#destroy as JS
+  Parameters: {"post_id"=>"3", "id"=>"16"}
+  [1m[36mComment Load (0.0ms)[0m  [1mSELECT  "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT 1[0m  [["id", 16]]
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mComment Load (0.0ms)[0m  SELECT  "comments".* FROM "comments" WHERE "comments"."post_id" = ? AND "comments"."id" = ? LIMIT 1  [["post_id", 3], ["id", 16]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  DELETE FROM "comments" WHERE "comments"."id" = ?  [["id", 16]]
+  [1m[36m (12.0ms)[0m  [1mcommit transaction[0m
+  Rendered comments/destroy.js (2.0ms)
+Completed 500 Internal Server Error in 139ms (ActiveRecord: 14.0ms)
+
+SyntaxError - syntax error, unexpected keyword_ensure, expecting ')'
+K:/Dropbox/progetti_libri/12_web_apps/forum/app/views/comments/destroy.js:7: syntax error, unexpected keyword_end, expecting ')':
+  app/views/comments/destroy.js:5:in `'
+  actionview (4.2.3) lib/action_view/template.rb:296:in `compile'
+  actionview (4.2.3) lib/action_view/template.rb:245:in `block (2 levels) in compile!'
+  activesupport (4.2.3) lib/active_support/notifications.rb:166:in `instrument'
+  actionview (4.2.3) lib/action_view/template.rb:333:in `instrument'
+  actionview (4.2.3) lib/action_view/template.rb:244:in `block in compile!'
+  actionview (4.2.3) lib/action_view/template.rb:232:in `compile!'
+  actionview (4.2.3) lib/action_view/template.rb:144:in `block in render'
+  activesupport (4.2.3) lib/active_support/notifications.rb:166:in `instrument'
+  actionview (4.2.3) lib/action_view/template.rb:333:in `instrument'
+  actionview (4.2.3) lib/action_view/template.rb:143:in `render'
+  actionview (4.2.3) lib/action_view/renderer/template_renderer.rb:54:in `block (2 levels) in render_template'
+  actionview (4.2.3) lib/action_view/renderer/abstract_renderer.rb:39:in `block in instrument'
+  activesupport (4.2.3) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.3) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.3) lib/active_support/notifications.rb:164:in `instrument'
+  actionview (4.2.3) lib/action_view/renderer/abstract_renderer.rb:39:in `instrument'
+  actionview (4.2.3) lib/action_view/renderer/template_renderer.rb:53:in `block in render_template'
+  actionview (4.2.3) lib/action_view/renderer/template_renderer.rb:61:in `render_with_layout'
+  actionview (4.2.3) lib/action_view/renderer/template_renderer.rb:52:in `render_template'
+  actionview (4.2.3) lib/action_view/renderer/template_renderer.rb:14:in `render'
+  actionview (4.2.3) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionview (4.2.3) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionview (4.2.3) lib/action_view/rendering.rb:100:in `_render_template'
+  actionpack (4.2.3) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.2.3) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (4.2.3) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.2.3) lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+  actionpack (4.2.3) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.2.3) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (4.2.3) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  C:/Ruby21/lib/ruby/2.1.0/benchmark.rb:294:in `realtime'
+  activesupport (4.2.3) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  activerecord (4.2.3) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  actionpack (4.2.3) lib/action_controller/metal/mime_responds.rb:215:in `respond_to'
+  app/controllers/comments_controller.rb:57:in `destroy'
+  actionpack (4.2.3) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (4.2.3) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.3) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.3) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:115:in `call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:553:in `block (2 levels) in compile'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:503:in `call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:88:in `run_callbacks'
+  actionpack (4.2.3) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.3) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.3) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.3) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.3) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.3) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.3) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.3) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.3) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.3) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.3) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.3) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:76:in `dispatch'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:45:in `serve'
+  actionpack (4.2.3) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.3) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:821:in `call'
+  meta_request (0.3.4) lib/meta_request/middlewares/app_request_handler.rb:13:in `call'
+  meta_request (0.3.4) lib/meta_request/middlewares/meta_request_handler.rb:13:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:38:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.3) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.3) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:84:in `run_callbacks'
+  actionpack (4.2.3) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+  rack-contrib (1.4.0) lib/rack/contrib/response_headers.rb:17:in `call'
+  meta_request (0.3.4) lib/meta_request/middlewares/headers.rb:16:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  C:/Ruby21/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  C:/Ruby21/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  C:/Ruby21/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+
+Started GET "/posts/3" for ::1 at 2015-12-03 23:22:47 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mPost Load (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36m (1.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 3]]
+  [1m[35mComment Load (0.0ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 3]]
+  Rendered collection (0.0ms)
+  Rendered comments/_form.html.haml (8.0ms)
+  Rendered posts/show.html.haml within layouts/application (65.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  Rendered layouts/_header.html.haml (22.0ms)
+Completed 200 OK in 321ms (Views: 299.0ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/posts/3/comments" for ::1 at 2015-12-03 23:22:50 +0100
+Processing by CommentsController#create as JS
+  Parameters: {"utf8"=>"✓", "comment"=>{"comment"=>"yry"}, "commit"=>"Create Comment", "post_id"=>"3"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35m (1.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "comments" ("comment", "post_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["comment", "yry"], ["post_id", 3], ["user_id", 2], ["created_at", "2015-12-03 22:22:51.028506"], ["updated_at", "2015-12-03 22:22:51.028506"]]
+  [1m[35m (12.0ms)[0m  commit transaction
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered comments/_comment.html.haml (22.0ms)
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 3]]
+  Rendered comments/create.js.erb (48.0ms)
+Completed 200 OK in 166ms (Views: 62.0ms | ActiveRecord: 15.0ms)
+
+
+Started POST "/posts/3/comments" for ::1 at 2015-12-03 23:22:59 +0100
+Processing by CommentsController#create as JS
+  Parameters: {"utf8"=>"✓", "comment"=>{"comment"=>"yry"}, "commit"=>"Create Comment", "post_id"=>"3"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mPost Load (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "comments" ("comment", "post_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["comment", "yry"], ["post_id", 3], ["user_id", 2], ["created_at", "2015-12-03 22:22:59.245773"], ["updated_at", "2015-12-03 22:22:59.245773"]]
+  [1m[36m (12.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered comments/_comment.html.haml (19.0ms)
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 3]]
+  Rendered comments/create.js.erb (47.0ms)
+Completed 200 OK in 187ms (Views: 61.0ms | ActiveRecord: 13.0ms)
+
+
+Started GET "/posts/3" for ::1 at 2015-12-03 23:23:37 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mPost Load (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 3]]
+  [1m[35mComment Load (0.0ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 3]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered comments/_comment.html.haml (62.0ms)
+  Rendered comments/_form.html.haml (6.0ms)
+  Rendered posts/show.html.haml within layouts/application (127.0ms)
+  Rendered layouts/_header.html.haml (0.0ms)
+Completed 200 OK in 566ms (Views: 550.0ms | ActiveRecord: 0.0ms)
+
+
+Started DELETE "/posts/3/comments/19" for ::1 at 2015-12-03 23:23:42 +0100
+Processing by CommentsController#destroy as JS
+  Parameters: {"post_id"=>"3", "id"=>"19"}
+  [1m[35mComment Load (0.0ms)[0m  SELECT  "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT 1  [["id", 19]]
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mPost Load (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mComment Load (1.0ms)[0m  [1mSELECT  "comments".* FROM "comments" WHERE "comments"."post_id" = ? AND "comments"."id" = ? LIMIT 1[0m  [["post_id", 3], ["id", 19]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mDELETE FROM "comments" WHERE "comments"."id" = ?[0m  [["id", 19]]
+  [1m[35m (12.0ms)[0m  commit transaction
+  Rendered comments/destroy.js (0.0ms)
+Completed 200 OK in 132ms (Views: 14.0ms | ActiveRecord: 15.0ms)
+
+
+Started GET "/posts/3" for ::1 at 2015-12-03 23:23:57 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35m (1.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 3]]
+  [1m[36mComment Load (0.0ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 3]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  Rendered comments/_comment.html.haml (49.0ms)
+  Rendered comments/_form.html.haml (7.0ms)
+  Rendered posts/show.html.haml within layouts/application (124.0ms)
+  Rendered layouts/_header.html.haml (1.0ms)
+Completed 200 OK in 342ms (Views: 324.0ms | ActiveRecord: 1.0ms)
+
+
+Started DELETE "/posts/3/comments/20" for ::1 at 2015-12-03 23:24:02 +0100
+Processing by CommentsController#destroy as JS
+  Parameters: {"post_id"=>"3", "id"=>"20"}
+  [1m[35mComment Load (0.0ms)[0m  SELECT  "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT 1  [["id", 20]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mPost Load (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mComment Load (0.0ms)[0m  [1mSELECT  "comments".* FROM "comments" WHERE "comments"."post_id" = ? AND "comments"."id" = ? LIMIT 1[0m  [["post_id", 3], ["id", 20]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mDELETE FROM "comments" WHERE "comments"."id" = ?[0m  [["id", 20]]
+  [1m[35m (13.0ms)[0m  commit transaction
+  Rendered comments/destroy.js (1.0ms)
+Completed 200 OK in 141ms (Views: 14.0ms | ActiveRecord: 14.0ms)
+
+
+Started POST "/posts/3/comments" for ::1 at 2015-12-03 23:24:16 +0100
+Processing by CommentsController#create as JS
+  Parameters: {"utf8"=>"✓", "comment"=>{"comment"=>"fhhghghhdf"}, "commit"=>"Create Comment", "post_id"=>"3"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mPost Load (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "comments" ("comment", "post_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["comment", "fhhghghhdf"], ["post_id", 3], ["user_id", 2], ["created_at", "2015-12-03 22:24:16.627776"], ["updated_at", "2015-12-03 22:24:16.627776"]]
+  [1m[36m (12.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered comments/_comment.html.haml (27.0ms)
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 3]]
+  Rendered comments/create.js.erb (64.0ms)
+Completed 200 OK in 206ms (Views: 79.0ms | ActiveRecord: 13.0ms)
+
+
+Started GET "/posts/3" for ::1 at 2015-12-03 23:24:19 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mPost Load (1.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 3]]
+  [1m[35mComment Load (0.0ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 3]]
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  Rendered comments/_comment.html.haml (50.0ms)
+  Rendered comments/_form.html.haml (8.0ms)
+  Rendered posts/show.html.haml within layouts/application (122.0ms)
+  Rendered layouts/_header.html.haml (0.0ms)
+Completed 200 OK in 346ms (Views: 324.0ms | ActiveRecord: 2.0ms)
+
+
+Started DELETE "/posts/3/comments/21" for ::1 at 2015-12-03 23:24:35 +0100
+Processing by CommentsController#destroy as JS
+  Parameters: {"post_id"=>"3", "id"=>"21"}
+  [1m[36mComment Load (0.0ms)[0m  [1mSELECT  "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT 1[0m  [["id", 21]]
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mComment Load (0.0ms)[0m  SELECT  "comments".* FROM "comments" WHERE "comments"."post_id" = ? AND "comments"."id" = ? LIMIT 1  [["post_id", 3], ["id", 21]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  DELETE FROM "comments" WHERE "comments"."id" = ?  [["id", 21]]
+  [1m[36m (12.0ms)[0m  [1mcommit transaction[0m
+  Rendered comments/destroy.js (1.0ms)
+Completed 200 OK in 137ms (Views: 14.0ms | ActiveRecord: 14.0ms)
+
+
+Started GET "/posts/3" for ::1 at 2015-12-03 23:24:43 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mPost Load (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 3]]
+  [1m[35mComment Load (0.0ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 3]]
+  Rendered collection (1.0ms)
+  Rendered comments/_form.html.haml (7.0ms)
+  Rendered posts/show.html.haml within layouts/application (60.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  Rendered layouts/_header.html.haml (22.0ms)
+Completed 200 OK in 302ms (Views: 281.0ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/posts/3/comments" for ::1 at 2015-12-03 23:24:48 +0100
+Processing by CommentsController#create as JS
+  Parameters: {"utf8"=>"✓", "comment"=>{"comment"=>"gdgd"}, "commit"=>"Create Comment", "post_id"=>"3"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "comments" ("comment", "post_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["comment", "gdgd"], ["post_id", 3], ["user_id", 2], ["created_at", "2015-12-03 22:24:48.155774"], ["updated_at", "2015-12-03 22:24:48.155774"]]
+  [1m[35m (12.0ms)[0m  commit transaction
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered comments/_comment.html.haml (20.0ms)
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 3]]
+  Rendered comments/create.js.erb (48.0ms)
+Completed 200 OK in 197ms (Views: 69.0ms | ActiveRecord: 13.0ms)
+
+
+Started GET "/posts/3" for ::1 at 2015-12-03 23:24:49 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 3]]
+  [1m[36mComment Load (0.0ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 3]]
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  Rendered comments/_comment.html.haml (41.0ms)
+  Rendered comments/_form.html.haml (6.0ms)
+  Rendered posts/show.html.haml within layouts/application (115.0ms)
+  Rendered layouts/_header.html.haml (1.0ms)
+Completed 200 OK in 318ms (Views: 297.0ms | ActiveRecord: 3.0ms)
+
+
+Started DELETE "/posts/3/comments/22" for ::1 at 2015-12-03 23:24:52 +0100
+Processing by CommentsController#destroy as JS
+  Parameters: {"post_id"=>"3", "id"=>"22"}
+  [1m[35mComment Load (0.0ms)[0m  SELECT  "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT 1  [["id", 22]]
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mPost Load (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mComment Load (0.0ms)[0m  [1mSELECT  "comments".* FROM "comments" WHERE "comments"."post_id" = ? AND "comments"."id" = ? LIMIT 1[0m  [["post_id", 3], ["id", 22]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mDELETE FROM "comments" WHERE "comments"."id" = ?[0m  [["id", 22]]
+  [1m[35m (12.0ms)[0m  commit transaction
+  Rendered comments/destroy.js (0.0ms)
+Completed 200 OK in 140ms (Views: 15.0ms | ActiveRecord: 14.0ms)
+
+
+Started GET "/posts/3" for ::1 at 2015-12-03 23:25:37 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 3]]
+  [1m[36mComment Load (0.0ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 3]]
+  Rendered collection (0.0ms)
+  Rendered comments/_form.html.haml (7.0ms)
+  Rendered posts/show.html.haml within layouts/application (61.0ms)
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  Rendered layouts/_header.html.haml (24.0ms)
+Completed 200 OK in 266ms (Views: 250.0ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/posts/3/comments" for ::1 at 2015-12-03 23:25:40 +0100
+Processing by CommentsController#create as JS
+  Parameters: {"utf8"=>"✓", "comment"=>{"comment"=>"yryr"}, "commit"=>"Create Comment", "post_id"=>"3"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mPost Load (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "comments" ("comment", "post_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["comment", "yryr"], ["post_id", 3], ["user_id", 2], ["created_at", "2015-12-03 22:25:40.417552"], ["updated_at", "2015-12-03 22:25:40.417552"]]
+  [1m[36m (70.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered comments/_comment.html.haml (21.0ms)
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 3]]
+  Rendered comments/create.js.erb (48.0ms)
+Completed 200 OK in 259ms (Views: 65.0ms | ActiveRecord: 71.0ms)
+
+
+Started GET "/posts/3" for ::1 at 2015-12-03 23:25:43 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mPost Load (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 3]]
+  [1m[35mComment Load (0.0ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 3]]
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  Rendered comments/_comment.html.haml (41.0ms)
+  Rendered comments/_form.html.haml (7.0ms)
+  Rendered posts/show.html.haml within layouts/application (117.0ms)
+  Rendered layouts/_header.html.haml (0.0ms)
+Completed 200 OK in 373ms (Views: 355.0ms | ActiveRecord: 1.0ms)
+
+
+Started DELETE "/posts/3/comments/23" for ::1 at 2015-12-03 23:25:47 +0100
+Processing by CommentsController#destroy as JS
+  Parameters: {"post_id"=>"3", "id"=>"23"}
+  [1m[36mComment Load (0.0ms)[0m  [1mSELECT  "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT 1[0m  [["id", 23]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mComment Load (1.0ms)[0m  SELECT  "comments".* FROM "comments" WHERE "comments"."post_id" = ? AND "comments"."id" = ? LIMIT 1  [["post_id", 3], ["id", 23]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  DELETE FROM "comments" WHERE "comments"."id" = ?  [["id", 23]]
+  [1m[36m (11.0ms)[0m  [1mcommit transaction[0m
+  Rendered comments/destroy.js (1.0ms)
+Completed 200 OK in 136ms (Views: 15.0ms | ActiveRecord: 13.0ms)
+
+
+Started GET "/posts/3" for ::1 at 2015-12-03 23:26:00 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mPost Load (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 3]]
+  [1m[35mComment Load (0.0ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 3]]
+  Rendered collection (0.0ms)
+  Rendered comments/_form.html.haml (7.0ms)
+  Rendered posts/show.html.haml within layouts/application (54.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  Rendered layouts/_header.html.haml (30.0ms)
+Completed 200 OK in 296ms (Views: 280.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/3" for ::1 at 2015-12-03 23:26:13 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mPost Load (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36m (1.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 3]]
+  [1m[35mComment Load (0.0ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 3]]
+  Rendered collection (0.0ms)
+  Rendered comments/_form.html.haml (6.0ms)
+  Rendered posts/show.html.haml within layouts/application (58.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  Rendered layouts/_header.html.haml (23.0ms)
+Completed 200 OK in 259ms (Views: 241.0ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/posts/3/comments" for ::1 at 2015-12-03 23:26:16 +0100
+Processing by CommentsController#create as JS
+  Parameters: {"utf8"=>"✓", "comment"=>{"comment"=>"yy"}, "commit"=>"Create Comment", "post_id"=>"3"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "comments" ("comment", "post_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["comment", "yy"], ["post_id", 3], ["user_id", 2], ["created_at", "2015-12-03 22:26:17.040439"], ["updated_at", "2015-12-03 22:26:17.040439"]]
+  [1m[35m (72.0ms)[0m  commit transaction
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered comments/_comment.html.haml (29.0ms)
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 3]]
+  Rendered comments/create.js.erb (70.0ms)
+Completed 200 OK in 307ms (Views: 94.0ms | ActiveRecord: 76.0ms)
+
+
+Started GET "/posts/3" for ::1 at 2015-12-03 23:26:18 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35m (1.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 3]]
+  [1m[36mComment Load (1.0ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 3]]
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  Rendered comments/_comment.html.haml (41.0ms)
+  Rendered comments/_form.html.haml (6.0ms)
+  Rendered posts/show.html.haml within layouts/application (103.0ms)
+  Rendered layouts/_header.html.haml (1.0ms)
+Completed 200 OK in 303ms (Views: 284.0ms | ActiveRecord: 3.0ms)
+
+
+Started DELETE "/posts/3/comments/24" for ::1 at 2015-12-03 23:26:22 +0100
+Processing by CommentsController#destroy as JS
+  Parameters: {"post_id"=>"3", "id"=>"24"}
+  [1m[35mComment Load (1.0ms)[0m  SELECT  "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT 1  [["id", 24]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mPost Load (1.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mComment Load (0.0ms)[0m  [1mSELECT  "comments".* FROM "comments" WHERE "comments"."post_id" = ? AND "comments"."id" = ? LIMIT 1[0m  [["post_id", 3], ["id", 24]]
+  [1m[35m (1.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mDELETE FROM "comments" WHERE "comments"."id" = ?[0m  [["id", 24]]
+  [1m[35m (11.0ms)[0m  commit transaction
+  Rendered comments/destroy.js (1.0ms)
+Completed 200 OK in 135ms (Views: 14.0ms | ActiveRecord: 15.0ms)
+
+
+Started GET "/posts/3" for ::1 at 2015-12-03 23:27:46 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 3]]
+  [1m[36mComment Load (0.0ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 3]]
+  Rendered collection (0.0ms)
+  Rendered comments/_form.html.haml (9.0ms)
+  Rendered posts/show.html.haml within layouts/application (74.0ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  Rendered layouts/_header.html.haml (23.0ms)
+Completed 200 OK in 325ms (Views: 308.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts/3/comments" for ::1 at 2015-12-03 23:27:50 +0100
+Processing by CommentsController#create as JS
+  Parameters: {"utf8"=>"✓", "comment"=>{"comment"=>"dg"}, "commit"=>"Create Comment", "post_id"=>"3"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mPost Load (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "comments" ("comment", "post_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["comment", "dg"], ["post_id", 3], ["user_id", 2], ["created_at", "2015-12-03 22:27:50.402965"], ["updated_at", "2015-12-03 22:27:50.402965"]]
+  [1m[36m (13.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered comments/_comment.html.haml (20.0ms)
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 3]]
+  Rendered comments/create.js.erb (47.0ms)
+Completed 200 OK in 195ms (Views: 61.0ms | ActiveRecord: 15.0ms)
+
+
+Started GET "/posts/3" for ::1 at 2015-12-03 23:27:52 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mPost Load (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 3]]
+  [1m[35mComment Load (0.0ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 3]]
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  Rendered comments/_comment.html.haml (69.0ms)
+  Rendered comments/_form.html.haml (8.0ms)
+  Rendered posts/show.html.haml within layouts/application (156.0ms)
+  Rendered layouts/_header.html.haml (1.0ms)
+Completed 200 OK in 369ms (Views: 348.0ms | ActiveRecord: 1.0ms)
+
+
+Started DELETE "/posts/3/comments/25" for ::1 at 2015-12-03 23:27:57 +0100
+Processing by CommentsController#destroy as JS
+  Parameters: {"post_id"=>"3", "id"=>"25"}
+  [1m[36mComment Load (1.0ms)[0m  [1mSELECT  "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT 1[0m  [["id", 25]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mComment Load (1.0ms)[0m  SELECT  "comments".* FROM "comments" WHERE "comments"."post_id" = ? AND "comments"."id" = ? LIMIT 1  [["post_id", 3], ["id", 25]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  DELETE FROM "comments" WHERE "comments"."id" = ?  [["id", 25]]
+  [1m[36m (12.0ms)[0m  [1mcommit transaction[0m
+  Rendered comments/destroy.js (1.0ms)
+Completed 200 OK in 153ms (Views: 20.0ms | ActiveRecord: 16.0ms)
+
+
+Started GET "/posts/3" for ::1 at 2015-12-03 23:28:17 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mPost Load (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 3]]
+  [1m[35mComment Load (0.0ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 3]]
+  Rendered collection (0.0ms)
+  Rendered comments/_form.html.haml (7.0ms)
+  Rendered posts/show.html.haml within layouts/application (59.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  Rendered layouts/_header.html.haml (25.0ms)
+Completed 200 OK in 267ms (Views: 252.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts/3/comments" for ::1 at 2015-12-03 23:28:21 +0100
+Processing by CommentsController#create as JS
+  Parameters: {"utf8"=>"✓", "comment"=>{"comment"=>"ggfggf"}, "commit"=>"Create Comment", "post_id"=>"3"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "comments" ("comment", "post_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["comment", "ggfggf"], ["post_id", 3], ["user_id", 2], ["created_at", "2015-12-03 22:28:21.476535"], ["updated_at", "2015-12-03 22:28:21.476535"]]
+  [1m[35m (157.0ms)[0m  commit transaction
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered comments/_comment.html.haml (39.0ms)
+  [1m[35m (1.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 3]]
+  Rendered comments/create.js.erb (80.0ms)
+Completed 200 OK in 408ms (Views: 104.0ms | ActiveRecord: 160.0ms)
+
+
+Started GET "/posts/3" for ::1 at 2015-12-03 23:28:27 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 3]]
+  [1m[36mComment Load (0.0ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 3]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  Rendered comments/_comment.html.haml (43.0ms)
+  Rendered comments/_form.html.haml (6.0ms)
+  Rendered posts/show.html.haml within layouts/application (105.0ms)
+  Rendered layouts/_header.html.haml (1.0ms)
+Completed 200 OK in 308ms (Views: 289.0ms | ActiveRecord: 1.0ms)
+
+
+Started DELETE "/posts/3/comments/26" for ::1 at 2015-12-03 23:28:31 +0100
+Processing by CommentsController#destroy as JS
+  Parameters: {"post_id"=>"3", "id"=>"26"}
+  [1m[35mComment Load (0.0ms)[0m  SELECT  "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT 1  [["id", 26]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mPost Load (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mComment Load (1.0ms)[0m  [1mSELECT  "comments".* FROM "comments" WHERE "comments"."post_id" = ? AND "comments"."id" = ? LIMIT 1[0m  [["post_id", 3], ["id", 26]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mDELETE FROM "comments" WHERE "comments"."id" = ?[0m  [["id", 26]]
+  [1m[35m (10.0ms)[0m  commit transaction
+  Rendered comments/destroy.js (0.0ms)
+Completed 200 OK in 138ms (Views: 15.0ms | ActiveRecord: 12.0ms)
+
+
+Started GET "/posts/3" for ::1 at 2015-12-03 23:28:53 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35m (1.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 3]]
+  [1m[36mComment Load (0.0ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 3]]
+  Rendered collection (0.0ms)
+  Rendered comments/_form.html.haml (6.0ms)
+  Rendered posts/show.html.haml within layouts/application (81.0ms)
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  Rendered layouts/_header.html.haml (26.0ms)
+Completed 200 OK in 357ms (Views: 339.0ms | ActiveRecord: 2.0ms)
+
+
+Started POST "/posts/3/comments" for ::1 at 2015-12-03 23:28:57 +0100
+Processing by CommentsController#create as JS
+  Parameters: {"utf8"=>"✓", "comment"=>{"comment"=>"fgfgfg"}, "commit"=>"Create Comment", "post_id"=>"3"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mPost Load (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  INSERT INTO "comments" ("comment", "post_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["comment", "fgfgfg"], ["post_id", 3], ["user_id", 2], ["created_at", "2015-12-03 22:28:57.423785"], ["updated_at", "2015-12-03 22:28:57.423785"]]
+  [1m[36m (13.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered comments/_comment.html.haml (23.0ms)
+  [1m[36m (1.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 3]]
+  Rendered comments/create.js.erb (51.0ms)
+Completed 200 OK in 179ms (Views: 65.0ms | ActiveRecord: 17.0ms)
+
+
+Started GET "/posts/3" for ::1 at 2015-12-03 23:29:03 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mPost Load (1.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 3]]
+  [1m[35mComment Load (0.0ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 3]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  Rendered comments/_comment.html.haml (46.0ms)
+  Rendered comments/_form.html.haml (6.0ms)
+  Rendered posts/show.html.haml within layouts/application (108.0ms)
+  Rendered layouts/_header.html.haml (0.0ms)
+Completed 200 OK in 293ms (Views: 273.0ms | ActiveRecord: 2.0ms)
+
+
+Started DELETE "/posts/3/comments/27" for ::1 at 2015-12-03 23:29:07 +0100
+Processing by CommentsController#destroy as JS
+  Parameters: {"post_id"=>"3", "id"=>"27"}
+  [1m[36mComment Load (0.0ms)[0m  [1mSELECT  "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT 1[0m  [["id", 27]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mComment Load (1.0ms)[0m  SELECT  "comments".* FROM "comments" WHERE "comments"."post_id" = ? AND "comments"."id" = ? LIMIT 1  [["post_id", 3], ["id", 27]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  DELETE FROM "comments" WHERE "comments"."id" = ?  [["id", 27]]
+  [1m[36m (13.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (1.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 3]]
+  Rendered comments/destroy.js (18.0ms)
+Completed 200 OK in 164ms (Views: 31.0ms | ActiveRecord: 16.0ms)
+
+
+Started GET "/posts/3" for ::1 at 2015-12-03 23:30:49 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 3]]
+  [1m[36mComment Load (0.0ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 3]]
+  Rendered collection (0.0ms)
+  Rendered comments/_form.html.haml (7.0ms)
+  Rendered posts/show.html.haml within layouts/application (63.0ms)
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  Rendered layouts/_header.html.haml (23.0ms)
+Completed 200 OK in 321ms (Views: 302.0ms | ActiveRecord: 2.0ms)
+
+
+Started POST "/posts/3/comments" for ::1 at 2015-12-03 23:30:53 +0100
+Processing by CommentsController#create as JS
+  Parameters: {"utf8"=>"✓", "comment"=>{"comment"=>"sddfdfssdg"}, "commit"=>"Create Comment", "post_id"=>"3"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mPost Load (1.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "comments" ("comment", "post_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["comment", "sddfdfssdg"], ["post_id", 3], ["user_id", 2], ["created_at", "2015-12-03 22:30:53.473811"], ["updated_at", "2015-12-03 22:30:53.473811"]]
+  [1m[36m (26.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered comments/_comment.html.haml (20.0ms)
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 3]]
+  Rendered comments/create.js.erb (50.0ms)
+Completed 200 OK in 206ms (Views: 67.0ms | ActiveRecord: 29.0ms)
+
+
+Started GET "/posts/3" for ::1 at 2015-12-03 23:31:16 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mPost Load (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 3]]
+  [1m[35mComment Load (0.0ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 3]]
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  Rendered comments/_comment.html.haml (44.0ms)
+  Rendered comments/_form.html.haml (7.0ms)
+  Rendered posts/show.html.haml within layouts/application (111.0ms)
+  Rendered layouts/_header.html.haml (0.0ms)
+Completed 200 OK in 315ms (Views: 295.0ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/posts/3/comments" for ::1 at 2015-12-03 23:31:22 +0100
+Processing by CommentsController#create as JS
+  Parameters: {"utf8"=>"✓", "comment"=>{"comment"=>"ca"}, "commit"=>"Create Comment", "post_id"=>"3"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mPost Load (1.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "comments" ("comment", "post_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["comment", "ca"], ["post_id", 3], ["user_id", 2], ["created_at", "2015-12-03 22:31:22.837882"], ["updated_at", "2015-12-03 22:31:22.837882"]]
+  [1m[36m (73.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered comments/_comment.html.haml (22.0ms)
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 3]]
+  Rendered comments/create.js.erb (58.0ms)
+Completed 200 OK in 271ms (Views: 77.0ms | ActiveRecord: 76.0ms)
+
+
+Started GET "/posts/3" for ::1 at 2015-12-03 23:32:07 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mPost Load (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 3]]
+  [1m[35mComment Load (1.0ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 3]]
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered comments/_comment.html.haml (68.0ms)
+  Rendered comments/_form.html.haml (5.0ms)
+  Rendered posts/show.html.haml within layouts/application (130.0ms)
+  Rendered layouts/_header.html.haml (1.0ms)
+Completed 200 OK in 353ms (Views: 332.0ms | ActiveRecord: 2.0ms)
+
+
+Started POST "/posts/3/comments" for ::1 at 2015-12-03 23:32:10 +0100
+Processing by CommentsController#create as JS
+  Parameters: {"utf8"=>"✓", "comment"=>{"comment"=>"sddsd"}, "commit"=>"Create Comment", "post_id"=>"3"}
+  [1m[35mUser Load (2.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "comments" ("comment", "post_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["comment", "sddsd"], ["post_id", 3], ["user_id", 2], ["created_at", "2015-12-03 22:32:10.974231"], ["updated_at", "2015-12-03 22:32:10.974231"]]
+  [1m[35m (56.0ms)[0m  commit transaction
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered comments/_comment.html.haml (19.0ms)
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 3]]
+  Rendered comments/create.js.erb (47.0ms)
+Completed 200 OK in 224ms (Views: 72.0ms | ActiveRecord: 59.0ms)
+
+
+Started DELETE "/posts/3/comments/30" for ::1 at 2015-12-03 23:32:15 +0100
+Processing by CommentsController#destroy as JS
+  Parameters: {"post_id"=>"3", "id"=>"30"}
+  [1m[36mComment Load (0.0ms)[0m  [1mSELECT  "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT 1[0m  [["id", 30]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mComment Load (1.0ms)[0m  SELECT  "comments".* FROM "comments" WHERE "comments"."post_id" = ? AND "comments"."id" = ? LIMIT 1  [["post_id", 3], ["id", 30]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  DELETE FROM "comments" WHERE "comments"."id" = ?  [["id", 30]]
+  [1m[36m (12.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (1.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 3]]
+  Rendered comments/destroy.js (21.0ms)
+Completed 200 OK in 157ms (Views: 35.0ms | ActiveRecord: 15.0ms)
+
+
+Started DELETE "/posts/3/comments/29" for ::1 at 2015-12-03 23:32:27 +0100
+Processing by CommentsController#destroy as JS
+  Parameters: {"post_id"=>"3", "id"=>"29"}
+  [1m[36mComment Load (0.0ms)[0m  [1mSELECT  "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT 1[0m  [["id", 29]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mComment Load (0.0ms)[0m  SELECT  "comments".* FROM "comments" WHERE "comments"."post_id" = ? AND "comments"."id" = ? LIMIT 1  [["post_id", 3], ["id", 29]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  DELETE FROM "comments" WHERE "comments"."id" = ?  [["id", 29]]
+  [1m[36m (11.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (1.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 3]]
+  Rendered comments/destroy.js (18.0ms)
+Completed 200 OK in 170ms (Views: 46.0ms | ActiveRecord: 13.0ms)
+
+
+Started DELETE "/posts/3/comments/28" for ::1 at 2015-12-03 23:32:30 +0100
+Processing by CommentsController#destroy as JS
+  Parameters: {"post_id"=>"3", "id"=>"28"}
+  [1m[36mComment Load (0.0ms)[0m  [1mSELECT  "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT 1[0m  [["id", 28]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mComment Load (1.0ms)[0m  SELECT  "comments".* FROM "comments" WHERE "comments"."post_id" = ? AND "comments"."id" = ? LIMIT 1  [["post_id", 3], ["id", 28]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  DELETE FROM "comments" WHERE "comments"."id" = ?  [["id", 28]]
+  [1m[36m (13.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 3]]
+  Rendered comments/destroy.js (17.0ms)
+Completed 200 OK in 160ms (Views: 32.0ms | ActiveRecord: 15.0ms)
+
+
+Started POST "/posts/3/comments" for ::1 at 2015-12-03 23:32:35 +0100
+Processing by CommentsController#create as JS
+  Parameters: {"utf8"=>"✓", "comment"=>{"comment"=>"dassdasdasd"}, "commit"=>"Create Comment", "post_id"=>"3"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mPost Load (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "comments" ("comment", "post_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["comment", "dassdasdasd"], ["post_id", 3], ["user_id", 2], ["created_at", "2015-12-03 22:32:35.192012"], ["updated_at", "2015-12-03 22:32:35.192012"]]
+  [1m[36m (11.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered comments/_comment.html.haml (19.0ms)
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 3]]
+  Rendered comments/create.js.erb (47.0ms)
+Completed 200 OK in 183ms (Views: 61.0ms | ActiveRecord: 13.0ms)
+
+
+Started DELETE "/posts/3/comments/31" for ::1 at 2015-12-03 23:32:41 +0100
+Processing by CommentsController#destroy as JS
+  Parameters: {"post_id"=>"3", "id"=>"31"}
+  [1m[35mComment Load (0.0ms)[0m  SELECT  "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT 1  [["id", 31]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mPost Load (1.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mComment Load (0.0ms)[0m  [1mSELECT  "comments".* FROM "comments" WHERE "comments"."post_id" = ? AND "comments"."id" = ? LIMIT 1[0m  [["post_id", 3], ["id", 31]]
+  [1m[35m (1.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mDELETE FROM "comments" WHERE "comments"."id" = ?[0m  [["id", 31]]
+  [1m[35m (10.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 3]]
+  Rendered comments/destroy.js (18.0ms)
+Completed 200 OK in 155ms (Views: 31.0ms | ActiveRecord: 13.0ms)

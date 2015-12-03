@@ -56,6 +56,7 @@ class CommentsController < ApplicationController
       @comment.destroy
       respond_to do |format|
          format.html { redirect_to post_path(@post), notice: 'Comment was successfully destroyed.' }
+         format.js # JavaScript response
       end
    end
 
