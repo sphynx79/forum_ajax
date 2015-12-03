@@ -4,8 +4,9 @@ Rails.application.routes.draw do
       resources :comments
    end
    match 'remote_sign_up', to: 'remote_content#remote_sign_up', via: [:get]
+   match 'remote_sign_in', to: 'remote_content#remote_sign_in', via: [:get]
 
-   devise_for :users, :controllers => {registrations: 'registrations'}
+   devise_for :users, :controllers => {registrations: 'registrations', sessions: 'sessions'}
 
    root "posts#index"
    # The priority is based upon order of creation: first created -> highest priority.

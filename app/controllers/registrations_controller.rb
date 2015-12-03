@@ -19,7 +19,7 @@ class RegistrationsController < Devise::RegistrationsController
           end
         }
         format.js {
-          flash[:notice] = "Skapade konto, inloggad."
+          flash[:notice] = "Account creato, effettua il login."
           render :template => "remote_content/devise_success_sign_up.js.erb"
           flash.discard
           sign_up(resource_name, resource)

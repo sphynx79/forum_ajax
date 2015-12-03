@@ -16,6 +16,6 @@
         %li= link_to "Sign Out", destroy_user_session_path, method: :delete
       - else
         %li= link_to "Sign Up", remote_sign_up_path, :remote => true, class: "active"
-        %li= link_to "Sign In", new_user_session_path, class: "active"
+        %li= link_to "Sign In",  remote_sign_in_path, :remote => true, class: "active"
 
 

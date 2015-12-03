@@ -1,0 +1,11 @@
+if($('#sign_up_modal').length > 0) {
+  $("#sign_up_modal").remove();
+}
+
+if($('.modal').length > 0) {
+  $("#sign_in_modal").modal();
+}
+else {
+  $("body").prepend("<%= escape_javascript(render "remote_sign_in", :formats => [:html]) %>");
+  $("#sign_in_modal").modal();
+}
