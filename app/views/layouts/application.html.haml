@@ -16,6 +16,9 @@
     .container
       .row
         .col-md-8.col-md-offset-2
-          - flash.each do |name,msg|
-            = content_tag :div, msg, class: 'alert alert-info'
+          #flash
+            - flash.each do |type, message|
+              .alert.alert-dismissable{ :class => twitterized_type(type) }
+                %button.close{"data-dismiss" => "alert", "aria-hidden" => "true"} ×
+                %p= message
           = yield

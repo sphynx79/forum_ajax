@@ -1,8 +1,11 @@
 Rails.application.routes.draw do
-   devise_for :users
+   #devise_for :users
    resources :posts do
       resources :comments
    end
+   match 'remote_sign_up', to: 'remote_content#remote_sign_up', via: [:get]
+
+   devise_for :users, :controllers => {registrations: 'registrations'}
 
    root "posts#index"
    # The priority is based upon order of creation: first created -> highest priority.
