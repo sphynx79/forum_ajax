@@ -1,6 +1,6 @@
 class CommentsController < ApplicationController
    before_action :set_comment, only: [:show, :edit, :update, :destroy]
-   before_action :authenticate_user!
+   before_action :authenticate_user!,  except: [:create]
 
 
 
@@ -13,23 +13,28 @@ class CommentsController < ApplicationController
    # POST /comments
    # POST /comments.json
    def create
-      @post = Post.find(params[:post_id])
-      @comment = @post.comments.new(comment_params)
-      @comment.user_id = current_user.id if current_user
-
-      respond_to do |format|
-         if @comment.save
-            format.html { redirect_to post_path(@post), notice: 'Comment was successfully created.' }
-            format.js{}
-         else
-            format.html { render :new }
-            format.js {
-            flash[:alert] = @comment.errors.full_messages.to_sentence
-            render :template => "comments/errors.js.erb"
-            flash.discard
-            }
+      if user_signed_in? 
+         @post = Post.find(params[:post_id])
+         @comment = @post.comments.new(comment_params)
+         @comment.user_id = current_user.id if current_user
+         respond_to do |format|
+            if @comment.save
+               format.html { redirect_to post_path(@post), notice: 'Comment was successfully created.' }
+               format.js{render :layout => false}
+            else
+               format.html { render :new }
+               format.js {
+                  flash[:alert] = @comment.errors.full_messages.to_sentence
+                  render "comments/errors.js.erb"
+                  flash.discard
+               }
+            end
          end
+      else
+         redirect_to  remote_sign_in_path and return
       end
+
+
    end
 
    # PATCH/PUT /comments/1
