@@ -28162,3 +28162,1673 @@ Processing by PostsController#index as HTML
   Rendered posts/index.html.haml within layouts/application (163.0ms)
   Rendered layouts/_header.html.haml (7.0ms)
 Completed 200 OK in 1454ms (Views: 1444.1ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/posts" for ::1 at 2015-12-05 02:39:01 +0100
+Processing by PostsController#index as HTML
+  Rendered posts/index.html.haml within layouts/application (76.0ms)
+Completed 500 Internal Server Error in 182ms (ActiveRecord: 0.0ms)
+
+SyntaxError - syntax error, unexpected =>
+...t' => '#modal-window', class => "btn btn-default"}
+...                               ^
+K:/Dropbox/progetti_libri/12_web_apps/forum/app/views/posts/index.html.haml:12: syntax error, unexpected '}', expecting ')'
+K:/Dropbox/progetti_libri/12_web_apps/forum/app/views/posts/index.html.haml:14: syntax error, unexpected '}', expecting tSTRING_DEND
+));}\n    </div>\n", -1, false);e...
+    ^
+K:/Dropbox/progetti_libri/12_web_apps/forum/app/views/posts/index.html.haml:14: unknown regexp options - dv
+unmatched close parenthesis: /div>\n", -1, false);end;_hamlout.push_text("  </i
+K:/Dropbox/progetti_libri/12_web_apps/forum/app/views/posts/index.html.haml:14: syntax error, unexpected $undefined
+...d;_hamlout.push_text("  </div>\n", -1, false);end;_hamlout.p...
+...                               ^
+K:/Dropbox/progetti_libri/12_web_apps/forum/app/views/posts/index.html.haml:14: unknown regexp options - dv
+K:/Dropbox/progetti_libri/12_web_apps/forum/app/views/posts/index.html.haml:14: syntax error, unexpected $undefined
+...l-window' role='dialog'></div>\n", -1, false);::Haml::Util.h...
+...                               ^
+K:/Dropbox/progetti_libri/12_web_apps/forum/app/views/posts/index.html.haml:14: unterminated string meets end of file
+K:/Dropbox/progetti_libri/12_web_apps/forum/app/views/posts/index.html.haml:14: syntax error, unexpected end-of-input, expecting tSTRING_DEND:
+  app/views/posts/index.html.haml:12:in `'
+  actionview (4.2.3) lib/action_view/template.rb:296:in `compile'
+  actionview (4.2.3) lib/action_view/template.rb:245:in `block (2 levels) in compile!'
+  activesupport (4.2.3) lib/active_support/notifications.rb:166:in `instrument'
+  actionview (4.2.3) lib/action_view/template.rb:333:in `instrument'
+  actionview (4.2.3) lib/action_view/template.rb:244:in `block in compile!'
+  actionview (4.2.3) lib/action_view/template.rb:232:in `compile!'
+  actionview (4.2.3) lib/action_view/template.rb:144:in `block in render'
+  activesupport (4.2.3) lib/active_support/notifications.rb:166:in `instrument'
+  actionview (4.2.3) lib/action_view/template.rb:333:in `instrument'
+  actionview (4.2.3) lib/action_view/template.rb:143:in `render'
+  actionview (4.2.3) lib/action_view/renderer/template_renderer.rb:54:in `block (2 levels) in render_template'
+  actionview (4.2.3) lib/action_view/renderer/abstract_renderer.rb:39:in `block in instrument'
+  activesupport (4.2.3) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.3) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.3) lib/active_support/notifications.rb:164:in `instrument'
+  actionview (4.2.3) lib/action_view/renderer/abstract_renderer.rb:39:in `instrument'
+  actionview (4.2.3) lib/action_view/renderer/template_renderer.rb:53:in `block in render_template'
+  actionview (4.2.3) lib/action_view/renderer/template_renderer.rb:61:in `render_with_layout'
+  actionview (4.2.3) lib/action_view/renderer/template_renderer.rb:52:in `render_template'
+  actionview (4.2.3) lib/action_view/renderer/template_renderer.rb:14:in `render'
+  actionview (4.2.3) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionview (4.2.3) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionview (4.2.3) lib/action_view/rendering.rb:100:in `_render_template'
+  actionpack (4.2.3) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.2.3) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (4.2.3) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.2.3) lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+  actionpack (4.2.3) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.2.3) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (4.2.3) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  C:/Ruby21/lib/ruby/2.1.0/benchmark.rb:294:in `realtime'
+  activesupport (4.2.3) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  activerecord (4.2.3) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  actionpack (4.2.3) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.2.3) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.2.3) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.3) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.3) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:115:in `call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:553:in `block (2 levels) in compile'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:503:in `call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:88:in `run_callbacks'
+  actionpack (4.2.3) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.3) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.3) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.3) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.3) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.3) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.3) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.3) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.3) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.3) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.3) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.3) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:76:in `dispatch'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:45:in `serve'
+  actionpack (4.2.3) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.3) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:821:in `call'
+  meta_request (0.3.4) lib/meta_request/middlewares/app_request_handler.rb:13:in `call'
+  meta_request (0.3.4) lib/meta_request/middlewares/meta_request_handler.rb:13:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.3) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.3) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:84:in `run_callbacks'
+  actionpack (4.2.3) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+  rack-contrib (1.4.0) lib/rack/contrib/response_headers.rb:17:in `call'
+  meta_request (0.3.4) lib/meta_request/middlewares/headers.rb:16:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  C:/Ruby21/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  C:/Ruby21/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  C:/Ruby21/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+
+Started POST "/__better_errors/e35b569d6aa6135b/variables" for ::1 at 2015-12-05 02:39:07 +0100
+  [1m[35mPost Load (3.0ms)[0m  SELECT "posts".* FROM "posts"  ORDER BY created_at DESC
+
+
+Started GET "/posts" for ::1 at 2015-12-05 02:39:59 +0100
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (3.0ms)[0m  [1mSELECT "posts".* FROM "posts"  ORDER BY created_at DESC[0m
+  [1m[35mUser Load (2.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (2.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  Rendered posts/index.html.haml within layouts/application (500.0ms)
+  Rendered layouts/_header.html.haml (9.0ms)
+Completed 200 OK in 2306ms (Views: 2283.1ms | ActiveRecord: 13.0ms)
+
+
+Started GET "/posts" for ::1 at 2015-12-05 02:57:15 +0100
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (3.0ms)[0m  SELECT "posts".* FROM "posts"  ORDER BY created_at DESC
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  Rendered posts/index.html.haml within layouts/application (271.0ms)
+  Rendered layouts/_header.html.haml (84.0ms)
+Completed 200 OK in 2139ms (Views: 2122.1ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/posts/new" for ::1 at 2015-12-05 02:57:22 +0100
+Processing by PostsController#new as JS
+  [1m[36mUser Load (8.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  Rendered posts/_new.html.haml (11.0ms)
+  Rendered posts/new.js.erb (45.0ms)
+Completed 200 OK in 359ms (Views: 106.0ms | ActiveRecord: 11.0ms)
+
+
+Started GET "/posts" for ::1 at 2015-12-05 02:57:35 +0100
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts"  ORDER BY created_at DESC
+  [1m[36mUser Load (2.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  Rendered posts/index.html.haml within layouts/application (198.0ms)
+  Rendered layouts/_header.html.haml (9.0ms)
+Completed 200 OK in 1933ms (Views: 1919.1ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/posts" for ::1 at 2015-12-05 03:01:43 +0100
+Processing by PostsController#index as HTML
+  Rendered posts/index.html.haml within layouts/application (65.0ms)
+Completed 500 Internal Server Error in 108ms (ActiveRecord: 0.0ms)
+
+ActionView::MissingTemplate - Missing partial posts/_posts, application/_posts with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :haml, :jbuilder]}. Searched in:
+  * "K:/Dropbox/progetti_libri/12_web_apps/forum/app/views"
+  * "C:/Ruby21/lib/ruby/gems/2.1.0/gems/devise-3.5.2/app/views"
+:
+  actionview (4.2.3) lib/action_view/path_set.rb:46:in `find'
+  actionview (4.2.3) lib/action_view/lookup_context.rb:121:in `find'
+  actionview (4.2.3) lib/action_view/renderer/partial_renderer.rb:418:in `find_template'
+  actionview (4.2.3) lib/action_view/renderer/partial_renderer.rb:413:in `find_partial'
+  actionview (4.2.3) lib/action_view/renderer/partial_renderer.rb:294:in `render'
+  actionview (4.2.3) lib/action_view/renderer/renderer.rb:47:in `render_partial'
+  actionview (4.2.3) lib/action_view/helpers/rendering_helper.rb:35:in `render'
+  haml (4.0.7) lib/haml/helpers/action_view_mods.rb:10:in `block in render_with_haml'
+  haml (4.0.7) lib/haml/helpers.rb:89:in `non_haml'
+  haml (4.0.7) lib/haml/helpers/action_view_mods.rb:10:in `render_with_haml'
+  app/views/posts/index.html.haml:2:in `_app_views_posts_index_html_haml___278878688_85090968'
+  actionview (4.2.3) lib/action_view/template.rb:145:in `block in render'
+  activesupport (4.2.3) lib/active_support/notifications.rb:166:in `instrument'
+  actionview (4.2.3) lib/action_view/template.rb:333:in `instrument'
+  actionview (4.2.3) lib/action_view/template.rb:143:in `render'
+  actionview (4.2.3) lib/action_view/renderer/template_renderer.rb:54:in `block (2 levels) in render_template'
+  actionview (4.2.3) lib/action_view/renderer/abstract_renderer.rb:39:in `block in instrument'
+  activesupport (4.2.3) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.3) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.3) lib/active_support/notifications.rb:164:in `instrument'
+  actionview (4.2.3) lib/action_view/renderer/abstract_renderer.rb:39:in `instrument'
+  actionview (4.2.3) lib/action_view/renderer/template_renderer.rb:53:in `block in render_template'
+  actionview (4.2.3) lib/action_view/renderer/template_renderer.rb:61:in `render_with_layout'
+  actionview (4.2.3) lib/action_view/renderer/template_renderer.rb:52:in `render_template'
+  actionview (4.2.3) lib/action_view/renderer/template_renderer.rb:14:in `render'
+  actionview (4.2.3) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionview (4.2.3) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionview (4.2.3) lib/action_view/rendering.rb:100:in `_render_template'
+  actionpack (4.2.3) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.2.3) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (4.2.3) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.2.3) lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+  actionpack (4.2.3) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.2.3) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (4.2.3) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  C:/Ruby21/lib/ruby/2.1.0/benchmark.rb:294:in `realtime'
+  activesupport (4.2.3) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  activerecord (4.2.3) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  actionpack (4.2.3) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.2.3) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.2.3) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.3) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.3) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:115:in `call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:553:in `block (2 levels) in compile'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:503:in `call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:88:in `run_callbacks'
+  actionpack (4.2.3) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.3) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.3) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.3) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.3) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.3) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.3) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.3) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.3) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.3) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.3) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.3) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:76:in `dispatch'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:45:in `serve'
+  actionpack (4.2.3) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.3) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:821:in `call'
+  meta_request (0.3.4) lib/meta_request/middlewares/app_request_handler.rb:13:in `call'
+  meta_request (0.3.4) lib/meta_request/middlewares/meta_request_handler.rb:13:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.3) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.3) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:84:in `run_callbacks'
+  actionpack (4.2.3) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+  rack-contrib (1.4.0) lib/rack/contrib/response_headers.rb:17:in `call'
+  meta_request (0.3.4) lib/meta_request/middlewares/headers.rb:16:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  C:/Ruby21/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  C:/Ruby21/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  C:/Ruby21/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+
+Started POST "/__better_errors/974bf1844bbafdf3/variables" for ::1 at 2015-12-05 03:01:45 +0100
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts"  ORDER BY created_at DESC[0m
+
+
+Started GET "/" for ::1 at 2015-12-05 03:01:57 +0100
+Processing by PostsController#index as HTML
+  Rendered posts/index.html.haml within layouts/application (35.0ms)
+Completed 500 Internal Server Error in 99ms (ActiveRecord: 0.0ms)
+
+ActionView::MissingTemplate - Missing partial posts/_posts, application/_posts with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :haml, :jbuilder]}. Searched in:
+  * "K:/Dropbox/progetti_libri/12_web_apps/forum/app/views"
+  * "C:/Ruby21/lib/ruby/gems/2.1.0/gems/devise-3.5.2/app/views"
+:
+  actionview (4.2.3) lib/action_view/path_set.rb:46:in `find'
+  actionview (4.2.3) lib/action_view/lookup_context.rb:121:in `find'
+  actionview (4.2.3) lib/action_view/renderer/partial_renderer.rb:418:in `find_template'
+  actionview (4.2.3) lib/action_view/renderer/partial_renderer.rb:413:in `find_partial'
+  actionview (4.2.3) lib/action_view/renderer/partial_renderer.rb:294:in `render'
+  actionview (4.2.3) lib/action_view/renderer/renderer.rb:47:in `render_partial'
+  actionview (4.2.3) lib/action_view/helpers/rendering_helper.rb:35:in `render'
+  haml (4.0.7) lib/haml/helpers/action_view_mods.rb:10:in `block in render_with_haml'
+  haml (4.0.7) lib/haml/helpers.rb:89:in `non_haml'
+  haml (4.0.7) lib/haml/helpers/action_view_mods.rb:10:in `render_with_haml'
+  app/views/posts/index.html.haml:2:in `_app_views_posts_index_html_haml___278878688_85090968'
+  actionview (4.2.3) lib/action_view/template.rb:145:in `block in render'
+  activesupport (4.2.3) lib/active_support/notifications.rb:166:in `instrument'
+  actionview (4.2.3) lib/action_view/template.rb:333:in `instrument'
+  actionview (4.2.3) lib/action_view/template.rb:143:in `render'
+  actionview (4.2.3) lib/action_view/renderer/template_renderer.rb:54:in `block (2 levels) in render_template'
+  actionview (4.2.3) lib/action_view/renderer/abstract_renderer.rb:39:in `block in instrument'
+  activesupport (4.2.3) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.3) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.3) lib/active_support/notifications.rb:164:in `instrument'
+  actionview (4.2.3) lib/action_view/renderer/abstract_renderer.rb:39:in `instrument'
+  actionview (4.2.3) lib/action_view/renderer/template_renderer.rb:53:in `block in render_template'
+  actionview (4.2.3) lib/action_view/renderer/template_renderer.rb:61:in `render_with_layout'
+  actionview (4.2.3) lib/action_view/renderer/template_renderer.rb:52:in `render_template'
+  actionview (4.2.3) lib/action_view/renderer/template_renderer.rb:14:in `render'
+  actionview (4.2.3) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionview (4.2.3) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionview (4.2.3) lib/action_view/rendering.rb:100:in `_render_template'
+  actionpack (4.2.3) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.2.3) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (4.2.3) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.2.3) lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+  actionpack (4.2.3) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.2.3) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (4.2.3) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  C:/Ruby21/lib/ruby/2.1.0/benchmark.rb:294:in `realtime'
+  activesupport (4.2.3) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  activerecord (4.2.3) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  actionpack (4.2.3) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.2.3) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.2.3) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.3) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.3) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:115:in `call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:553:in `block (2 levels) in compile'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:503:in `call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:88:in `run_callbacks'
+  actionpack (4.2.3) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.3) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.3) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.3) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.3) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.3) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.3) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.3) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.3) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.3) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.3) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.3) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:76:in `dispatch'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:45:in `serve'
+  actionpack (4.2.3) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.3) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:821:in `call'
+  meta_request (0.3.4) lib/meta_request/middlewares/app_request_handler.rb:13:in `call'
+  meta_request (0.3.4) lib/meta_request/middlewares/meta_request_handler.rb:13:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.3) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.3) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:84:in `run_callbacks'
+  actionpack (4.2.3) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+  rack-contrib (1.4.0) lib/rack/contrib/response_headers.rb:17:in `call'
+  meta_request (0.3.4) lib/meta_request/middlewares/headers.rb:16:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  C:/Ruby21/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  C:/Ruby21/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  C:/Ruby21/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+
+Started POST "/__better_errors/6e1afbfe3996c141/variables" for ::1 at 2015-12-05 03:01:59 +0100
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts"  ORDER BY created_at DESC
+
+
+Started GET "/" for ::1 at 2015-12-05 03:03:05 +0100
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (2.0ms)[0m  [1mSELECT "posts".* FROM "posts"  ORDER BY created_at DESC[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (2.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  Rendered posts/_post.html.haml (274.0ms)
+  Rendered posts/_posts.html.haml (361.0ms)
+  Rendered posts/index.html.haml within layouts/application (377.0ms)
+  Rendered layouts/_header.html.haml (97.0ms)
+Completed 200 OK in 2323ms (Views: 2304.1ms | ActiveRecord: 7.0ms)
+
+
+Started GET "/posts/new" for ::1 at 2015-12-05 03:03:10 +0100
+Processing by PostsController#new as JS
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  Rendered posts/_new.html.haml (1.0ms)
+  Rendered posts/new.js.erb (25.0ms)
+Completed 200 OK in 188ms (Views: 77.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/" for ::1 at 2015-12-05 03:07:07 +0100
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts"  ORDER BY created_at DESC[0m
+  [1m[35mUser Load (2.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  Rendered posts/_post.html.haml (173.0ms)
+  Rendered posts/_posts.html.haml (247.0ms)
+  Rendered posts/index.html.haml within layouts/application (264.0ms)
+  Rendered layouts/_header.html.haml (9.0ms)
+Completed 200 OK in 2140ms (Views: 2126.1ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/" for ::1 at 2015-12-05 03:07:15 +0100
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (2.0ms)[0m  SELECT "posts".* FROM "posts"  ORDER BY created_at DESC
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (2.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  Rendered posts/_post.html.haml (175.0ms)
+  Rendered posts/_posts.html.haml (234.0ms)
+  Rendered posts/index.html.haml within layouts/application (275.0ms)
+  Rendered layouts/_header.html.haml (10.0ms)
+Completed 200 OK in 2115ms (Views: 2099.1ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/posts/new" for ::1 at 2015-12-05 03:07:18 +0100
+Processing by PostsController#new as JS
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  Rendered posts/_form.html.haml (99.0ms)
+  Rendered posts/_new.html.haml (139.0ms)
+  Rendered posts/new.js.erb (161.0ms)
+Completed 200 OK in 275ms (Views: 210.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2015-12-05 03:16:01 +0100
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (2.0ms)[0m  SELECT "posts".* FROM "posts"  ORDER BY created_at DESC
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  Rendered posts/_post.html.haml (152.0ms)
+  Rendered posts/_posts.html.haml (223.0ms)
+  Rendered posts/index.html.haml within layouts/application (250.0ms)
+  Rendered layouts/_header.html.haml (10.0ms)
+Completed 200 OK in 2027ms (Views: 2007.1ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/posts/new" for ::1 at 2015-12-05 03:16:07 +0100
+Processing by PostsController#new as JS
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  Rendered posts/_form.html.haml (88.0ms)
+  Rendered posts/_new.html.haml (124.0ms)
+  Rendered posts/new.js.erb (148.0ms)
+Completed 200 OK in 279ms (Views: 188.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2015-12-05 03:18:22 +0100
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (2.0ms)[0m  SELECT "posts".* FROM "posts"  ORDER BY created_at DESC
+  [1m[36mUser Load (2.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  Rendered posts/_post.html.haml (180.0ms)
+  Rendered posts/_posts.html.haml (267.0ms)
+  Rendered posts/index.html.haml within layouts/application (284.0ms)
+  Rendered layouts/_header.html.haml (9.0ms)
+Completed 200 OK in 2071ms (Views: 2055.1ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/posts/new" for ::1 at 2015-12-05 03:18:25 +0100
+Processing by PostsController#new as JS
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  Rendered posts/_form.html.haml (208.6ms)
+  Rendered posts/_new.html.haml (232.6ms)
+  Rendered posts/new.js.erb (268.6ms)
+Completed 200 OK in 399ms (Views: 308.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2015-12-05 03:18:43 +0100
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (2.0ms)[0m  SELECT "posts".* FROM "posts"  ORDER BY created_at DESC
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  Rendered posts/_post.html.haml (196.0ms)
+  Rendered posts/_posts.html.haml (267.0ms)
+  Rendered posts/index.html.haml within layouts/application (284.0ms)
+  Rendered layouts/_header.html.haml (21.0ms)
+Completed 200 OK in 2075ms (Views: 2059.1ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/posts/new" for ::1 at 2015-12-05 03:18:46 +0100
+Processing by PostsController#new as JS
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  Rendered posts/_form.html.haml (218.0ms)
+  Rendered posts/_new.html.haml (241.0ms)
+  Rendered posts/new.js.erb (267.0ms)
+Completed 200 OK in 409ms (Views: 306.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2015-12-05 03:20:23 +0100
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (2.0ms)[0m  SELECT "posts".* FROM "posts"  ORDER BY created_at DESC
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  Rendered posts/_post.html.haml (188.0ms)
+  Rendered posts/_posts.html.haml (248.0ms)
+  Rendered posts/index.html.haml within layouts/application (266.0ms)
+  Rendered layouts/_header.html.haml (10.0ms)
+Completed 200 OK in 2121ms (Views: 2092.1ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/posts/new" for ::1 at 2015-12-05 03:20:27 +0100
+Processing by PostsController#new as JS
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  Rendered posts/_form.html.haml (223.0ms)
+  Rendered posts/_new.html.haml (247.0ms)
+  Rendered posts/new.js.erb (273.0ms)
+Completed 200 OK in 404ms (Views: 312.0ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/posts" for ::1 at 2015-12-05 03:20:36 +0100
+Processing by PostsController#create as JS
+  Parameters: {"utf8"=>"✓", "post"=>{"title"=>"ciao", "content"=>"dssdf"}, "commit"=>"Create Post"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  INSERT INTO "posts" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "ciao"], ["content", "dssdf"], ["user_id", 2], ["created_at", "2015-12-05 02:20:37.197608"], ["updated_at", "2015-12-05 02:20:37.197608"]]
+  [1m[36m (13.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/posts/28
+Completed 302 Found in 319ms (ActiveRecord: 17.0ms)
+
+
+Started GET "/posts/28" for ::1 at 2015-12-05 03:20:37 +0100
+Processing by PostsController#show as JS
+  Parameters: {"id"=>"28"}
+  [1m[35mPost Load (2.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 28]]
+  [1m[36m (1.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 28]]
+  [1m[35mComment Load (2.0ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 28]]
+  Rendered collection (0.0ms)
+  Rendered comments/_form.html.haml (251.0ms)
+  Rendered posts/show.html.haml within layouts/application (522.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  Rendered layouts/_header.html.haml (125.0ms)
+Completed 200 OK in 2144ms (Views: 2074.1ms | ActiveRecord: 9.0ms)
+
+
+Started GET "/posts" for ::1 at 2015-12-05 03:20:50 +0100
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts"  ORDER BY created_at DESC
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  Rendered posts/_post.html.haml (161.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered posts/_post.html.haml (69.0ms)
+  Rendered posts/_posts.html.haml (302.0ms)
+  Rendered posts/index.html.haml within layouts/application (328.0ms)
+  Rendered layouts/_header.html.haml (62.0ms)
+Completed 200 OK in 1626ms (Views: 1603.9ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/posts" for ::1 at 2015-12-05 03:22:16 +0100
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (2.0ms)[0m  SELECT "posts".* FROM "posts"  ORDER BY created_at DESC
+  [1m[36mUser Load (2.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (3.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  Rendered posts/_post.html.haml (403.0ms)
+  [1m[36mCACHE (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered posts/_post.html.haml (89.0ms)
+  Rendered posts/_posts.html.haml (739.0ms)
+  Rendered posts/index.html.haml within layouts/application (756.0ms)
+  Rendered layouts/_header.html.haml (9.0ms)
+Completed 200 OK in 2682ms (Views: 2610.2ms | ActiveRecord: 20.0ms)
+
+
+Started GET "/posts/new" for ::1 at 2015-12-05 03:22:22 +0100
+Processing by PostsController#new as JS
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  Rendered posts/_form.html.haml (177.0ms)
+  Rendered posts/_new.html.haml (202.0ms)
+  Rendered posts/new.js.erb (228.0ms)
+Completed 200 OK in 406ms (Views: 269.0ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/posts" for ::1 at 2015-12-05 03:22:28 +0100
+Processing by PostsController#create as JS
+  Parameters: {"utf8"=>"✓", "post"=>{"title"=>"fg", "content"=>"fgdfggdggggggggg"}, "commit"=>"Create Post"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35m (1.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "posts" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "fg"], ["content", "fgdfggdggggggggg"], ["user_id", 2], ["created_at", "2015-12-05 02:22:28.650349"], ["updated_at", "2015-12-05 02:22:28.650349"]]
+  [1m[35m (10.0ms)[0m  commit transaction
+  Rendered posts/_post.html.haml (63.0ms)
+  Rendered posts/create.js.erb (96.0ms)
+Completed 200 OK in 421ms (Views: 128.0ms | ActiveRecord: 14.0ms)
+
+
+Started GET "/posts/new" for ::1 at 2015-12-05 03:22:33 +0100
+Processing by PostsController#new as JS
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  Rendered posts/_form.html.haml (125.0ms)
+  Rendered posts/_new.html.haml (147.0ms)
+  Rendered posts/new.js.erb (170.0ms)
+Completed 200 OK in 277ms (Views: 216.0ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/posts" for ::1 at 2015-12-05 03:22:37 +0100
+Processing by PostsController#create as JS
+  Parameters: {"utf8"=>"✓", "post"=>{"title"=>"c", "content"=>"c"}, "commit"=>"Create Post"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "posts" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "c"], ["content", "c"], ["user_id", 2], ["created_at", "2015-12-05 02:22:37.968679"], ["updated_at", "2015-12-05 02:22:37.968679"]]
+  [1m[36m (12.0ms)[0m  [1mcommit transaction[0m
+  Rendered posts/_post.html.haml (13.0ms)
+  Rendered posts/create.js.erb (27.0ms)
+Completed 200 OK in 301ms (Views: 54.0ms | ActiveRecord: 15.0ms)
+
+
+Started GET "/posts" for ::1 at 2015-12-05 03:23:41 +0100
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts"  ORDER BY created_at DESC
+  [1m[36mUser Load (2.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  Rendered posts/_post.html.haml (171.0ms)
+  [1m[36mCACHE (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered posts/_post.html.haml (97.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered posts/_post.html.haml (88.0ms)
+  [1m[36mCACHE (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered posts/_post.html.haml (88.0ms)
+  Rendered posts/_posts.html.haml (581.0ms)
+  Rendered posts/index.html.haml within layouts/application (598.0ms)
+Completed 401 Unauthorized in 53596ms (ActiveRecord: 6.0ms)
+
+
+Started GET "/posts" for ::1 at 2015-12-05 03:25:35 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts"  ORDER BY created_at DESC
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  Rendered posts/_post.html.haml (162.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered posts/_post.html.haml (19.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered posts/_post.html.haml (18.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered posts/_post.html.haml (20.0ms)
+  Rendered posts/_posts.html.haml (299.0ms)
+  Rendered posts/index.html.haml within layouts/application (321.0ms)
+  Rendered layouts/_header.html.haml (5.0ms)
+Completed 200 OK in 1467ms (Views: 1424.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application-9520d62d89d56d41a527501676513cef6d12e5ff1c84b1ffe1c93eddae3e01ba.css" for ::1 at 2015-12-05 03:25:37 +0100
+
+
+Started GET "/posts/new" for ::1 at 2015-12-05 03:25:39 +0100
+Processing by PostsController#new as JS
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  Rendered posts/_form.html.haml (212.0ms)
+  Rendered posts/_new.html.haml (232.0ms)
+  Rendered posts/new.js.erb (249.0ms)
+Completed 200 OK in 329ms (Views: 271.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for ::1 at 2015-12-05 03:25:42 +0100
+Processing by PostsController#create as JS
+  Parameters: {"utf8"=>"✓", "post"=>{"title"=>"sdf", "content"=>"fssffs"}, "commit"=>"Create Post"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "posts" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "sdf"], ["content", "fssffs"], ["user_id", 2], ["created_at", "2015-12-05 02:25:42.947828"], ["updated_at", "2015-12-05 02:25:42.947828"]]
+  [1m[35m (11.0ms)[0m  commit transaction
+  Rendered posts/_post.html.haml (4.0ms)
+  Rendered posts/create.js.erb (13.0ms)
+Completed 200 OK in 124ms (Views: 27.0ms | ActiveRecord: 12.0ms)
+
+
+Started DELETE "/posts/31" for ::1 at 2015-12-05 03:25:50 +0100
+Processing by PostsController#destroy as JS
+  Parameters: {"id"=>"31"}
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 31]]
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  DELETE FROM "posts" WHERE "posts"."id" = ?  [["id", 31]]
+  [1m[36m (10.0ms)[0m  [1mcommit transaction[0m
+  Rendered application/_flashes.html.haml (3.0ms)
+  Rendered application/_flashes.html.haml (0.0ms)
+  Rendered posts/destroy.js.erb (30.0ms)
+Completed 200 OK in 134ms (Views: 45.0ms | ActiveRecord: 12.0ms)
+
+
+Started DELETE "/posts/27" for ::1 at 2015-12-05 03:25:55 +0100
+Processing by PostsController#destroy as JS
+  Parameters: {"id"=>"27"}
+  [1m[35mPost Load (1.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 27]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 27]]
+  [1m[35m (12.0ms)[0m  commit transaction
+  Rendered application/_flashes.html.haml (0.0ms)
+  Rendered application/_flashes.html.haml (0.0ms)
+  Rendered posts/destroy.js.erb (25.0ms)
+Completed 200 OK in 126ms (Views: 39.0ms | ActiveRecord: 14.0ms)
+
+
+Started DELETE "/posts/30" for ::1 at 2015-12-05 03:25:57 +0100
+Processing by PostsController#destroy as JS
+  Parameters: {"id"=>"30"}
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 30]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  DELETE FROM "posts" WHERE "posts"."id" = ?  [["id", 30]]
+  [1m[36m (11.0ms)[0m  [1mcommit transaction[0m
+  Rendered application/_flashes.html.haml (1.0ms)
+  Rendered application/_flashes.html.haml (0.0ms)
+  Rendered posts/destroy.js.erb (30.0ms)
+Completed 200 OK in 130ms (Views: 48.0ms | ActiveRecord: 12.0ms)
+
+
+Started GET "/posts" for ::1 at 2015-12-05 03:28:11 +0100
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts"  ORDER BY created_at DESC
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  Rendered posts/_post.html.haml (47.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered posts/_post.html.haml (23.0ms)
+  Rendered posts/_posts.html.haml (108.0ms)
+  Rendered posts/index.html.haml within layouts/application (119.0ms)
+  Rendered layouts/_header.html.haml (1.0ms)
+Completed 200 OK in 305ms (Views: 302.0ms | ActiveRecord: 2.0ms)
+
+
+Started DELETE "/posts/29" for ::1 at 2015-12-05 03:28:14 +0100
+Processing by PostsController#destroy as JS
+  Parameters: {"id"=>"29"}
+  [1m[35mPost Load (1.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 29]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 29]]
+  [1m[35m (11.0ms)[0m  commit transaction
+  Rendered posts/destroy.js.erb (31.0ms)
+Completed 500 Internal Server Error in 137ms (ActiveRecord: 13.0ms)
+
+NameError - undefined local variable or method `post' for #<#<Class:0x7a86c08>:0xa0f4550>:
+  app/views/posts/destroy.js.erb:5:in `_app_views_posts_destroy_js_erb__375713069_84409260'
+  actionview (4.2.3) lib/action_view/template.rb:145:in `block in render'
+  activesupport (4.2.3) lib/active_support/notifications.rb:166:in `instrument'
+  actionview (4.2.3) lib/action_view/template.rb:333:in `instrument'
+  actionview (4.2.3) lib/action_view/template.rb:143:in `render'
+  actionview (4.2.3) lib/action_view/renderer/template_renderer.rb:54:in `block (2 levels) in render_template'
+  actionview (4.2.3) lib/action_view/renderer/abstract_renderer.rb:39:in `block in instrument'
+  activesupport (4.2.3) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.3) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.3) lib/active_support/notifications.rb:164:in `instrument'
+  actionview (4.2.3) lib/action_view/renderer/abstract_renderer.rb:39:in `instrument'
+  actionview (4.2.3) lib/action_view/renderer/template_renderer.rb:53:in `block in render_template'
+  actionview (4.2.3) lib/action_view/renderer/template_renderer.rb:61:in `render_with_layout'
+  actionview (4.2.3) lib/action_view/renderer/template_renderer.rb:52:in `render_template'
+  actionview (4.2.3) lib/action_view/renderer/template_renderer.rb:14:in `render'
+  actionview (4.2.3) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionview (4.2.3) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionview (4.2.3) lib/action_view/rendering.rb:100:in `_render_template'
+  actionpack (4.2.3) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.2.3) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (4.2.3) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.2.3) lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+  actionpack (4.2.3) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.2.3) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (4.2.3) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  C:/Ruby21/lib/ruby/2.1.0/benchmark.rb:294:in `realtime'
+  activesupport (4.2.3) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  activerecord (4.2.3) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  actionpack (4.2.3) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.2.3) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.2.3) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.3) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.3) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:115:in `call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:553:in `block (2 levels) in compile'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:503:in `call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:88:in `run_callbacks'
+  actionpack (4.2.3) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.3) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.3) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.3) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.3) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.3) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.3) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.3) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.3) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.3) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.3) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.3) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:76:in `dispatch'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:45:in `serve'
+  actionpack (4.2.3) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.3) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:821:in `call'
+  meta_request (0.3.4) lib/meta_request/middlewares/app_request_handler.rb:13:in `call'
+  meta_request (0.3.4) lib/meta_request/middlewares/meta_request_handler.rb:13:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:38:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.3) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.3) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:84:in `run_callbacks'
+  actionpack (4.2.3) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+  rack-contrib (1.4.0) lib/rack/contrib/response_headers.rb:17:in `call'
+  meta_request (0.3.4) lib/meta_request/middlewares/headers.rb:16:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  C:/Ruby21/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  C:/Ruby21/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  C:/Ruby21/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+
+Started GET "/posts" for ::1 at 2015-12-05 03:29:45 +0100
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts"  ORDER BY created_at DESC[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  Rendered posts/_post.html.haml (45.0ms)
+  Rendered posts/_posts.html.haml (69.0ms)
+  Rendered posts/index.html.haml within layouts/application (77.0ms)
+  Rendered layouts/_header.html.haml (1.0ms)
+Completed 200 OK in 315ms (Views: 312.0ms | ActiveRecord: 1.0ms)
+
+
+Started DELETE "/posts/28" for ::1 at 2015-12-05 03:29:49 +0100
+Processing by PostsController#destroy as JS
+  Parameters: {"id"=>"28"}
+  [1m[35mPost Load (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 28]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 28]]
+  [1m[35m (11.0ms)[0m  commit transaction
+  Rendered application/_flashes.html.haml (0.0ms)
+  Rendered application/_flashes.html.haml (0.0ms)
+  Rendered posts/destroy.js.erb (33.0ms)
+Completed 200 OK in 148ms (Views: 49.0ms | ActiveRecord: 12.0ms)
+
+
+Started GET "/posts/new" for ::1 at 2015-12-05 03:30:12 +0100
+Processing by PostsController#new as JS
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  Rendered posts/_form.html.haml (10.0ms)
+  Rendered posts/_new.html.haml (26.0ms)
+  Rendered posts/new.js.erb (41.0ms)
+Completed 200 OK in 92ms (Views: 64.0ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/posts" for ::1 at 2015-12-05 03:30:16 +0100
+Processing by PostsController#create as JS
+  Parameters: {"utf8"=>"✓", "post"=>{"title"=>"dgggddgg", "content"=>"dggdggdffdg"}, "commit"=>"Create Post"}
+  [1m[35mUser Load (4.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "posts" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "dgggddgg"], ["content", "dggdggdffdg"], ["user_id", 2], ["created_at", "2015-12-05 02:30:16.825812"], ["updated_at", "2015-12-05 02:30:16.825812"]]
+  [1m[36m (10.0ms)[0m  [1mcommit transaction[0m
+  Rendered posts/_post.html.haml (2.0ms)
+  Rendered posts/create.js.erb (12.0ms)
+Completed 200 OK in 129ms (Views: 25.0ms | ActiveRecord: 16.0ms)
+
+
+Started DELETE "/posts/32" for ::1 at 2015-12-05 03:30:21 +0100
+Processing by PostsController#destroy as JS
+  Parameters: {"id"=>"32"}
+  [1m[35mPost Load (1.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 32]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 32]]
+  [1m[35m (11.0ms)[0m  commit transaction
+  Rendered application/_flashes.html.haml (1.0ms)
+  Rendered application/_flashes.html.haml (0.0ms)
+  Rendered posts/destroy.js.erb (35.0ms)
+Completed 200 OK in 138ms (Views: 49.0ms | ActiveRecord: 13.0ms)
+
+
+Started GET "/posts" for ::1 at 2015-12-05 03:33:41 +0100
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts".* FROM "posts"  ORDER BY created_at DESC[0m
+  Rendered posts/_posts.html.haml (17.0ms)
+  Rendered posts/index.html.haml within layouts/application (25.0ms)
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  Rendered layouts/_header.html.haml (23.0ms)
+Completed 200 OK in 239ms (Views: 237.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/posts/new" for ::1 at 2015-12-05 03:33:43 +0100
+Processing by PostsController#new as JS
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  Rendered posts/_form.html.haml (9.0ms)
+  Rendered posts/_new.html.haml (26.0ms)
+  Rendered posts/new.js.erb (42.0ms)
+Completed 200 OK in 87ms (Views: 63.0ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/posts" for ::1 at 2015-12-05 03:33:46 +0100
+Processing by PostsController#create as JS
+  Parameters: {"utf8"=>"✓", "post"=>{"title"=>"vfgfgfg", "content"=>"dg"}, "commit"=>"Create Post"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "posts" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "vfgfgfg"], ["content", "dg"], ["user_id", 2], ["created_at", "2015-12-05 02:33:46.790592"], ["updated_at", "2015-12-05 02:33:46.790592"]]
+  [1m[36m (10.0ms)[0m  [1mcommit transaction[0m
+  Rendered posts/_post.html.haml (1.0ms)
+  Rendered posts/create.js.erb (10.0ms)
+Completed 200 OK in 131ms (Views: 24.0ms | ActiveRecord: 12.0ms)
+
+
+Started DELETE "/posts/33" for ::1 at 2015-12-05 03:33:50 +0100
+Processing by PostsController#destroy as JS
+  Parameters: {"id"=>"33"}
+  [1m[35mPost Load (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 33]]
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35m (1.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 33]]
+  [1m[35m (12.0ms)[0m  commit transaction
+  Rendered application/_flashes.html.haml (0.0ms)
+  Rendered application/_flashes.html.haml (0.0ms)
+  Rendered posts/destroy.js.erb (28.0ms)
+Completed 200 OK in 136ms (Views: 43.0ms | ActiveRecord: 15.0ms)
+
+
+Started GET "/posts" for ::1 at 2015-12-05 03:35:22 +0100
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts"  ORDER BY created_at DESC[0m
+  Rendered posts/_posts.html.haml (17.0ms)
+  Rendered posts/index.html.haml within layouts/application (35.0ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  Rendered layouts/_header.html.haml (22.0ms)
+Completed 200 OK in 491ms (Views: 489.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/posts/new" for ::1 at 2015-12-05 03:35:24 +0100
+Processing by PostsController#new as JS
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  Rendered posts/_form.html.haml (13.0ms)
+  Rendered posts/_new.html.haml (36.0ms)
+  Rendered posts/new.js.erb (54.0ms)
+Completed 200 OK in 102ms (Views: 77.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for ::1 at 2015-12-05 03:35:27 +0100
+Processing by PostsController#create as JS
+  Parameters: {"utf8"=>"✓", "post"=>{"title"=>"fggd", "content"=>"ddfdg"}, "commit"=>"Create Post"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "posts" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "fggd"], ["content", "ddfdg"], ["user_id", 2], ["created_at", "2015-12-05 02:35:27.881155"], ["updated_at", "2015-12-05 02:35:27.881155"]]
+  [1m[36m (12.0ms)[0m  [1mcommit transaction[0m
+  Rendered posts/_post.html.haml (2.0ms)
+  Rendered posts/create.js.erb (10.0ms)
+Completed 200 OK in 120ms (Views: 25.0ms | ActiveRecord: 13.0ms)
+
+
+Started DELETE "/posts/34" for ::1 at 2015-12-05 03:36:02 +0100
+Processing by PostsController#destroy as JS
+  Parameters: {"id"=>"34"}
+  [1m[35mPost Load (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 34]]
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 34]]
+  [1m[35m (11.0ms)[0m  commit transaction
+  Rendered application/_flashes.html.haml (0.0ms)
+  Rendered application/_flashes.html.haml (1.0ms)
+  Rendered posts/destroy.js.erb (28.0ms)
+Completed 200 OK in 130ms (Views: 44.0ms | ActiveRecord: 13.0ms)
+
+
+Started GET "/posts/new" for ::1 at 2015-12-05 03:37:22 +0100
+Processing by PostsController#new as JS
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  Rendered posts/_form.html.haml (11.0ms)
+  Rendered posts/_new.html.haml (28.0ms)
+  Rendered posts/new.js.erb (44.0ms)
+Completed 200 OK in 90ms (Views: 66.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for ::1 at 2015-12-05 03:37:28 +0100
+Processing by PostsController#create as JS
+  Parameters: {"utf8"=>"✓", "post"=>{"title"=>"ghffghffh", "content"=>"fhghfhfh"}, "commit"=>"Create Post"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "posts" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "ghffghffh"], ["content", "fhghfhfh"], ["user_id", 2], ["created_at", "2015-12-05 02:37:28.864247"], ["updated_at", "2015-12-05 02:37:28.864247"]]
+  [1m[36m (11.0ms)[0m  [1mcommit transaction[0m
+  Rendered posts/_post.html.haml (2.0ms)
+  Rendered posts/create.js.erb (11.0ms)
+Completed 200 OK in 132ms (Views: 23.0ms | ActiveRecord: 12.0ms)
+
+
+Started DELETE "/posts/35" for ::1 at 2015-12-05 03:37:36 +0100
+Processing by PostsController#destroy as JS
+  Parameters: {"id"=>"35"}
+  [1m[35mPost Load (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 35]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 35]]
+  [1m[35m (10.0ms)[0m  commit transaction
+  Rendered application/_flashes.html.haml (0.0ms)
+  Rendered application/_flashes.html.haml (0.0ms)
+  Rendered posts/destroy.js.erb (29.0ms)
+Completed 200 OK in 137ms (Views: 45.0ms | ActiveRecord: 11.0ms)
+
+
+Started GET "/posts/new" for ::1 at 2015-12-05 03:39:17 +0100
+Processing by PostsController#new as JS
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  Rendered posts/_form.html.haml (10.0ms)
+  Rendered posts/_new.html.haml (26.0ms)
+  Rendered posts/new.js.erb (43.0ms)
+Completed 200 OK in 86ms (Views: 64.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for ::1 at 2015-12-05 03:40:57 +0100
+Processing by PostsController#create as JS
+  Parameters: {"utf8"=>"✓", "post"=>{"title"=>"ggfhfghf", "content"=>"fhhfhfgh"}, "commit"=>"Create Post"}
+  [1m[35mUser Load (3.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "posts" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "ggfhfghf"], ["content", "fhhfhfgh"], ["user_id", 2], ["created_at", "2015-12-05 02:40:57.824728"], ["updated_at", "2015-12-05 02:40:57.824728"]]
+  [1m[36m (13.0ms)[0m  [1mcommit transaction[0m
+  Rendered posts/_post.html.haml (2.0ms)
+  Rendered posts/create.js.erb (10.0ms)
+Completed 200 OK in 127ms (Views: 24.0ms | ActiveRecord: 17.0ms)
+
+
+Started DELETE "/posts/36" for ::1 at 2015-12-05 03:41:06 +0100
+Processing by PostsController#destroy as JS
+  Parameters: {"id"=>"36"}
+  [1m[35mPost Load (1.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 36]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 36]]
+  [1m[35m (12.0ms)[0m  commit transaction
+  Rendered application/_flashes.html.haml (1.0ms)
+  Rendered application/_flashes.html.haml (0.0ms)
+  Rendered posts/destroy.js.erb (40.0ms)
+Completed 200 OK in 159ms (Views: 58.0ms | ActiveRecord: 14.0ms)
+
+
+Started GET "/posts" for ::1 at 2015-12-05 03:46:24 +0100
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts".* FROM "posts"  ORDER BY created_at DESC[0m
+  Rendered posts/_posts.html.haml (17.0ms)
+  Rendered posts/index.html.haml within layouts/application (26.0ms)
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  Rendered layouts/_header.html.haml (28.0ms)
+Completed 200 OK in 253ms (Views: 249.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/posts/new" for ::1 at 2015-12-05 03:46:26 +0100
+Processing by PostsController#new as JS
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  Rendered posts/_form.html.haml (10.0ms)
+  Rendered posts/_new.html.haml (29.0ms)
+  Rendered posts/new.js.erb (45.0ms)
+Completed 200 OK in 91ms (Views: 68.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for ::1 at 2015-12-05 03:46:29 +0100
+Processing by PostsController#create as JS
+  Parameters: {"utf8"=>"✓", "post"=>{"title"=>"dggfdg", "content"=>"dgdgdgdg"}, "commit"=>"Create Post"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "posts" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "dggfdg"], ["content", "dgdgdgdg"], ["user_id", 2], ["created_at", "2015-12-05 02:46:29.590825"], ["updated_at", "2015-12-05 02:46:29.590825"]]
+  [1m[36m (11.0ms)[0m  [1mcommit transaction[0m
+  Rendered posts/_post.html.haml (1.0ms)
+  Rendered posts/create.js.erb (12.0ms)
+Completed 200 OK in 127ms (Views: 28.0ms | ActiveRecord: 12.0ms)
+
+
+Started DELETE "/posts/37" for ::1 at 2015-12-05 03:46:33 +0100
+Processing by PostsController#destroy as JS
+  Parameters: {"id"=>"37"}
+  [1m[35mPost Load (1.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 37]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 37]]
+  [1m[35m (11.0ms)[0m  commit transaction
+  Rendered application/_flashes.html.haml (0.0ms)
+  Rendered application/_flashes.html.haml (0.0ms)
+  Rendered posts/destroy.js.erb (31.0ms)
+Completed 200 OK in 143ms (Views: 48.0ms | ActiveRecord: 13.0ms)
+
+
+Started GET "/" for ::1 at 2015-12-05 03:47:12 +0100
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts".* FROM "posts"  ORDER BY created_at DESC[0m
+  Rendered posts/_posts.html.haml (15.0ms)
+  Rendered posts/index.html.haml within layouts/application (24.0ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  Rendered layouts/_header.html.haml (27.0ms)
+Completed 200 OK in 231ms (Views: 230.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-12-05 03:47:16 +0100
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts"  ORDER BY created_at DESC[0m
+  Rendered posts/_posts.html.haml (16.0ms)
+  Rendered posts/index.html.haml within layouts/application (26.0ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  Rendered layouts/_header.html.haml (22.0ms)
+Completed 200 OK in 231ms (Views: 229.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2015-12-05 03:48:08 +0100
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts".* FROM "posts"  ORDER BY created_at DESC[0m
+  Rendered posts/_posts.html.haml (17.0ms)
+  Rendered posts/index.html.haml within layouts/application (25.0ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  Rendered layouts/_header.html.haml (23.0ms)
+Completed 200 OK in 234ms (Views: 233.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new" for ::1 at 2015-12-05 03:48:10 +0100
+Processing by PostsController#new as JS
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  Rendered posts/_form.html.haml (10.0ms)
+  Rendered posts/_new.html.haml (26.0ms)
+  Rendered posts/new.js.erb (41.0ms)
+Completed 200 OK in 85ms (Views: 62.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for ::1 at 2015-12-05 03:48:13 +0100
+Processing by PostsController#create as JS
+  Parameters: {"utf8"=>"✓", "post"=>{"title"=>"fgddg", "content"=>"dg"}, "commit"=>"Create Post"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "posts" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "fgddg"], ["content", "dg"], ["user_id", 2], ["created_at", "2015-12-05 02:48:13.195134"], ["updated_at", "2015-12-05 02:48:13.195134"]]
+  [1m[36m (11.0ms)[0m  [1mcommit transaction[0m
+  Rendered posts/_post.html.haml (1.0ms)
+  Rendered posts/create.js.erb (10.0ms)
+Completed 200 OK in 114ms (Views: 24.0ms | ActiveRecord: 13.0ms)
+
+
+Started DELETE "/posts/38" for ::1 at 2015-12-05 03:48:16 +0100
+Processing by PostsController#destroy as JS
+  Parameters: {"id"=>"38"}
+  [1m[35mPost Load (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 38]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 38]]
+  [1m[35m (12.0ms)[0m  commit transaction
+  Rendered application/_flashes.html.haml (1.0ms)
+  Rendered application/_flashes.html.haml (0.0ms)
+  Rendered posts/destroy.js.erb (28.0ms)
+Completed 200 OK in 132ms (Views: 44.0ms | ActiveRecord: 13.0ms)
+
+
+Started GET "/posts/new" for ::1 at 2015-12-05 03:48:18 +0100
+Processing by PostsController#new as JS
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  Rendered posts/_form.html.haml (9.0ms)
+  Rendered posts/_new.html.haml (26.0ms)
+  Rendered posts/new.js.erb (42.0ms)
+Completed 200 OK in 85ms (Views: 63.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-12-05 03:53:39 +0100
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts"  ORDER BY created_at DESC
+  Rendered posts/_posts.html.haml (16.0ms)
+  Rendered posts/index.html.haml within layouts/application (25.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  Rendered layouts/_header.html.haml (24.0ms)
+Completed 200 OK in 236ms (Views: 232.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/posts/new" for ::1 at 2015-12-05 03:53:42 +0100
+Processing by PostsController#new as JS
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  Rendered posts/_form.html.haml (14.0ms)
+  Rendered posts/new.js.erb (32.0ms)
+Completed 200 OK in 76ms (Views: 54.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/posts/new" for ::1 at 2015-12-05 03:53:55 +0100
+Processing by PostsController#new as JS
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  Rendered posts/_form.html.haml (11.0ms)
+  Rendered posts/new.js.erb (31.0ms)
+Completed 200 OK in 88ms (Views: 60.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for ::1 at 2015-12-05 03:53:58 +0100
+Processing by PostsController#create as JS
+  Parameters: {"utf8"=>"✓", "post"=>{"title"=>"dfgd", "content"=>"fddfg"}, "commit"=>"Create Post"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "posts" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "dfgd"], ["content", "fddfg"], ["user_id", 2], ["created_at", "2015-12-05 02:53:59.071081"], ["updated_at", "2015-12-05 02:53:59.071081"]]
+  [1m[36m (12.0ms)[0m  [1mcommit transaction[0m
+  Rendered posts/_post.html.haml (1.0ms)
+  Rendered posts/create.js.erb (10.0ms)
+Completed 200 OK in 154ms (Views: 24.0ms | ActiveRecord: 14.0ms)
+
+
+Started GET "/posts/39/edit" for ::1 at 2015-12-05 03:54:01 +0100
+Processing by PostsController#edit as JS
+  Parameters: {"id"=>"39"}
+  [1m[35mPost Load (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 39]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  Rendered posts/_form.html.haml (17.0ms)
+  Rendered posts/edit.html.haml within layouts/application (46.0ms)
+  Rendered layouts/_header.html.haml (5.0ms)
+Completed 200 OK in 350ms (Views: 296.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for ::1 at 2015-12-05 03:54:06 +0100
+Processing by PostsController#create as JS
+  Parameters: {"utf8"=>"✓", "post"=>{"title"=>"dfgd", "content"=>"fddfgdfdffd"}, "commit"=>"Create Post"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "posts" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "dfgd"], ["content", "fddfgdfdffd"], ["user_id", 2], ["created_at", "2015-12-05 02:54:06.264091"], ["updated_at", "2015-12-05 02:54:06.264091"]]
+  [1m[36m (12.0ms)[0m  [1mcommit transaction[0m
+  Rendered posts/_post.html.haml (2.0ms)
+  Rendered posts/create.js.erb (9.0ms)
+Completed 200 OK in 114ms (Views: 23.0ms | ActiveRecord: 14.0ms)
+
+
+Started GET "/posts/39/edit" for ::1 at 2015-12-05 03:54:21 +0100
+Processing by PostsController#edit as JS
+  Parameters: {"id"=>"39"}
+  [1m[35mPost Load (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 39]]
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  Rendered posts/_form.html.haml (19.0ms)
+  Rendered posts/edit.html.haml within layouts/application (46.0ms)
+  Rendered layouts/_header.html.haml (1.0ms)
+Completed 200 OK in 346ms (Views: 294.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2015-12-05 03:57:37 +0100
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts"  ORDER BY created_at DESC
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  Rendered posts/_post.html.haml (57.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered posts/_post.html.haml (21.0ms)
+  Rendered posts/_posts.html.haml (114.0ms)
+  Rendered posts/index.html.haml within layouts/application (122.0ms)
+  Rendered layouts/_header.html.haml (1.0ms)
+Completed 200 OK in 307ms (Views: 305.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/posts/new" for ::1 at 2015-12-05 03:57:39 +0100
+Processing by PostsController#new as JS
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  Rendered posts/_form.html.haml (14.0ms)
+  Rendered posts/new.js.erb (31.0ms)
+Completed 200 OK in 73ms (Views: 52.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/posts/40/edit" for ::1 at 2015-12-05 03:57:46 +0100
+Processing by PostsController#edit as JS
+  Parameters: {"id"=>"40"}
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 40]]
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  Rendered posts/_form.html.haml (9.0ms)
+  Rendered posts/edit.js.erb (28.0ms)
+Completed 200 OK in 95ms (Views: 52.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for ::1 at 2015-12-05 03:58:25 +0100
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts"  ORDER BY created_at DESC[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  Rendered posts/_post.html.haml (57.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered posts/_post.html.haml (27.0ms)
+  Rendered posts/_posts.html.haml (122.0ms)
+  Rendered posts/index.html.haml within layouts/application (134.0ms)
+  Rendered layouts/_header.html.haml (1.0ms)
+Completed 200 OK in 348ms (Views: 345.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/posts/new" for ::1 at 2015-12-05 03:58:27 +0100
+Processing by PostsController#new as JS
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  Rendered posts/_form.html.haml (13.0ms)
+  Rendered posts/new.js.erb (30.0ms)
+Completed 200 OK in 71ms (Views: 50.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/posts/40/edit" for ::1 at 2015-12-05 03:58:30 +0100
+Processing by PostsController#edit as JS
+  Parameters: {"id"=>"40"}
+  [1m[35mPost Load (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 40]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  Rendered posts/_form.html.haml (9.0ms)
+  Rendered posts/edit.js.erb (29.0ms)
+Completed 200 OK in 99ms (Views: 55.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new" for ::1 at 2015-12-05 03:58:33 +0100
+Processing by PostsController#new as JS
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  Rendered posts/_form.html.haml (12.0ms)
+  Rendered posts/new.js.erb (29.0ms)
+Completed 200 OK in 81ms (Views: 58.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/40/edit" for ::1 at 2015-12-05 03:58:37 +0100
+Processing by PostsController#edit as JS
+  Parameters: {"id"=>"40"}
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 40]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  Rendered posts/_form.html.haml (11.0ms)
+  Rendered posts/edit.js.erb (31.0ms)
+Completed 200 OK in 103ms (Views: 58.0ms | ActiveRecord: 1.0ms)
+
+
+Started PATCH "/posts/40" for ::1 at 2015-12-05 03:58:41 +0100
+Processing by PostsController#update as JS
+  Parameters: {"utf8"=>"✓", "post"=>{"title"=>"dfgd", "content"=>"mia"}, "commit"=>"Update Post", "id"=>"40"}
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 40]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  UPDATE "posts" SET "content" = ?, "updated_at" = ? WHERE "posts"."id" = ?  [["content", "mia"], ["updated_at", "2015-12-05 02:58:41.626975"], ["id", 40]]
+  [1m[36m (14.0ms)[0m  [1mcommit transaction[0m
+  Rendered posts/update.js.erb (1.0ms)
+Completed 200 OK in 113ms (Views: 15.0ms | ActiveRecord: 15.0ms)
+
+
+Started PATCH "/posts/40" for ::1 at 2015-12-05 03:58:45 +0100
+Processing by PostsController#update as JS
+  Parameters: {"utf8"=>"✓", "post"=>{"title"=>"dfgd", "content"=>"mia"}, "commit"=>"Update Post", "id"=>"40"}
+  [1m[35mPost Load (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 40]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  Rendered posts/update.js.erb (0.0ms)
+Completed 200 OK in 69ms (Views: 15.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-12-05 04:05:41 +0100
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts"  ORDER BY created_at DESC
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  Rendered posts/_post.html.haml (66.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered posts/_post.html.haml (34.0ms)
+  Rendered posts/_posts.html.haml (200.0ms)
+  Rendered posts/index.html.haml within layouts/application (209.0ms)
+  Rendered layouts/_header.html.haml (0.0ms)
+Completed 200 OK in 400ms (Views: 396.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for ::1 at 2015-12-05 04:06:01 +0100
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts"  ORDER BY created_at DESC
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  Rendered posts/_post.html.haml (49.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered posts/_post.html.haml (42.0ms)
+  Rendered posts/_posts.html.haml (129.0ms)
+  Rendered posts/index.html.haml within layouts/application (137.0ms)
+  Rendered layouts/_header.html.haml (1.0ms)
+Completed 200 OK in 335ms (Views: 330.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/posts/40/edit" for ::1 at 2015-12-05 04:06:03 +0100
+Processing by PostsController#edit as JS
+  Parameters: {"id"=>"40"}
+  [1m[35mPost Load (1.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 40]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  Rendered posts/_form.html.haml (10.0ms)
+  Rendered posts/edit.js.erb (27.0ms)
+Completed 200 OK in 83ms (Views: 50.0ms | ActiveRecord: 1.0ms)
+
+
+Started PATCH "/posts/40" for ::1 at 2015-12-05 04:06:07 +0100
+Processing by PostsController#update as JS
+  Parameters: {"utf8"=>"✓", "post"=>{"title"=>"ggggggg", "content"=>"mia"}, "commit"=>"Update Post", "id"=>"40"}
+  [1m[35mPost Load (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 40]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mUPDATE "posts" SET "title" = ?, "updated_at" = ? WHERE "posts"."id" = ?[0m  [["title", "ggggggg"], ["updated_at", "2015-12-05 03:06:07.894594"], ["id", 40]]
+  [1m[35m (14.0ms)[0m  commit transaction
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered posts/_post.html.haml (23.0ms)
+  Rendered posts/update.js.erb (32.0ms)
+Completed 200 OK in 158ms (Views: 45.0ms | ActiveRecord: 16.0ms)
+
+
+Started GET "/" for ::1 at 2015-12-05 04:06:31 +0100
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts"  ORDER BY created_at DESC
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  Rendered posts/_post.html.haml (77.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered posts/_post.html.haml (23.0ms)
+  Rendered posts/_posts.html.haml (138.0ms)
+  Rendered posts/index.html.haml within layouts/application (148.0ms)
+  Rendered layouts/_header.html.haml (0.0ms)
+Completed 200 OK in 352ms (Views: 350.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/posts/40/edit" for ::1 at 2015-12-05 04:06:33 +0100
+Processing by PostsController#edit as JS
+  Parameters: {"id"=>"40"}
+  [1m[35mPost Load (1.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 40]]
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  Rendered posts/_form.html.haml (14.0ms)
+  Rendered posts/edit.js.erb (33.0ms)
+Completed 200 OK in 108ms (Views: 62.0ms | ActiveRecord: 2.0ms)
+
+
+Started PATCH "/posts/40" for ::1 at 2015-12-05 04:06:37 +0100
+Processing by PostsController#update as JS
+  Parameters: {"utf8"=>"✓", "post"=>{"title"=>"jjjjj", "content"=>"mia"}, "commit"=>"Update Post", "id"=>"40"}
+  [1m[35mPost Load (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 40]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mUPDATE "posts" SET "title" = ?, "updated_at" = ? WHERE "posts"."id" = ?[0m  [["title", "jjjjj"], ["updated_at", "2015-12-05 03:06:37.309665"], ["id", 40]]
+  [1m[35m (11.0ms)[0m  commit transaction
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered posts/_post.html.haml (20.0ms)
+  Rendered posts/update.js.erb (30.0ms)
+Completed 200 OK in 148ms (Views: 42.0ms | ActiveRecord: 13.0ms)
+
+
+Started GET "/posts/40/edit" for ::1 at 2015-12-05 04:06:43 +0100
+Processing by PostsController#edit as JS
+  Parameters: {"id"=>"40"}
+  [1m[35mPost Load (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 40]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  Rendered posts/_form.html.haml (10.0ms)
+  Rendered posts/edit.js.erb (26.0ms)
+Completed 200 OK in 82ms (Views: 47.0ms | ActiveRecord: 0.0ms)
+
+
+Started PATCH "/posts/40" for ::1 at 2015-12-05 04:06:45 +0100
+Processing by PostsController#update as JS
+  Parameters: {"utf8"=>"✓", "post"=>{"title"=>"jjjjjdffdf", "content"=>"mia"}, "commit"=>"Update Post", "id"=>"40"}
+  [1m[35mPost Load (5.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 40]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mUPDATE "posts" SET "title" = ?, "updated_at" = ? WHERE "posts"."id" = ?[0m  [["title", "jjjjjdffdf"], ["updated_at", "2015-12-05 03:06:45.869154"], ["id", 40]]
+  [1m[35m (14.0ms)[0m  commit transaction
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered posts/_post.html.haml (20.0ms)
+  Rendered posts/update.js.erb (29.0ms)
+Completed 200 OK in 159ms (Views: 41.0ms | ActiveRecord: 21.0ms)
+
+
+Started GET "/" for ::1 at 2015-12-05 04:06:48 +0100
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts"  ORDER BY created_at DESC
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  Rendered posts/_post.html.haml (46.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered posts/_post.html.haml (19.0ms)
+  Rendered posts/_posts.html.haml (102.0ms)
+  Rendered posts/index.html.haml within layouts/application (111.0ms)
+  Rendered layouts/_header.html.haml (0.0ms)
+Completed 200 OK in 299ms (Views: 298.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/40/edit" for ::1 at 2015-12-05 04:06:51 +0100
+Processing by PostsController#edit as JS
+  Parameters: {"id"=>"40"}
+  [1m[35mPost Load (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 40]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  Rendered posts/_form.html.haml (9.0ms)
+  Rendered posts/edit.js.erb (27.0ms)
+Completed 200 OK in 85ms (Views: 48.0ms | ActiveRecord: 0.0ms)
+
+
+Started PATCH "/posts/40" for ::1 at 2015-12-05 04:06:53 +0100
+Processing by PostsController#update as JS
+  Parameters: {"utf8"=>"✓", "post"=>{"title"=>"jjjjjdffdfgfgg", "content"=>"mia"}, "commit"=>"Update Post", "id"=>"40"}
+  [1m[35mPost Load (1.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 40]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mUPDATE "posts" SET "title" = ?, "updated_at" = ? WHERE "posts"."id" = ?[0m  [["title", "jjjjjdffdfgfgg"], ["updated_at", "2015-12-05 03:06:53.329581"], ["id", 40]]
+  [1m[35m (14.0ms)[0m  commit transaction
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered posts/_post.html.haml (23.0ms)
+  Rendered posts/update.js.erb (32.0ms)
+Completed 200 OK in 154ms (Views: 46.0ms | ActiveRecord: 16.0ms)
+
+
+Started GET "/" for ::1 at 2015-12-05 04:08:22 +0100
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts"  ORDER BY created_at DESC
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  Rendered posts/_post.html.haml (72.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered posts/_post.html.haml (22.0ms)
+  Rendered posts/_posts.html.haml (130.0ms)
+  Rendered posts/index.html.haml within layouts/application (139.0ms)
+  Rendered layouts/_header.html.haml (1.0ms)
+Completed 200 OK in 341ms (Views: 339.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/posts/40/edit" for ::1 at 2015-12-05 04:08:24 +0100
+Processing by PostsController#edit as JS
+  Parameters: {"id"=>"40"}
+  [1m[35mPost Load (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 40]]
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  Rendered posts/_form.html.haml (9.0ms)
+  Rendered posts/edit.js.erb (25.0ms)
+Completed 200 OK in 86ms (Views: 48.0ms | ActiveRecord: 1.0ms)
+
+
+Started PATCH "/posts/40" for ::1 at 2015-12-05 04:08:27 +0100
+Processing by PostsController#update as JS
+  Parameters: {"utf8"=>"✓", "post"=>{"title"=>"ss", "content"=>"mia"}, "commit"=>"Update Post", "id"=>"40"}
+  [1m[35mPost Load (1.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 40]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mUPDATE "posts" SET "title" = ?, "updated_at" = ? WHERE "posts"."id" = ?[0m  [["title", "ss"], ["updated_at", "2015-12-05 03:08:27.430950"], ["id", 40]]
+  [1m[35m (11.0ms)[0m  commit transaction
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered posts/_post.html.haml (20.0ms)
+  Rendered posts/update.js.erb (30.0ms)
+Completed 200 OK in 146ms (Views: 45.0ms | ActiveRecord: 13.0ms)
+
+
+Started GET "/posts/39/edit" for ::1 at 2015-12-05 04:08:42 +0100
+Processing by PostsController#edit as JS
+  Parameters: {"id"=>"39"}
+  [1m[35mPost Load (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 39]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  Rendered posts/_form.html.haml (9.0ms)
+  Rendered posts/edit.js.erb (25.0ms)
+Completed 200 OK in 83ms (Views: 47.0ms | ActiveRecord: 0.0ms)
+
+
+Started PATCH "/posts/39" for ::1 at 2015-12-05 04:08:44 +0100
+Processing by PostsController#update as JS
+  Parameters: {"utf8"=>"✓", "post"=>{"title"=>"dfgd", "content"=>"fddfgsss"}, "commit"=>"Update Post", "id"=>"39"}
+  [1m[35mPost Load (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 39]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mUPDATE "posts" SET "content" = ?, "updated_at" = ? WHERE "posts"."id" = ?[0m  [["content", "fddfgsss"], ["updated_at", "2015-12-05 03:08:44.850541"], ["id", 39]]
+  [1m[35m (13.0ms)[0m  commit transaction
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered posts/_post.html.haml (20.0ms)
+  Rendered posts/update.js.erb (28.0ms)
+Completed 200 OK in 146ms (Views: 42.0ms | ActiveRecord: 14.0ms)
+
+
+Started GET "/posts/39" for ::1 at 2015-12-05 04:08:48 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"39"}
+  [1m[35mPost Load (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 39]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 39]]
+  [1m[35mComment Load (1.0ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 39]]
+  Rendered collection (0.0ms)
+  Rendered comments/_form.html.haml (24.0ms)
+  Rendered posts/show.html.haml within layouts/application (94.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  Rendered layouts/_header.html.haml (24.0ms)
+Completed 200 OK in 310ms (Views: 290.8ms | ActiveRecord: 3.0ms)

@@ -1,7 +1,7 @@
-$('#<%= "post_#{@post.id}" %>').fadeOut("normal",function(){
-        $(this).remove();
-    })
-
+$('#post_<%= @post.id %>').addClass('magictime spaceOutLeft')
+setTimeout(function () { 
+    $('#post_<%= @post.id %>').remove();
+}, 800);
 
 
 setTimeout(function(){
@@ -13,4 +13,4 @@ else {
   $('#wrap_error').prepend("<%= escape_javascript raw(flash_normal) %>");
 }
 
-},1000); 
+},1800); 

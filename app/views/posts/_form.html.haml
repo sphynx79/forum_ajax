@@ -1,9 +1,18 @@
-= simple_form_for(@post) do |f|
-  = f.error_notification
+.modal-dialog
+  .modal-content
+    .modal-header
+      %button.close{"data-dismiss" => "modal" }
+        %span ×
+      %h4.modal-title 
+        =action_name.capitalize 
+        Todo List
 
-  .form-inputs
-    = f.input :title
-    .form-group
-      = f.text_area :content, rows: 6, class: 'form-control' 
-  .form-actions
-    = f.button :submit
+    .modal-body
+      = simple_form_for @post, remote: true do |f|
+        = f.error_notification
+        .form-inputs
+          = f.input :title
+        .form-inputs
+          = f.input :content, :as => :text, :input_html => { 'rows' => 6}
+        .form-actions
+          = f.button :submit
