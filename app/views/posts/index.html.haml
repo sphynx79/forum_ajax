@@ -1,6 +1,6 @@
 #posts
   - @posts.each do |post|
-    .post
+    .post{:id => "#{dom_id(post)}"}
       %h2.title= link_to post.title, post
       %p.date
         Published at 
@@ -9,7 +9,7 @@
         = post.user.email
       - if user_signed_in?
         .buttons.btn-group.btn-group-xs
-          = link_to 'Edit', edit_post_path(post), class: "btn btn-default"
-          = link_to 'Delete', post_path(post), method: :delete, data: {confirmation: "Are you sure?"}, class: "btn btn-default"
+          = link_to 'Edit', edit_post_path(post), remote: true, class: "btn btn-default"
+          = link_to 'Delete', post_path(post), method: :delete, data: { confirm: "Are you sure?" }, remote: true , class: "btn btn-default"
 
 

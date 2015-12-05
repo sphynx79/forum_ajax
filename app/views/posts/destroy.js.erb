@@ -1,10 +1,16 @@
-$('.modal').modal('hide')
+$('#<%= "post_#{@post.id}" %>').fadeOut("normal",function(){
+        $(this).remove();
+    })
 
+
+
+setTimeout(function(){
 if($('#flash').length > 0) {
   $('#flash').remove();
   $('#wrap_error').prepend("<%= escape_javascript raw(flash_normal) %>");
 }
 else {
-  $('.modal').modal('hide')
   $('#wrap_error').prepend("<%= escape_javascript raw(flash_normal) %>");
 }
+
+},1000); 

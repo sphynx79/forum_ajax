@@ -33,6 +33,7 @@ gem 'devise', '~> 3.5.2'
 
 gem 'simple_form', '~> 3.2.0'
 
+gem 'bootbox-rails' 
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
