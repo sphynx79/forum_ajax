@@ -14,11 +14,14 @@
           = render 'layouts/header'
 
     .container
+      #modal-window.modal.fade{:role => "dialog"}
       .row
-        .col-md-8.col-md-offset-2#wrap_error
-          #flash
-            - flash.each do |type, message|
-              .alert.alert-dismissable{ :class => twitterized_type(type) }
-                %button.close{"data-dismiss" => "alert", "aria-hidden" => "true"} ×
-                %p= message
+        .col-md-8.col-md-offset-2
+          #wrap_error
+            #flash
+              - flash.each do |type, message|
+                .alert.alert-dismissable{ :class => twitterized_type(type) }
+                  %button.close{"data-dismiss" => "alert", "aria-hidden" => "true"} ×
+                  %p= message
           = yield
+

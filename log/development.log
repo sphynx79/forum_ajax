@@ -29832,3 +29832,2889 @@ Processing by PostsController#show as HTML
   [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
   Rendered layouts/_header.html.haml (24.0ms)
 Completed 200 OK in 310ms (Views: 290.8ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/" for ::1 at 2015-12-05 17:39:15 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts"  ORDER BY created_at DESC
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered posts/_post.html.haml (474.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered posts/_post.html.haml (20.0ms)
+  Rendered posts/_posts.html.haml (567.0ms)
+  Rendered posts/index.html.haml within layouts/application (627.0ms)
+  Rendered layouts/_header.html.haml (5.0ms)
+Completed 200 OK in 2063ms (Views: 1923.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/posts/40" for ::1 at 2015-12-05 17:40:22 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"40"}
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 40]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 40]]
+  [1m[36mComment Load (0.0ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 40]]
+  Rendered collection (0.0ms)
+  Rendered comments/_form.html.haml (1788.9ms)
+  Rendered posts/show.html.haml within layouts/application (2016.9ms)
+  Rendered layouts/_header.html.haml (5.0ms)
+Completed 200 OK in 3068ms (Views: 2791.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/remote_sign_up" for ::1 at 2015-12-05 17:40:48 +0100
+Processing by RemoteContentController#remote_sign_up as JS
+  Rendered remote_content/_remote_sign_up.html.haml (76.0ms)
+  Rendered remote_content/remote_sign_up.js.erb (144.0ms)
+Completed 200 OK in 178ms (Views: 176.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/remote_sign_in" for ::1 at 2015-12-05 17:40:52 +0100
+Processing by RemoteContentController#remote_sign_in as JS
+  Rendered remote_content/_remote_sign_in.html.haml (93.0ms)
+  Rendered remote_content/remote_sign_in.js.erb (160.0ms)
+Completed 200 OK in 187ms (Views: 186.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for ::1 at 2015-12-05 17:40:56 +0100
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts"  ORDER BY created_at DESC
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered posts/_post.html.haml (26.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered posts/_post.html.haml (21.0ms)
+  Rendered posts/_posts.html.haml (82.0ms)
+  Rendered posts/index.html.haml within layouts/application (93.0ms)
+  Rendered layouts/_header.html.haml (1.0ms)
+Completed 200 OK in 294ms (Views: 293.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/40" for ::1 at 2015-12-05 17:40:58 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"40"}
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 40]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 40]]
+  [1m[36mComment Load (1.0ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 40]]
+  Rendered collection (0.0ms)
+  Rendered comments/_form.html.haml (6.0ms)
+  Rendered posts/show.html.haml within layouts/application (76.0ms)
+  Rendered layouts/_header.html.haml (1.0ms)
+Completed 200 OK in 267ms (Views: 248.0ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/posts/40/comments" for ::1 at 2015-12-05 17:41:03 +0100
+Processing by CommentsController#create as JS
+  Parameters: {"utf8"=>"✓", "comment"=>{"comment"=>"ete"}, "commit"=>"Create Comment", "post_id"=>"40"}
+Redirected to http://localhost:3000/remote_sign_in
+Completed 302 Found in 9ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/remote_sign_in" for ::1 at 2015-12-05 17:41:04 +0100
+Processing by RemoteContentController#remote_sign_in as JS
+  Rendered remote_content/_remote_sign_in.html.haml (11.0ms)
+  Rendered remote_content/remote_sign_in.js.erb (33.0ms)
+Completed 200 OK in 61ms (Views: 60.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/remote_sign_in" for ::1 at 2015-12-05 17:41:15 +0100
+Processing by RemoteContentController#remote_sign_in as JS
+  Rendered remote_content/_remote_sign_in.html.haml (12.0ms)
+  Rendered remote_content/remote_sign_in.js.erb (32.0ms)
+Completed 200 OK in 59ms (Views: 59.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2015-12-05 17:41:31 +0100
+Processing by SessionsController#create as JS
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"browserino@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["email", "browserino@gmail.com"]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  UPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["last_sign_in_at", "2015-12-05 01:14:51.868205"], ["current_sign_in_at", "2015-12-05 16:41:31.897788"], ["sign_in_count", 51], ["updated_at", "2015-12-05 16:41:31.908788"], ["id", 2]]
+  [1m[36m (13.0ms)[0m  [1mcommit transaction[0m
+Completed 200 OK in 435ms (Views: 1.0ms | ActiveRecord: 15.0ms)
+
+
+Started GET "/posts/40" for ::1 at 2015-12-05 17:41:32 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"40"}
+  [1m[35mPost Load (1.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 40]]
+  [1m[36m (1.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 40]]
+  [1m[35mComment Load (1.0ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 40]]
+  Rendered collection (0.0ms)
+  Rendered comments/_form.html.haml (10.0ms)
+  Rendered posts/show.html.haml within layouts/application (68.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  Rendered layouts/_header.html.haml (24.0ms)
+Completed 200 OK in 278ms (Views: 258.0ms | ActiveRecord: 4.0ms)
+
+
+Started POST "/posts/40/comments" for ::1 at 2015-12-05 17:41:39 +0100
+Processing by CommentsController#create as JS
+  Parameters: {"utf8"=>"✓", "comment"=>{"comment"=>"ciao"}, "commit"=>"Create Comment", "post_id"=>"40"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 40]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "comments" ("comment", "post_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["comment", "ciao"], ["post_id", 40], ["user_id", 2], ["created_at", "2015-12-05 16:41:39.718235"], ["updated_at", "2015-12-05 16:41:39.718235"]]
+  [1m[35m (12.0ms)[0m  commit transaction
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered comments/_comment.html.haml (25.0ms)
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 40]]
+  Rendered comments/create.js.erb (78.0ms)
+Completed 200 OK in 229ms (Views: 91.0ms | ActiveRecord: 16.0ms)
+
+
+Started GET "/posts/40/comments/40/edit" for ::1 at 2015-12-05 17:41:43 +0100
+Processing by CommentsController#edit as HTML
+  Parameters: {"post_id"=>"40", "id"=>"40"}
+  [1m[36mComment Load (0.0ms)[0m  [1mSELECT  "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT 1[0m  [["id", 40]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 40]]
+  [1m[35mComment Load (1.0ms)[0m  SELECT  "comments".* FROM "comments" WHERE "comments"."post_id" = ? AND "comments"."id" = ? LIMIT 1  [["post_id", 40], ["id", 40]]
+  Rendered comments/edit.html.haml within layouts/application (8.0ms)
+  Rendered layouts/_header.html.haml (0.0ms)
+Completed 200 OK in 316ms (Views: 232.0ms | ActiveRecord: 1.0ms)
+
+
+Started DELETE "/posts/40/comments/40" for ::1 at 2015-12-05 17:41:48 +0100
+Processing by CommentsController#destroy as JS
+  Parameters: {"post_id"=>"40", "id"=>"40"}
+  [1m[36mComment Load (0.0ms)[0m  [1mSELECT  "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT 1[0m  [["id", 40]]
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 40]]
+  [1m[35mComment Load (0.0ms)[0m  SELECT  "comments".* FROM "comments" WHERE "comments"."post_id" = ? AND "comments"."id" = ? LIMIT 1  [["post_id", 40], ["id", 40]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  DELETE FROM "comments" WHERE "comments"."id" = ?  [["id", 40]]
+  [1m[36m (11.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 40]]
+  Rendered comments/destroy.js (24.0ms)
+Completed 200 OK in 201ms (Views: 50.0ms | ActiveRecord: 14.0ms)
+
+
+Started POST "/posts/40/comments" for ::1 at 2015-12-05 17:41:51 +0100
+Processing by CommentsController#create as JS
+  Parameters: {"utf8"=>"✓", "comment"=>{"comment"=>"ciao"}, "commit"=>"Create Comment", "post_id"=>"40"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mPost Load (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 40]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "comments" ("comment", "post_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["comment", "ciao"], ["post_id", 40], ["user_id", 2], ["created_at", "2015-12-05 16:41:51.733121"], ["updated_at", "2015-12-05 16:41:51.733121"]]
+  [1m[36m (61.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered comments/_comment.html.haml (25.0ms)
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 40]]
+  Rendered comments/create.js.erb (58.0ms)
+Completed 200 OK in 243ms (Views: 70.0ms | ActiveRecord: 63.0ms)
+
+
+Started GET "/posts/40" for ::1 at 2015-12-05 17:45:42 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"40"}
+  [1m[35mPost Load (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 40]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 40]]
+  [1m[35mComment Load (1.0ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 40]]
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  Rendered comments/_comment.html.haml (47.0ms)
+  Rendered comments/_form.html.haml (8.0ms)
+  Rendered posts/show.html.haml within layouts/application (114.0ms)
+  Rendered layouts/_header.html.haml (1.0ms)
+Completed 200 OK in 349ms (Views: 329.0ms | ActiveRecord: 2.0ms)
+
+
+Started POST "/posts/40/comments" for ::1 at 2015-12-05 17:45:47 +0100
+Processing by CommentsController#create as JS
+  Parameters: {"utf8"=>"✓", "comment"=>{"comment"=>"hffg"}, "commit"=>"Create Comment", "post_id"=>"40"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mPost Load (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 40]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "comments" ("comment", "post_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["comment", "hffg"], ["post_id", 40], ["user_id", 2], ["created_at", "2015-12-05 16:45:47.561169"], ["updated_at", "2015-12-05 16:45:47.561169"]]
+  [1m[36m (13.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered comments/_comment.html.haml (20.0ms)
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 40]]
+  Rendered comments/create.js.erb (47.0ms)
+Completed 200 OK in 168ms (Views: 57.0ms | ActiveRecord: 14.0ms)
+
+
+Started GET "/posts/new" for ::1 at 2015-12-05 17:46:11 +0100
+Processing by PostsController#new as JS
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  Rendered posts/_form.html.haml (14.0ms)
+  Rendered posts/new.js.erb (32.0ms)
+Completed 200 OK in 97ms (Views: 58.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/posts/new" for ::1 at 2015-12-05 17:46:22 +0100
+Processing by PostsController#new as JS
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  Rendered posts/_form.html.haml (10.0ms)
+  Rendered posts/new.js.erb (26.0ms)
+Completed 200 OK in 75ms (Views: 49.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/40" for ::1 at 2015-12-05 17:47:42 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"40"}
+  [1m[35mPost Load (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 40]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 40]]
+  [1m[35mComment Load (1.0ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 40]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered comments/_comment.html.haml (69.0ms)
+  Rendered comments/_form.html.haml (6.0ms)
+  Rendered posts/show.html.haml within layouts/application (142.0ms)
+  Rendered layouts/_header.html.haml (0.0ms)
+Completed 200 OK in 375ms (Views: 359.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/posts/new" for ::1 at 2015-12-05 17:47:44 +0100
+Processing by PostsController#new as JS
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  Rendered posts/_form.html.haml (16.0ms)
+  Rendered posts/new.js.erb (38.0ms)
+Completed 200 OK in 92ms (Views: 67.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for ::1 at 2015-12-05 17:47:51 +0100
+Processing by PostsController#create as JS
+  Parameters: {"utf8"=>"✓", "post"=>{"title"=>"ciao", "content"=>"dadadas"}, "commit"=>"Create Post"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "posts" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "ciao"], ["content", "dadadas"], ["user_id", 2], ["created_at", "2015-12-05 16:47:51.740030"], ["updated_at", "2015-12-05 16:47:51.740030"]]
+  [1m[35m (12.0ms)[0m  commit transaction
+  Rendered posts/_post.html.haml (4.0ms)
+  Rendered posts/create.js.erb (14.0ms)
+Completed 200 OK in 144ms (Views: 29.0ms | ActiveRecord: 13.0ms)
+
+
+Started GET "/posts" for ::1 at 2015-12-05 17:47:59 +0100
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts".* FROM "posts"  ORDER BY created_at DESC[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  Rendered posts/_post.html.haml (45.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered posts/_post.html.haml (20.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered posts/_post.html.haml (20.0ms)
+  Rendered posts/_posts.html.haml (131.0ms)
+  Rendered posts/index.html.haml within layouts/application (140.0ms)
+  Rendered layouts/_header.html.haml (1.0ms)
+Completed 200 OK in 324ms (Views: 320.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/posts" for ::1 at 2015-12-05 17:48:29 +0100
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts"  ORDER BY created_at DESC
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  Rendered posts/_post.html.haml (49.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered posts/_post.html.haml (23.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered posts/_post.html.haml (23.0ms)
+  Rendered posts/_posts.html.haml (139.0ms)
+  Rendered posts/index.html.haml within layouts/application (147.0ms)
+  Rendered layouts/_header.html.haml (0.0ms)
+Completed 200 OK in 335ms (Views: 332.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/posts/new" for ::1 at 2015-12-05 17:48:31 +0100
+Processing by PostsController#new as JS
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  Rendered posts/_form.html.haml (10.0ms)
+  Rendered posts/new.js.erb (28.0ms)
+Completed 200 OK in 87ms (Views: 57.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/posts/41" for ::1 at 2015-12-05 17:52:07 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"41"}
+  [1m[35mPost Load (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 41]]
+  [1m[36m (1.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 41]]
+  [1m[35mComment Load (0.0ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 41]]
+  Rendered collection (0.0ms)
+  Rendered comments/_form.html.haml (8.0ms)
+  Rendered posts/show.html.haml within layouts/application (66.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  Rendered layouts/_header.html.haml (25.0ms)
+Completed 200 OK in 538ms (Views: 517.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/posts" for ::1 at 2015-12-05 17:52:36 +0100
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts"  ORDER BY created_at DESC
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  Rendered posts/_post.html.haml (52.0ms)
+  [1m[36mCACHE (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered posts/_post.html.haml (37.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered posts/_post.html.haml (26.0ms)
+  Rendered posts/_posts.html.haml (171.0ms)
+  Rendered posts/index.html.haml within layouts/application (181.0ms)
+  Rendered layouts/_header.html.haml (1.0ms)
+Completed 200 OK in 389ms (Views: 385.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/posts/new" for ::1 at 2015-12-05 17:52:43 +0100
+Processing by PostsController#new as JS
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  Rendered posts/_form.html.haml (10.0ms)
+  Rendered posts/new.js.erb (26.0ms)
+Completed 200 OK in 70ms (Views: 48.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/__meta_request/d1965d76-2bc4-40bb-95a2-f9411b36c1c2.json" for ::1 at 2015-12-05 17:52:44 +0100
+
+
+Started GET "/posts/41" for ::1 at 2015-12-05 17:53:08 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"41"}
+  [1m[35mPost Load (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 41]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 41]]
+  [1m[35mComment Load (0.0ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 41]]
+  Rendered collection (0.0ms)
+  Rendered comments/_form.html.haml (8.0ms)
+  Rendered posts/show.html.haml within layouts/application (71.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  Rendered layouts/_header.html.haml (26.0ms)
+Completed 200 OK in 331ms (Views: 308.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/__meta_request/9a693fec-8ece-4712-bd53-daf101577ad0.json" for ::1 at 2015-12-05 17:53:09 +0100
+
+
+Started GET "/posts/new" for ::1 at 2015-12-05 17:53:15 +0100
+Processing by PostsController#new as JS
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  Rendered posts/_form.html.haml (9.0ms)
+  Rendered posts/new.js.erb (26.0ms)
+Completed 200 OK in 72ms (Views: 49.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/__meta_request/35d7d336-1444-485f-ae80-3015cca8d86b.json" for ::1 at 2015-12-05 17:53:15 +0100
+
+
+Started GET "/posts" for ::1 at 2015-12-05 17:56:11 +0100
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts"  ORDER BY created_at DESC[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  Rendered posts/_post.html.haml (53.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered posts/_post.html.haml (26.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered posts/_post.html.haml (26.0ms)
+  Rendered posts/_posts.html.haml (161.0ms)
+  Rendered posts/index.html.haml within layouts/application (173.0ms)
+  Rendered layouts/_header.html.haml (1.0ms)
+Completed 200 OK in 611ms (Views: 608.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/__meta_request/6f8f13da-6333-4e12-b077-c559fc388b1e.json" for ::1 at 2015-12-05 17:56:11 +0100
+
+
+Started GET "/posts/new" for ::1 at 2015-12-05 17:56:13 +0100
+Processing by PostsController#new as JS
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  Rendered posts/_form.html.haml (10.0ms)
+  Rendered posts/new.js.erb (27.0ms)
+Completed 200 OK in 74ms (Views: 49.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/__meta_request/8e426392-5c99-441f-b38e-3783d2ac2e6d.json" for ::1 at 2015-12-05 17:56:14 +0100
+
+
+Started GET "/posts/41" for ::1 at 2015-12-05 17:56:19 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"41"}
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 41]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 41]]
+  [1m[36mComment Load (0.0ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 41]]
+  Rendered collection (0.0ms)
+  Rendered comments/_form.html.haml (6.0ms)
+  Rendered posts/show.html.haml within layouts/application (58.0ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  Rendered layouts/_header.html.haml (24.0ms)
+Completed 200 OK in 273ms (Views: 244.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/__meta_request/45aea11a-e112-4b6b-8d2b-97a93a4baa6d.json" for ::1 at 2015-12-05 17:56:19 +0100
+
+
+Started GET "/posts/41" for ::1 at 2015-12-05 17:57:53 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"41"}
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 41]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 41]]
+  [1m[36mComment Load (0.0ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 41]]
+  Rendered collection (1.0ms)
+  Rendered comments/_form.html.haml (23.0ms)
+  Rendered posts/show.html.haml within layouts/application (98.0ms)
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  Rendered layouts/_header.html.haml (52.0ms)
+Completed 200 OK in 423ms (Views: 370.0ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/__meta_request/646d50a9-cec5-4135-aa90-5974b841bd73.json" for ::1 at 2015-12-05 17:57:54 +0100
+
+
+Started GET "/posts/new" for ::1 at 2015-12-05 17:57:55 +0100
+Processing by PostsController#new as JS
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  Rendered posts/_form.html.haml (13.0ms)
+  Rendered posts/new.js.erb (33.0ms)
+Completed 200 OK in 103ms (Views: 61.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/__meta_request/67368c59-5fc7-4c76-b27b-a76ec9af658e.json" for ::1 at 2015-12-05 17:57:56 +0100
+
+
+Started POST "/posts" for ::1 at 2015-12-05 17:57:59 +0100
+Processing by PostsController#create as JS
+  Parameters: {"utf8"=>"✓", "post"=>{"title"=>"yryy", "content"=>"ryyry"}, "commit"=>"Create Post"}
+  [1m[35mUser Load (6.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (3.0ms)[0m  INSERT INTO "posts" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "yryy"], ["content", "ryyry"], ["user_id", 2], ["created_at", "2015-12-05 16:58:06.956287"], ["updated_at", "2015-12-05 16:58:06.956287"]]
+  [1m[36m (15.0ms)[0m  [1mcommit transaction[0m
+  Rendered posts/_post.html.haml (20.0ms)
+  Rendered posts/create.js.erb (51.0ms)
+Completed 200 OK in 7984ms (Views: 88.0ms | ActiveRecord: 25.0ms)
+
+
+Started GET "/__meta_request/57a3734e-ce54-494a-a53d-ef40ed6732bb.json" for ::1 at 2015-12-05 17:58:07 +0100
+
+
+Started GET "/posts/41" for ::1 at 2015-12-05 18:02:22 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"41"}
+  [1m[35mPost Load (2.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 41]]
+  [1m[36m (2.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 41]]
+  [1m[35mComment Load (2.0ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 41]]
+  Rendered collection (1.0ms)
+  Rendered comments/_form.html.haml (171.0ms)
+  Rendered posts/show.html.haml within layouts/application (399.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  Rendered layouts/_header.html.haml (115.0ms)
+Completed 200 OK in 3434ms (Views: 3334.2ms | ActiveRecord: 7.0ms)
+
+
+Started POST "/posts/41/comments" for ::1 at 2015-12-05 18:02:26 +0100
+Processing by CommentsController#create as JS
+  Parameters: {"utf8"=>"✓", "comment"=>{"comment"=>"hf"}, "commit"=>"Create Comment", "post_id"=>"41"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mPost Load (2.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 41]]
+  [1m[35m (2.0ms)[0m  begin transaction
+  [1m[36mSQL (4.0ms)[0m  [1mINSERT INTO "comments" ("comment", "post_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["comment", "hf"], ["post_id", 41], ["user_id", 2], ["created_at", "2015-12-05 17:02:26.968513"], ["updated_at", "2015-12-05 17:02:26.968513"]]
+  [1m[35m (30.0ms)[0m  commit transaction
+  [1m[36mUser Load (2.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered comments/_comment.html.haml (184.0ms)
+  [1m[35m (1.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 41]]
+  Rendered comments/create.js.erb (293.0ms)
+Completed 200 OK in 1002ms (Views: 366.0ms | ActiveRecord: 42.0ms)
+
+
+Started GET "/__meta_request/10188fa5-9a4f-488e-8894-fab76e6ca8b6.json" for ::1 at 2015-12-05 18:02:27 +0100
+
+
+Started GET "/posts/41" for ::1 at 2015-12-05 18:02:40 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"41"}
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 41]]
+  [1m[35m (1.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 41]]
+  [1m[36mComment Load (2.0ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 41]]
+  [1m[35mUser Load (2.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  Rendered comments/_comment.html.haml (178.0ms)
+  Rendered comments/_form.html.haml (132.0ms)
+  Rendered posts/show.html.haml within layouts/application (501.0ms)
+  Rendered layouts/_header.html.haml (12.0ms)
+Completed 200 OK in 3104ms (Views: 3026.2ms | ActiveRecord: 7.0ms)
+
+
+Started GET "/__meta_request/ba1cb596-8ef7-4dae-9fd2-395e9f125f02.json" for ::1 at 2015-12-05 18:02:43 +0100
+
+
+Started POST "/posts/41/comments" for ::1 at 2015-12-05 18:02:46 +0100
+Processing by CommentsController#create as JS
+  Parameters: {"utf8"=>"✓", "comment"=>{"comment"=>"ddgdg"}, "commit"=>"Create Comment", "post_id"=>"41"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mPost Load (2.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 41]]
+  [1m[35m (2.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "comments" ("comment", "post_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["comment", "ddgdg"], ["post_id", 41], ["user_id", 2], ["created_at", "2015-12-05 17:02:47.028453"], ["updated_at", "2015-12-05 17:02:47.028453"]]
+  [1m[35m (14.0ms)[0m  commit transaction
+  [1m[36mUser Load (2.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered comments/_comment.html.haml (89.0ms)
+  [1m[35m (1.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 41]]
+  Rendered comments/create.js.erb (184.0ms)
+Completed 200 OK in 670ms (Views: 200.0ms | ActiveRecord: 24.0ms)
+
+
+Started GET "/__meta_request/c636ec04-06bb-4985-8e8a-a11326f4fd12.json" for ::1 at 2015-12-05 18:02:47 +0100
+
+
+Started POST "/posts/41/comments" for ::1 at 2015-12-05 18:02:56 +0100
+Processing by CommentsController#create as JS
+  Parameters: {"utf8"=>"✓", "comment"=>{"comment"=>"hfhff"}, "commit"=>"Create Comment", "post_id"=>"41"}
+  [1m[36mUser Load (2.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mPost Load (1.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 41]]
+  [1m[36m (2.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  INSERT INTO "comments" ("comment", "post_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["comment", "hfhff"], ["post_id", 41], ["user_id", 2], ["created_at", "2015-12-05 17:02:57.101827"], ["updated_at", "2015-12-05 17:02:57.101827"]]
+  [1m[36m (33.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mUser Load (2.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered comments/_comment.html.haml (85.0ms)
+  [1m[36m (12.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 41]]
+  Rendered comments/create.js.erb (178.0ms)
+Completed 200 OK in 620ms (Views: 183.0ms | ActiveRecord: 54.0ms)
+
+
+Started GET "/__meta_request/c5249c7d-5a0e-40cc-9187-16f025681ca7.json" for ::1 at 2015-12-05 18:02:57 +0100
+
+
+Started GET "/posts/41" for ::1 at 2015-12-05 18:03:04 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"41"}
+  [1m[35mPost Load (2.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 41]]
+  [1m[36m (2.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 41]]
+  [1m[35mComment Load (2.0ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 41]]
+  [1m[36mUser Load (2.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (2.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered comments/_comment.html.haml (350.0ms)
+  Rendered comments/_form.html.haml (135.0ms)
+  Rendered posts/show.html.haml within layouts/application (690.0ms)
+  Rendered layouts/_header.html.haml (23.0ms)
+Completed 200 OK in 3043ms (Views: 2961.2ms | ActiveRecord: 12.0ms)
+
+
+Started GET "/__meta_request/fb9be987-f990-43c4-ac53-11769e366e14.json" for ::1 at 2015-12-05 18:03:08 +0100
+
+
+Started POST "/posts/41/comments" for ::1 at 2015-12-05 18:03:13 +0100
+Processing by CommentsController#create as JS
+  Parameters: {"utf8"=>"✓", "comment"=>{"comment"=>"fgfgfdf"}, "commit"=>"Create Comment", "post_id"=>"41"}
+  [1m[36mUser Load (2.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mPost Load (1.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 41]]
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  INSERT INTO "comments" ("comment", "post_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["comment", "fgfgfdf"], ["post_id", 41], ["user_id", 2], ["created_at", "2015-12-05 17:03:14.294206"], ["updated_at", "2015-12-05 17:03:14.294206"]]
+  [1m[36m (11.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mUser Load (2.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered comments/_comment.html.haml (96.0ms)
+  [1m[36m (1.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 41]]
+  Rendered comments/create.js.erb (186.0ms)
+Completed 200 OK in 649ms (Views: 204.0ms | ActiveRecord: 20.0ms)
+
+
+Started GET "/__meta_request/95269f3d-3bdf-4295-9b5c-fefef67f533e.json" for ::1 at 2015-12-05 18:03:15 +0100
+
+
+Started GET "/posts/41" for ::1 at 2015-12-05 18:04:29 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"41"}
+  [1m[35mPost Load (1.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 41]]
+  [1m[36m (1.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 41]]
+  [1m[35mComment Load (1.0ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 41]]
+  [1m[36mUser Load (2.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered comments/_comment.html.haml (432.0ms)
+  Rendered comments/_form.html.haml (122.0ms)
+  Rendered posts/show.html.haml within layouts/application (745.0ms)
+  Rendered layouts/_header.html.haml (25.0ms)
+Completed 200 OK in 2986ms (Views: 2908.2ms | ActiveRecord: 8.0ms)
+
+
+Started GET "/__meta_request/12568521-48ad-47f2-abc9-c6160cb40e7e.json" for ::1 at 2015-12-05 18:04:32 +0100
+
+
+Started GET "/posts/41" for ::1 at 2015-12-05 18:08:22 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"41"}
+  [1m[35mPost Load (2.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 41]]
+  [1m[36m (1.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 41]]
+  [1m[35mComment Load (1.0ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 41]]
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered comments/_comment.html.haml (479.0ms)
+  Rendered comments/_form.html.haml (125.0ms)
+  Rendered posts/show.html.haml within layouts/application (807.0ms)
+  Rendered layouts/_header.html.haml (28.0ms)
+Completed 200 OK in 3045ms (Views: 2982.2ms | ActiveRecord: 9.0ms)
+
+
+Started GET "/__meta_request/0a503209-eb83-45a3-bd81-16a08f675fd2.json" for ::1 at 2015-12-05 18:08:26 +0100
+
+
+Started POST "/posts/41/comments" for ::1 at 2015-12-05 18:08:30 +0100
+Processing by CommentsController#create as JS
+  Parameters: {"utf8"=>"✓", "comment"=>{"comment"=>"fgghfgffjhfjhffhffh"}, "commit"=>"Create Comment", "post_id"=>"41"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mPost Load (2.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 41]]
+  [1m[35m (2.0ms)[0m  begin transaction
+  [1m[36mSQL (3.0ms)[0m  [1mINSERT INTO "comments" ("comment", "post_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["comment", "fgghfgffjhfjhffhffh"], ["post_id", 41], ["user_id", 2], ["created_at", "2015-12-05 17:08:30.752255"], ["updated_at", "2015-12-05 17:08:30.752255"]]
+  [1m[35m (23.0ms)[0m  commit transaction
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered comments/_comment.html.haml (95.0ms)
+  [1m[35m (2.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 41]]
+  Rendered comments/create.js.erb (189.0ms)
+Completed 200 OK in 584ms (Views: 206.0ms | ActiveRecord: 34.0ms)
+
+
+Started GET "/__meta_request/7e03cde0-fdce-496b-9a7f-44618b45bdfb.json" for ::1 at 2015-12-05 18:08:31 +0100
+
+
+Started GET "/posts/41" for ::1 at 2015-12-05 18:15:19 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"41"}
+  [1m[36mPost Load (3.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 41]]
+  [1m[35m (1.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 41]]
+  [1m[36mComment Load (13.0ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 41]]
+  [1m[35mUser Load (2.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (2.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered comments/_comment.html.haml (514.0ms)
+  Rendered comments/_form.html.haml (133.0ms)
+  Rendered posts/show.html.haml within layouts/application (848.0ms)
+  Rendered layouts/_header.html.haml (10.0ms)
+Completed 200 OK in 3236ms (Views: 3147.2ms | ActiveRecord: 23.0ms)
+
+
+Started GET "/posts/new" for ::1 at 2015-12-05 18:15:23 +0100
+Processing by PostsController#new as JS
+  [1m[35mUser Load (2.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  Rendered posts/_form.html.haml (312.0ms)
+  Rendered posts/new.js.erb (350.0ms)
+Completed 200 OK in 634ms (Views: 408.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/__meta_request/979e994f-b96b-4446-bc95-41719fa323d0.json" for ::1 at 2015-12-05 18:15:24 +0100
+
+
+Started GET "/posts/new" for ::1 at 2015-12-05 18:15:26 +0100
+Processing by PostsController#new as JS
+  [1m[36mUser Load (2.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  Rendered posts/_form.html.haml (169.0ms)
+  Rendered posts/new.js.erb (197.0ms)
+Completed 200 OK in 335ms (Views: 239.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/__meta_request/8c453a7c-a8bb-486e-9e42-18f86c558e83.json" for ::1 at 2015-12-05 18:15:27 +0100
+
+
+Started POST "/posts" for ::1 at 2015-12-05 18:15:30 +0100
+Processing by PostsController#create as JS
+  Parameters: {"utf8"=>"✓", "post"=>{"title"=>"fgfg", "content"=>"jfjfj"}, "commit"=>"Create Post"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  INSERT INTO "posts" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "fgfg"], ["content", "jfjfj"], ["user_id", 2], ["created_at", "2015-12-05 17:15:33.299531"], ["updated_at", "2015-12-05 17:15:33.299531"]]
+  [1m[36m (12.0ms)[0m  [1mcommit transaction[0m
+  Rendered posts/_post.html.haml (18.0ms)
+  Rendered posts/create.js.erb (39.0ms)
+Completed 200 OK in 3459ms (Views: 85.0ms | ActiveRecord: 16.0ms)
+
+
+Started GET "/__meta_request/c2a4fe47-3773-450b-8e71-f1f3355032dd.json" for ::1 at 2015-12-05 18:15:33 +0100
+
+
+Started GET "/posts/41" for ::1 at 2015-12-05 18:20:49 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"41"}
+  [1m[35mPost Load (2.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 41]]
+  [1m[36m (2.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 41]]
+  [1m[35mComment Load (15.0ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 41]]
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered comments/_comment.html.haml (556.0ms)
+  Rendered comments/_form.html.haml (134.0ms)
+  Rendered posts/show.html.haml within layouts/application (899.1ms)
+  Rendered layouts/_header.html.haml (10.0ms)
+Completed 200 OK in 2962ms (Views: 2866.2ms | ActiveRecord: 24.0ms)
+
+
+Started GET "/__meta_request/e6542afe-b203-4861-98e2-3edd83720d08.json" for ::1 at 2015-12-05 18:20:53 +0100
+
+
+Started GET "/posts/41" for ::1 at 2015-12-05 18:20:59 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"41"}
+  [1m[36mPost Load (3.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 41]]
+  [1m[35m (1.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 41]]
+  [1m[36mComment Load (3.0ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 41]]
+  [1m[35mUser Load (2.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (2.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered comments/_comment.html.haml (603.0ms)
+  Rendered comments/_form.html.haml (95.0ms)
+  Rendered posts/show.html.haml within layouts/application (1159.1ms)
+  Rendered layouts/_header.html.haml (8.0ms)
+Completed 200 OK in 3071ms (Views: 2734.2ms | ActiveRecord: 40.0ms)
+
+
+Started GET "/posts/new" for ::1 at 2015-12-05 18:21:04 +0100
+Processing by PostsController#new as JS
+  [1m[35mUser Load (2.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  Rendered posts/_form.html.haml (252.0ms)
+  Rendered posts/new.js.erb (296.0ms)
+Completed 200 OK in 546ms (Views: 357.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/__meta_request/ae20fd71-ea2c-4843-9bf4-8ce6eba27fc0.json" for ::1 at 2015-12-05 18:21:05 +0100
+
+
+Started GET "/posts/new" for ::1 at 2015-12-05 18:21:06 +0100
+Processing by PostsController#new as JS
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  Rendered posts/_form.html.haml (121.0ms)
+  Rendered posts/new.js.erb (145.0ms)
+Completed 200 OK in 260ms (Views: 181.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/__meta_request/a4f0811a-18f7-4a3d-865d-ac2d39641240.json" for ::1 at 2015-12-05 18:21:07 +0100
+
+
+Started POST "/posts" for ::1 at 2015-12-05 18:21:09 +0100
+Processing by PostsController#create as JS
+  Parameters: {"utf8"=>"✓", "post"=>{"title"=>"dggd", "content"=>"dfgdd"}, "commit"=>"Create Post"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  INSERT INTO "posts" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "dggd"], ["content", "dfgdd"], ["user_id", 2], ["created_at", "2015-12-05 17:21:09.843521"], ["updated_at", "2015-12-05 17:21:09.843521"]]
+  [1m[36m (18.0ms)[0m  [1mcommit transaction[0m
+  Rendered posts/_post.html.haml (13.0ms)
+  Rendered posts/create.js.erb (197.0ms)
+Completed 500 Internal Server Error in 501ms (ActiveRecord: 22.0ms)
+
+ActionView::MissingTemplate - Missing template /show with {:locale=>[:en], :formats=>[:js, :html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :haml, :jbuilder]}. Searched in:
+  * "K:/Dropbox/progetti_libri/12_web_apps/forum/app/views"
+  * "C:/Ruby21/lib/ruby/gems/2.1.0/gems/devise-3.5.2/app/views"
+  * "K:/Dropbox/progetti_libri/12_web_apps/forum"
+  * "K:/"
+:
+  actionview (4.2.3) lib/action_view/path_set.rb:46:in `find'
+  actionview (4.2.3) lib/action_view/lookup_context.rb:121:in `find'
+  C:0:in `find_template'
+  actionview (4.2.3) lib/action_view/renderer/template_renderer.rb:32:in `block in determine_template'
+  actionview (4.2.3) lib/action_view/lookup_context.rb:143:in `with_fallbacks'
+  C:0:in `with_fallbacks'
+  actionview (4.2.3) lib/action_view/renderer/template_renderer.rb:32:in `determine_template'
+  actionview (4.2.3) lib/action_view/renderer/template_renderer.rb:8:in `render'
+  actionview (4.2.3) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionview (4.2.3) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionview (4.2.3) lib/action_view/helpers/rendering_helper.rb:32:in `render'
+  haml (4.0.7) lib/haml/helpers/action_view_mods.rb:12:in `render_with_haml'
+  app/views/posts/create.js.erb:9:in `_app_views_posts_create_js_erb__840564187_82707228'
+  actionview (4.2.3) lib/action_view/template.rb:145:in `block in render'
+  activesupport (4.2.3) lib/active_support/notifications.rb:166:in `instrument'
+  actionview (4.2.3) lib/action_view/template.rb:333:in `instrument'
+  actionview (4.2.3) lib/action_view/template.rb:143:in `render'
+  actionview (4.2.3) lib/action_view/renderer/template_renderer.rb:54:in `block (2 levels) in render_template'
+  actionview (4.2.3) lib/action_view/renderer/abstract_renderer.rb:39:in `block in instrument'
+  activesupport (4.2.3) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.3) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.3) lib/active_support/notifications.rb:164:in `instrument'
+  actionview (4.2.3) lib/action_view/renderer/abstract_renderer.rb:39:in `instrument'
+  actionview (4.2.3) lib/action_view/renderer/template_renderer.rb:53:in `block in render_template'
+  actionview (4.2.3) lib/action_view/renderer/template_renderer.rb:61:in `render_with_layout'
+  actionview (4.2.3) lib/action_view/renderer/template_renderer.rb:52:in `render_template'
+  actionview (4.2.3) lib/action_view/renderer/template_renderer.rb:14:in `render'
+  actionview (4.2.3) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionview (4.2.3) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionview (4.2.3) lib/action_view/rendering.rb:100:in `_render_template'
+  actionpack (4.2.3) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.2.3) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (4.2.3) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.2.3) lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+  actionpack (4.2.3) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.2.3) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (4.2.3) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  C:/Ruby21/lib/ruby/2.1.0/benchmark.rb:294:in `realtime'
+  activesupport (4.2.3) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  activerecord (4.2.3) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  actionpack (4.2.3) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.2.3) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.2.3) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.3) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.3) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:115:in `call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:553:in `block (2 levels) in compile'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:503:in `call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:88:in `run_callbacks'
+  actionpack (4.2.3) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.3) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.3) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.3) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.3) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.3) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.3) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.3) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.3) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.3) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.3) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.3) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:76:in `dispatch'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:45:in `serve'
+  actionpack (4.2.3) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.3) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:821:in `call'
+  meta_request (0.3.4) lib/meta_request/middlewares/app_request_handler.rb:13:in `call'
+  meta_request (0.3.4) lib/meta_request/middlewares/meta_request_handler.rb:13:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:38:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.3) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.3) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:84:in `run_callbacks'
+  actionpack (4.2.3) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+  rack-contrib (1.4.0) lib/rack/contrib/response_headers.rb:17:in `call'
+  meta_request (0.3.4) lib/meta_request/middlewares/headers.rb:16:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  C:/Ruby21/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  C:/Ruby21/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  C:/Ruby21/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+
+Started GET "/__meta_request/af1ef1b2-bcba-4d69-83b9-e5ccd55dacae.json" for ::1 at 2015-12-05 18:21:11 +0100
+
+
+Started GET "/posts/41" for ::1 at 2015-12-05 18:26:07 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"41"}
+  [1m[35mPost Load (1.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 41]]
+  [1m[36m (1.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 41]]
+  [1m[35mComment Load (1.0ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 41]]
+  [1m[36mUser Load (2.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered comments/_comment.html.haml (502.0ms)
+  Rendered comments/_form.html.haml (126.0ms)
+  Rendered posts/show.html.haml within layouts/application (827.0ms)
+  Rendered layouts/_header.html.haml (22.0ms)
+Completed 200 OK in 3040ms (Views: 2965.2ms | ActiveRecord: 9.0ms)
+
+
+Started GET "/__meta_request/45ab85e5-9217-4faf-8da0-a33bb6dd3946.json" for ::1 at 2015-12-05 18:26:10 +0100
+
+
+Started GET "/posts/41" for ::1 at 2015-12-05 18:27:03 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"41"}
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 41]]
+  [1m[35m (1.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 41]]
+  [1m[36mComment Load (2.0ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 41]]
+  [1m[35mUser Load (2.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered comments/_comment.html.haml (513.0ms)
+  Rendered comments/_form.html.haml (128.0ms)
+  Rendered posts/show.html.haml within layouts/application (845.0ms)
+  Rendered layouts/_header.html.haml (10.0ms)
+Completed 200 OK in 3103ms (Views: 3023.2ms | ActiveRecord: 11.0ms)
+
+
+Started GET "/__meta_request/71b93b42-5f69-4537-9f76-c32ef46e5398.json" for ::1 at 2015-12-05 18:27:07 +0100
+
+
+Started DELETE "/posts/41/comments/43" for ::1 at 2015-12-05 18:27:27 +0100
+Processing by CommentsController#destroy as JS
+  Parameters: {"post_id"=>"41", "id"=>"43"}
+  [1m[35mComment Load (3.0ms)[0m  SELECT  "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT 1  [["id", 43]]
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mPost Load (2.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 41]]
+  [1m[36mComment Load (1.0ms)[0m  [1mSELECT  "comments".* FROM "comments" WHERE "comments"."post_id" = ? AND "comments"."id" = ? LIMIT 1[0m  [["post_id", 41], ["id", 43]]
+  [1m[35m (1.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mDELETE FROM "comments" WHERE "comments"."id" = ?[0m  [["id", 43]]
+  [1m[35m (14.0ms)[0m  commit transaction
+  [1m[36m (1.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 41]]
+  Rendered comments/destroy.js (60.0ms)
+Completed 200 OK in 528ms (Views: 98.0ms | ActiveRecord: 25.0ms)
+
+
+Started GET "/__meta_request/9fcf9487-31f9-4f2e-a2f2-c443d124befc.json" for ::1 at 2015-12-05 18:27:28 +0100
+
+
+Started GET "/posts/41" for ::1 at 2015-12-05 18:28:23 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"41"}
+  [1m[35mPost Load (1.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 41]]
+  [1m[36m (2.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 41]]
+  [1m[35mComment Load (1.0ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 41]]
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (3.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered comments/_comment.html.haml (403.0ms)
+  Rendered comments/_form.html.haml (104.0ms)
+  Rendered posts/show.html.haml within layouts/application (708.0ms)
+  Rendered layouts/_header.html.haml (9.0ms)
+Completed 200 OK in 2730ms (Views: 2639.1ms | ActiveRecord: 9.0ms)
+
+
+Started GET "/__meta_request/75fda591-f233-4f4b-8d6f-2eabfdf31100.json" for ::1 at 2015-12-05 18:28:26 +0100
+
+
+Started GET "/posts/new" for ::1 at 2015-12-05 18:28:29 +0100
+Processing by PostsController#new as JS
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  Rendered posts/_form.html.haml (213.0ms)
+  Rendered posts/new.js.erb (241.0ms)
+Completed 200 OK in 417ms (Views: 283.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/__meta_request/97a9c242-e661-4218-ae2a-36bc9680827c.json" for ::1 at 2015-12-05 18:28:30 +0100
+
+
+Started POST "/posts" for ::1 at 2015-12-05 18:28:32 +0100
+Processing by PostsController#create as JS
+  Parameters: {"utf8"=>"✓", "post"=>{"title"=>"jhjhg", "content"=>"jhgg"}, "commit"=>"Create Post"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35m (1.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "posts" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "jhjhg"], ["content", "jhgg"], ["user_id", 2], ["created_at", "2015-12-05 17:28:32.467544"], ["updated_at", "2015-12-05 17:28:32.467544"]]
+  [1m[35m (14.0ms)[0m  commit transaction
+  Rendered posts/_post.html.haml (33.0ms)
+  [1m[36m (1.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 45]]
+  [1m[35mComment Load (1.0ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 45]]
+  Rendered collection (1.0ms)
+  Rendered comments/_form.html.haml (159.0ms)
+  Rendered posts/show.html.haml (357.0ms)
+  Rendered posts/create.js.erb (424.0ms)
+Completed 200 OK in 762ms (Views: 451.0ms | ActiveRecord: 20.0ms)
+
+
+Started GET "/__meta_request/f972db2f-9a26-436e-a408-c1d18e005252.json" for ::1 at 2015-12-05 18:28:33 +0100
+
+
+Started GET "/posts/41" for ::1 at 2015-12-05 18:31:27 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"41"}
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 41]]
+  [1m[35m (1.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 41]]
+  [1m[36mComment Load (2.0ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 41]]
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered comments/_comment.html.haml (486.0ms)
+  Rendered comments/_form.html.haml (108.0ms)
+  Rendered posts/show.html.haml within layouts/application (813.0ms)
+  Rendered layouts/_header.html.haml (10.0ms)
+Completed 200 OK in 2847ms (Views: 2768.2ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/__meta_request/fdd7321a-be1a-4623-8dc3-96611eb7bd26.json" for ::1 at 2015-12-05 18:31:30 +0100
+
+
+Started GET "/posts/new" for ::1 at 2015-12-05 18:31:34 +0100
+Processing by PostsController#new as JS
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  Rendered posts/_form.html.haml (238.0ms)
+  Rendered posts/new.js.erb (270.0ms)
+Completed 200 OK in 448ms (Views: 324.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/__meta_request/88cc754c-0249-4ede-856a-d3e47fe744ce.json" for ::1 at 2015-12-05 18:31:34 +0100
+
+
+Started POST "/posts" for ::1 at 2015-12-05 18:31:38 +0100
+Processing by PostsController#create as JS
+  Parameters: {"utf8"=>"✓", "post"=>{"title"=>"mario", "content"=>"sdaafasd"}, "commit"=>"Create Post"}
+  [1m[35mUser Load (2.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  INSERT INTO "posts" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "mario"], ["content", "sdaafasd"], ["user_id", 2], ["created_at", "2015-12-05 17:31:39.093990"], ["updated_at", "2015-12-05 17:31:39.093990"]]
+  [1m[36m (13.0ms)[0m  [1mcommit transaction[0m
+  Rendered posts/_post.html.haml (18.0ms)
+  [1m[35m (1.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 46]]
+  [1m[36mComment Load (1.0ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 46]]
+  Rendered collection (0.0ms)
+  Rendered comments/_form.html.haml (121.0ms)
+  Rendered posts/show.html.haml (295.0ms)
+  Rendered posts/create.js.erb (351.0ms)
+Completed 200 OK in 700ms (Views: 393.0ms | ActiveRecord: 20.0ms)
+
+
+Started GET "/__meta_request/50b2fd92-dba6-436b-a022-fa6e2309cff8.json" for ::1 at 2015-12-05 18:31:40 +0100
+
+
+Started GET "/posts/41" for ::1 at 2015-12-05 18:36:00 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"41"}
+  [1m[35mPost Load (2.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 41]]
+  [1m[36m (1.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 41]]
+  [1m[35mComment Load (1.0ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 41]]
+  [1m[36mUser Load (2.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered comments/_comment.html.haml (434.0ms)
+  Rendered comments/_form.html.haml (113.0ms)
+  Rendered posts/show.html.haml within layouts/application (754.0ms)
+  Rendered layouts/_header.html.haml (10.0ms)
+Completed 200 OK in 2988ms (Views: 2903.2ms | ActiveRecord: 10.0ms)
+
+
+Started GET "/__meta_request/a526f4d8-5111-4cc2-b046-a5be2e2bc582.json" for ::1 at 2015-12-05 18:36:03 +0100
+
+
+Started GET "/posts/new" for ::1 at 2015-12-05 18:36:09 +0100
+Processing by PostsController#new as JS
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  Rendered posts/_form.html.haml (180.0ms)
+  Rendered posts/new.js.erb (223.0ms)
+Completed 200 OK in 378ms (Views: 268.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/__meta_request/f316a343-ef31-4be2-802e-4f3ad999d67f.json" for ::1 at 2015-12-05 18:36:10 +0100
+
+
+Started POST "/posts" for ::1 at 2015-12-05 18:36:12 +0100
+Processing by PostsController#create as JS
+  Parameters: {"utf8"=>"✓", "post"=>{"title"=>"fddsfsdf", "content"=>"sdffsd"}, "commit"=>"Create Post"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "posts" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "fddsfsdf"], ["content", "sdffsd"], ["user_id", 2], ["created_at", "2015-12-05 17:36:12.357365"], ["updated_at", "2015-12-05 17:36:12.357365"]]
+  [1m[35m (11.0ms)[0m  commit transaction
+  Rendered posts/_post.html.haml (28.0ms)
+  [1m[36m (1.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 47]]
+  [1m[35mComment Load (1.0ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 47]]
+  Rendered collection (1.0ms)
+  Rendered comments/_form.html.haml (80.0ms)
+  Rendered posts/show.html.haml (209.0ms)
+  Rendered posts/create.js.erb (269.0ms)
+Completed 200 OK in 526ms (Views: 294.0ms | ActiveRecord: 16.0ms)
+
+
+Started GET "/__meta_request/5106b114-5c9c-4108-98e4-684e374ba6b5.json" for ::1 at 2015-12-05 18:36:12 +0100
+
+
+Started GET "/posts/new" for ::1 at 2015-12-05 18:36:25 +0100
+Processing by PostsController#new as JS
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  Rendered posts/_form.html.haml (128.0ms)
+  Rendered posts/new.js.erb (153.0ms)
+Completed 200 OK in 268ms (Views: 189.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/__meta_request/d56b98ca-0d53-4421-bf53-677da30207d5.json" for ::1 at 2015-12-05 18:36:25 +0100
+
+
+Started POST "/posts" for ::1 at 2015-12-05 18:36:27 +0100
+Processing by PostsController#create as JS
+  Parameters: {"utf8"=>"✓", "post"=>{"title"=>"ffd", "content"=>"dffdfd"}, "commit"=>"Create Post"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  INSERT INTO "posts" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "ffd"], ["content", "dffdfd"], ["user_id", 2], ["created_at", "2015-12-05 17:36:27.975259"], ["updated_at", "2015-12-05 17:36:27.975259"]]
+  [1m[36m (11.0ms)[0m  [1mcommit transaction[0m
+  Rendered posts/_post.html.haml (13.0ms)
+  [1m[35m (1.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 48]]
+  [1m[36mComment Load (1.0ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 48]]
+  Rendered collection (0.0ms)
+  Rendered comments/_form.html.haml (81.0ms)
+  Rendered posts/show.html.haml (210.0ms)
+  Rendered posts/create.js.erb (253.0ms)
+Completed 200 OK in 519ms (Views: 278.0ms | ActiveRecord: 17.0ms)
+
+
+Started GET "/__meta_request/aa28a1e7-b1b9-48c4-9568-b585b7dfe18b.json" for ::1 at 2015-12-05 18:36:28 +0100
+
+
+Started GET "/posts/41" for ::1 at 2015-12-05 18:38:02 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"41"}
+  [1m[35mPost Load (2.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 41]]
+  [1m[36m (1.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 41]]
+  [1m[35mComment Load (1.0ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 41]]
+  [1m[36mUser Load (2.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (15.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered comments/_comment.html.haml (455.0ms)
+  Rendered comments/_form.html.haml (131.0ms)
+  Rendered posts/show.html.haml within layouts/application (789.0ms)
+  Rendered layouts/_header.html.haml (26.0ms)
+Completed 200 OK in 3172ms (Views: 3083.2ms | ActiveRecord: 23.0ms)
+
+
+Started GET "/posts/41" for ::1 at 2015-12-05 18:38:06 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"41"}
+  [1m[35mPost Load (1.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 41]]
+  [1m[36m (2.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 41]]
+  [1m[35mComment Load (1.0ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 41]]
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered comments/_comment.html.haml (406.0ms)
+  Rendered comments/_form.html.haml (116.0ms)
+  Rendered posts/show.html.haml within layouts/application (710.0ms)
+  Rendered layouts/_header.html.haml (14.0ms)
+Completed 200 OK in 2875ms (Views: 2803.2ms | ActiveRecord: 7.0ms)
+
+
+Started GET "/__meta_request/6ef94320-5333-426a-8d1e-5afca11482e2.json" for ::1 at 2015-12-05 18:38:09 +0100
+
+
+Started GET "/assets/application-d0d24238c3921d90ab267fd1ef4755c162fa65824379e1a469fd8957f80dc7ab.js" for ::1 at 2015-12-05 18:38:09 +0100
+
+
+Started GET "/assets/application-9520d62d89d56d41a527501676513cef6d12e5ff1c84b1ffe1c93eddae3e01ba.css" for ::1 at 2015-12-05 18:38:10 +0100
+
+
+Started GET "/posts/new" for ::1 at 2015-12-05 18:38:13 +0100
+Processing by PostsController#new as JS
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  Rendered posts/_form.html.haml (164.0ms)
+  Rendered posts/new.js.erb (190.0ms)
+Completed 200 OK in 345ms (Views: 251.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/__meta_request/0411bd58-1772-4af8-b459-78ff5e1ca7f3.json" for ::1 at 2015-12-05 18:38:14 +0100
+
+
+Started POST "/posts" for ::1 at 2015-12-05 18:38:16 +0100
+Processing by PostsController#create as JS
+  Parameters: {"utf8"=>"✓", "post"=>{"title"=>"d", "content"=>"dfgddd"}, "commit"=>"Create Post"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35m (1.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "posts" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "d"], ["content", "dfgddd"], ["user_id", 2], ["created_at", "2015-12-05 17:38:16.562038"], ["updated_at", "2015-12-05 17:38:16.562038"]]
+  [1m[35m (11.0ms)[0m  commit transaction
+  Rendered posts/_post.html.haml (17.0ms)
+  [1m[36m (1.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 49]]
+  [1m[35mComment Load (1.0ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 49]]
+  Rendered collection (1.0ms)
+  Rendered comments/_form.html.haml (117.0ms)
+  Rendered posts/show.html.haml (288.0ms)
+  Rendered posts/create.js.erb (357.0ms)
+Completed 200 OK in 679ms (Views: 385.0ms | ActiveRecord: 16.0ms)
+
+
+Started GET "/__meta_request/ff6f9e3d-ecbd-4e18-a3c4-7fd35c0d470b.json" for ::1 at 2015-12-05 18:38:17 +0100
+
+
+Started GET "/posts/new" for ::1 at 2015-12-05 18:39:13 +0100
+Processing by PostsController#new as JS
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  Rendered posts/_form.html.haml (143.0ms)
+  Rendered posts/new.js.erb (170.0ms)
+Completed 200 OK in 301ms (Views: 212.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/__meta_request/038c9b65-def4-494f-98af-df69b7847a8b.json" for ::1 at 2015-12-05 18:39:14 +0100
+
+
+Started POST "/posts" for ::1 at 2015-12-05 18:39:16 +0100
+Processing by PostsController#create as JS
+  Parameters: {"utf8"=>"✓", "post"=>{"title"=>"das", "content"=>"asdasdasd"}, "commit"=>"Create Post"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  INSERT INTO "posts" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "das"], ["content", "asdasdasd"], ["user_id", 2], ["created_at", "2015-12-05 17:39:16.890670"], ["updated_at", "2015-12-05 17:39:16.890670"]]
+  [1m[36m (29.0ms)[0m  [1mcommit transaction[0m
+  Rendered posts/_post.html.haml (12.0ms)
+  [1m[35m (1.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 50]]
+  [1m[36mComment Load (1.0ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 50]]
+  Rendered collection (0.0ms)
+  Rendered comments/_form.html.haml (98.0ms)
+  Rendered posts/show.html.haml (232.0ms)
+  Rendered posts/create.js.erb (278.0ms)
+Completed 200 OK in 585ms (Views: 303.0ms | ActiveRecord: 34.0ms)
+
+
+Started GET "/__meta_request/231e6da2-4414-4fce-92d7-7cdf5e91a3ba.json" for ::1 at 2015-12-05 18:39:18 +0100
+
+
+Started GET "/posts/41" for ::1 at 2015-12-05 18:40:11 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"41"}
+  [1m[35mPost Load (2.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 41]]
+  [1m[36m (2.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 41]]
+  [1m[35mComment Load (1.0ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 41]]
+  [1m[36mUser Load (5.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (2.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered comments/_comment.html.haml (602.0ms)
+  Rendered comments/_form.html.haml (173.0ms)
+  Rendered posts/show.html.haml within layouts/application (1020.1ms)
+  Rendered layouts/_header.html.haml (30.0ms)
+Completed 200 OK in 3900ms (Views: 3804.2ms | ActiveRecord: 15.0ms)
+
+
+Started GET "/posts/new" for ::1 at 2015-12-05 18:40:15 +0100
+Processing by PostsController#new as JS
+  [1m[35mUser Load (2.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  Rendered posts/_form.html.haml (338.0ms)
+  Rendered posts/new.js.erb (374.0ms)
+Completed 200 OK in 658ms (Views: 441.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/__meta_request/a4049f84-208a-48bb-9ff2-508d0dccb25b.json" for ::1 at 2015-12-05 18:40:16 +0100
+
+
+Started GET "/posts/new" for ::1 at 2015-12-05 18:40:18 +0100
+Processing by PostsController#new as JS
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  Rendered posts/_form.html.haml (195.0ms)
+  Rendered posts/new.js.erb (223.0ms)
+Completed 200 OK in 390ms (Views: 283.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/__meta_request/a274f4d2-78e4-4ca0-8263-c96e02f8a48e.json" for ::1 at 2015-12-05 18:40:19 +0100
+
+
+Started POST "/posts" for ::1 at 2015-12-05 18:40:21 +0100
+Processing by PostsController#create as JS
+  Parameters: {"utf8"=>"✓", "post"=>{"title"=>"hgjhg", "content"=>"gjfgjgj"}, "commit"=>"Create Post"}
+  [1m[35mUser Load (2.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  INSERT INTO "posts" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "hgjhg"], ["content", "gjfgjgj"], ["user_id", 2], ["created_at", "2015-12-05 17:40:21.722167"], ["updated_at", "2015-12-05 17:40:21.722167"]]
+  [1m[36m (11.0ms)[0m  [1mcommit transaction[0m
+  Rendered posts/_post.html.haml (21.0ms)
+  [1m[35m (2.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 51]]
+  [1m[36mComment Load (17.0ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 51]]
+  Rendered collection (1.0ms)
+  Rendered comments/_form.html.haml (132.0ms)
+  Rendered posts/show.html.haml (319.0ms)
+  Rendered posts/create.js.erb (379.0ms)
+Completed 200 OK in 847ms (Views: 420.0ms | ActiveRecord: 35.0ms)
+
+
+Started GET "/__meta_request/c2d3f5aa-8442-4f47-b298-e335350c3b8f.json" for ::1 at 2015-12-05 18:40:22 +0100
+
+
+Started GET "/posts/41" for ::1 at 2015-12-05 18:43:28 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"41"}
+  [1m[35mPost Load (1.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 41]]
+  [1m[36m (2.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 41]]
+  [1m[35mComment Load (2.0ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 41]]
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (2.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered comments/_comment.html.haml (474.0ms)
+  Rendered comments/_form.html.haml (159.0ms)
+  Rendered posts/show.html.haml within layouts/application (876.1ms)
+  Rendered layouts/_header.html.haml (12.0ms)
+Completed 200 OK in 3473ms (Views: 3385.2ms | ActiveRecord: 11.0ms)
+
+
+Started GET "/__meta_request/bf2ced79-7b3e-46df-8f83-b00324493bd7.json" for ::1 at 2015-12-05 18:43:32 +0100
+
+
+Started GET "/posts/41" for ::1 at 2015-12-05 18:43:37 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"41"}
+  [1m[35mPost Load (2.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 41]]
+  [1m[36m (1.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 41]]
+  [1m[35mComment Load (1.0ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 41]]
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (2.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered comments/_comment.html.haml (486.0ms)
+  Rendered comments/_form.html.haml (146.0ms)
+  Rendered posts/show.html.haml within layouts/application (861.1ms)
+  Rendered layouts/_header.html.haml (12.0ms)
+Completed 200 OK in 3430ms (Views: 3346.2ms | ActiveRecord: 9.0ms)
+
+
+Started GET "/__meta_request/ef4f5ce2-f104-4d26-870c-0a041b93c8c0.json" for ::1 at 2015-12-05 18:43:40 +0100
+
+
+Started GET "/posts/new" for ::1 at 2015-12-05 18:43:46 +0100
+Processing by PostsController#new as JS
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  Rendered posts/_form.html.haml (134.0ms)
+  Rendered posts/new.js.erb (160.0ms)
+Completed 200 OK in 276ms (Views: 203.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/__meta_request/21b7054c-7047-4d02-9bc9-5aac6c8ff9ca.json" for ::1 at 2015-12-05 18:43:46 +0100
+
+
+Started POST "/posts" for ::1 at 2015-12-05 18:43:49 +0100
+Processing by PostsController#create as JS
+  Parameters: {"utf8"=>"✓", "post"=>{"title"=>"tet", "content"=>"tr"}, "commit"=>"Create Post"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35m (1.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "posts" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "tet"], ["content", "tr"], ["user_id", 2], ["created_at", "2015-12-05 17:43:50.076627"], ["updated_at", "2015-12-05 17:43:50.076627"]]
+  [1m[35m (43.0ms)[0m  commit transaction
+  Rendered posts/_post.html.haml (14.0ms)
+  [1m[36m (1.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 52]]
+  [1m[35mComment Load (0.0ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 52]]
+  Rendered collection (0.0ms)
+  Rendered comments/_form.html.haml (79.0ms)
+  Rendered posts/show.html.haml (207.0ms)
+  Rendered posts/create.js.erb (265.0ms)
+Completed 200 OK in 559ms (Views: 291.0ms | ActiveRecord: 48.0ms)
+
+
+Started GET "/__meta_request/62ffaa96-0ba9-400c-bb60-dd183b5483c3.json" for ::1 at 2015-12-05 18:43:50 +0100
+
+
+Started GET "/posts/41" for ::1 at 2015-12-05 18:44:19 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"41"}
+  [1m[36mPost Load (2.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 41]]
+  [1m[35m (2.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 41]]
+  [1m[36mComment Load (2.0ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 41]]
+  [1m[35mUser Load (2.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered comments/_comment.html.haml (493.0ms)
+  Rendered comments/_form.html.haml (143.0ms)
+  Rendered posts/show.html.haml within layouts/application (863.0ms)
+  Rendered layouts/_header.html.haml (13.0ms)
+Completed 200 OK in 3258ms (Views: 3172.2ms | ActiveRecord: 12.0ms)
+
+
+Started GET "/__meta_request/186b159a-d31b-4c43-bf18-2866c0e3901d.json" for ::1 at 2015-12-05 18:44:23 +0100
+
+
+Started GET "/posts/new" for ::1 at 2015-12-05 18:44:25 +0100
+Processing by PostsController#new as JS
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  Rendered posts/_form.html.haml (256.0ms)
+  Rendered posts/new.js.erb (309.0ms)
+Completed 200 OK in 514ms (Views: 379.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/__meta_request/45a1b3d9-92db-4a32-8162-9a0e49a379c9.json" for ::1 at 2015-12-05 18:44:26 +0100
+
+
+Started POST "/posts" for ::1 at 2015-12-05 18:44:29 +0100
+Processing by PostsController#create as JS
+  Parameters: {"utf8"=>"✓", "post"=>{"title"=>"ryyr", "content"=>"ryyrryry"}, "commit"=>"Create Post"}
+  [1m[35mUser Load (2.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (3.0ms)[0m  INSERT INTO "posts" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "ryyr"], ["content", "ryyrryry"], ["user_id", 2], ["created_at", "2015-12-05 17:44:29.391471"], ["updated_at", "2015-12-05 17:44:29.391471"]]
+  [1m[36m (12.0ms)[0m  [1mcommit transaction[0m
+  Rendered posts/_post.html.haml (39.0ms)
+  [1m[35m (1.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 53]]
+  [1m[36mComment Load (1.0ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 53]]
+  Rendered collection (1.0ms)
+  Rendered comments/_form.html.haml (137.0ms)
+  Rendered posts/show.html.haml (339.0ms)
+  Rendered posts/create.js.erb (418.0ms)
+Completed 200 OK in 826ms (Views: 451.0ms | ActiveRecord: 20.0ms)
+
+
+Started GET "/__meta_request/17ab6575-ec33-4abd-96a5-8e7b1e12d182.json" for ::1 at 2015-12-05 18:44:30 +0100
+
+
+Started GET "/posts/41" for ::1 at 2015-12-05 18:45:13 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"41"}
+  [1m[35mPost Load (2.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 41]]
+  [1m[36m (1.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 41]]
+  [1m[35mComment Load (1.0ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 41]]
+  [1m[36mUser Load (3.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered comments/_comment.html.haml (472.0ms)
+  Rendered comments/_form.html.haml (143.0ms)
+  Rendered posts/show.html.haml within layouts/application (862.0ms)
+  Rendered layouts/_header.html.haml (12.0ms)
+Completed 200 OK in 3358ms (Views: 3269.2ms | ActiveRecord: 10.0ms)
+
+
+Started GET "/__meta_request/37f4164d-69f4-479f-9ecb-b013095df855.json" for ::1 at 2015-12-05 18:45:17 +0100
+
+
+Started GET "/posts/new" for ::1 at 2015-12-05 18:45:19 +0100
+Processing by PostsController#new as JS
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  Rendered posts/_form.html.haml (207.0ms)
+  Rendered posts/new.js.erb (252.0ms)
+Completed 200 OK in 439ms (Views: 313.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/__meta_request/27dd552b-2688-435c-b4f1-1fa1ee255462.json" for ::1 at 2015-12-05 18:45:21 +0100
+
+
+Started POST "/posts" for ::1 at 2015-12-05 18:45:25 +0100
+Processing by PostsController#create as JS
+  Parameters: {"utf8"=>"✓", "post"=>{"title"=>"erwre", "content"=>"werwerwer"}, "commit"=>"Create Post"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35m (1.0ms)[0m  begin transaction
+  [1m[36mSQL (3.0ms)[0m  [1mINSERT INTO "posts" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "erwre"], ["content", "werwerwer"], ["user_id", 2], ["created_at", "2015-12-05 17:45:25.822690"], ["updated_at", "2015-12-05 17:45:25.822690"]]
+  [1m[35m (13.0ms)[0m  commit transaction
+  Rendered posts/_post.html.haml (20.0ms)
+  [1m[36m (1.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 54]]
+  [1m[35mComment Load (1.0ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 54]]
+  Rendered collection (1.0ms)
+  Rendered comments/_form.html.haml (155.0ms)
+  Rendered posts/show.html.haml (345.0ms)
+  Rendered posts/create.js.erb (421.0ms)
+Completed 200 OK in 836ms (Views: 471.0ms | ActiveRecord: 20.0ms)
+
+
+Started GET "/posts/41" for ::1 at 2015-12-05 18:46:51 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"41"}
+  [1m[36mPost Load (2.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 41]]
+  [1m[35m (1.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 41]]
+  [1m[36mComment Load (1.0ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 41]]
+  [1m[35mUser Load (2.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered comments/_comment.html.haml (450.0ms)
+  Rendered comments/_form.html.haml (136.0ms)
+  Rendered posts/show.html.haml within layouts/application (794.0ms)
+  Rendered layouts/_header.html.haml (23.0ms)
+Completed 200 OK in 3037ms (Views: 2949.2ms | ActiveRecord: 10.0ms)
+
+
+Started GET "/posts/new" for ::1 at 2015-12-05 18:46:56 +0100
+Processing by PostsController#new as JS
+  [1m[36mUser Load (2.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  Rendered posts/_form.html.haml (221.0ms)
+  Rendered posts/new.js.erb (250.0ms)
+Completed 200 OK in 451ms (Views: 318.0ms | ActiveRecord: 2.0ms)
+
+
+Started POST "/posts" for ::1 at 2015-12-05 18:47:02 +0100
+Processing by PostsController#create as JS
+  Parameters: {"utf8"=>"✓", "post"=>{"title"=>"a", "content"=>"a"}, "commit"=>"Create Post"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  INSERT INTO "posts" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "a"], ["content", "a"], ["user_id", 2], ["created_at", "2015-12-05 17:47:02.373190"], ["updated_at", "2015-12-05 17:47:02.373190"]]
+  [1m[36m (13.0ms)[0m  [1mcommit transaction[0m
+  Rendered posts/_post.html.haml (13.0ms)
+  [1m[35m (1.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 55]]
+  [1m[36mComment Load (1.0ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 55]]
+  Rendered collection (0.0ms)
+  Rendered comments/_form.html.haml (79.0ms)
+  Rendered posts/show.html.haml (206.0ms)
+  Rendered posts/create.js.erb (250.0ms)
+Completed 200 OK in 518ms (Views: 286.0ms | ActiveRecord: 19.0ms)
+
+
+Started GET "/posts/41" for ::1 at 2015-12-05 18:47:35 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"41"}
+  [1m[35mPost Load (1.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 41]]
+  [1m[36m (1.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 41]]
+  [1m[35mComment Load (1.0ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 41]]
+  [1m[36mUser Load (2.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (2.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered comments/_comment.html.haml (395.0ms)
+  Rendered comments/_form.html.haml (114.0ms)
+  Rendered posts/show.html.haml within layouts/application (684.0ms)
+  Rendered layouts/_header.html.haml (9.0ms)
+Completed 200 OK in 2522ms (Views: 2451.1ms | ActiveRecord: 8.0ms)
+
+
+Started GET "/posts/new" for ::1 at 2015-12-05 18:47:42 +0100
+Processing by PostsController#new as JS
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  Rendered posts/_form.html.haml (213.0ms)
+  Rendered posts/new.js.erb (243.0ms)
+Completed 200 OK in 411ms (Views: 294.0ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/posts" for ::1 at 2015-12-05 18:47:46 +0100
+Processing by PostsController#create as JS
+  Parameters: {"utf8"=>"✓", "post"=>{"title"=>"dsssd", "content"=>"sdsfs"}, "commit"=>"Create Post"}
+  [1m[36mUser Load (2.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35m (1.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "posts" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "dsssd"], ["content", "sdsfs"], ["user_id", 2], ["created_at", "2015-12-05 17:47:47.198944"], ["updated_at", "2015-12-05 17:47:47.198944"]]
+  [1m[35m (13.0ms)[0m  commit transaction
+  Rendered posts/_post.html.haml (17.0ms)
+  [1m[36m (2.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 56]]
+  [1m[35mComment Load (1.0ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 56]]
+  Rendered collection (1.0ms)
+  Rendered comments/_form.html.haml (112.0ms)
+  Rendered posts/show.html.haml (258.0ms)
+  Rendered posts/create.js.erb (324.0ms)
+Completed 200 OK in 642ms (Views: 351.0ms | ActiveRecord: 21.0ms)
+
+
+Started GET "/posts/41" for ::1 at 2015-12-05 18:48:31 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"41"}
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 41]]
+  [1m[35m (2.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 41]]
+  [1m[36mComment Load (1.0ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 41]]
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered comments/_comment.html.haml (417.0ms)
+  Rendered comments/_form.html.haml (128.0ms)
+  Rendered posts/show.html.haml within layouts/application (748.0ms)
+  Rendered layouts/_header.html.haml (23.0ms)
+Completed 200 OK in 2878ms (Views: 2787.2ms | ActiveRecord: 8.0ms)
+
+
+Started GET "/posts/41" for ::1 at 2015-12-05 18:49:23 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"41"}
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 41]]
+  [1m[35m (1.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 41]]
+  [1m[36mComment Load (1.0ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 41]]
+  [1m[35mUser Load (2.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered comments/_comment.html.haml (388.0ms)
+  Rendered comments/_form.html.haml (119.0ms)
+  Rendered posts/show.html.haml within layouts/application (703.0ms)
+  Rendered layouts/_header.html.haml (9.0ms)
+Completed 200 OK in 2627ms (Views: 2552.1ms | ActiveRecord: 9.0ms)
+
+
+Started GET "/posts/new" for ::1 at 2015-12-05 18:49:33 +0100
+Processing by PostsController#new as JS
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  Rendered posts/_form.html.haml (177.0ms)
+  Rendered posts/new.js.erb (206.0ms)
+Completed 200 OK in 344ms (Views: 247.0ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/posts" for ::1 at 2015-12-05 18:49:36 +0100
+Processing by PostsController#create as JS
+  Parameters: {"utf8"=>"✓", "post"=>{"title"=>"ryryt", "content"=>"y"}, "commit"=>"Create Post"}
+  [1m[35mUser Load (2.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  INSERT INTO "posts" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "ryryt"], ["content", "y"], ["user_id", 2], ["created_at", "2015-12-05 17:49:36.484177"], ["updated_at", "2015-12-05 17:49:36.484177"]]
+  [1m[36m (13.0ms)[0m  [1mcommit transaction[0m
+  Rendered posts/_post.html.haml (16.0ms)
+  [1m[35m (2.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 57]]
+  [1m[36mComment Load (2.0ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 57]]
+  Rendered collection (0.0ms)
+  Rendered comments/_form.html.haml (115.0ms)
+  Rendered posts/show.html.haml (283.0ms)
+  Rendered posts/create.js.erb (335.0ms)
+Completed 200 OK in 690ms (Views: 365.0ms | ActiveRecord: 22.0ms)
+
+
+Started GET "/posts/ciao" for ::1 at 2015-12-05 18:49:37 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"ciao"}
+  [1m[35mPost Load (2.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 0]]
+Completed 404 Not Found in 77ms (ActiveRecord: 2.0ms)
+
+ActiveRecord::RecordNotFound - Couldn't find Post with 'id'=ciao:
+  activerecord (4.2.3) lib/active_record/core.rb:155:in `find'
+  app/controllers/posts_controller.rb:73:in `set_post'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:430:in `block in make_lambda'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:143:in `block in halting_and_conditional'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:502:in `block in call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:502:in `call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:88:in `run_callbacks'
+  actionpack (4.2.3) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.3) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.3) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.3) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.3) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.3) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.3) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.3) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.3) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.3) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.3) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.3) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:76:in `dispatch'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:45:in `serve'
+  actionpack (4.2.3) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.3) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:821:in `call'
+  meta_request (0.3.4) lib/meta_request/middlewares/app_request_handler.rb:13:in `call'
+  meta_request (0.3.4) lib/meta_request/middlewares/meta_request_handler.rb:13:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.3) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.3) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:84:in `run_callbacks'
+  actionpack (4.2.3) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+  rack-contrib (1.4.0) lib/rack/contrib/response_headers.rb:17:in `call'
+  meta_request (0.3.4) lib/meta_request/middlewares/headers.rb:16:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  C:/Ruby21/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  C:/Ruby21/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  C:/Ruby21/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+
+Started POST "/__better_errors/d09a56c238451b4b/variables" for ::1 at 2015-12-05 18:49:38 +0100
+
+
+Started GET "/posts/41" for ::1 at 2015-12-05 18:50:47 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"41"}
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 41]]
+  [1m[35m (1.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 41]]
+  [1m[36mComment Load (1.0ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 41]]
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered comments/_comment.html.haml (473.0ms)
+  Rendered comments/_form.html.haml (122.0ms)
+  Rendered posts/show.html.haml within layouts/application (797.0ms)
+  Rendered layouts/_header.html.haml (24.0ms)
+Completed 200 OK in 2768ms (Views: 2709.2ms | ActiveRecord: 8.0ms)
+
+
+Started GET "/posts/new" for ::1 at 2015-12-05 18:50:56 +0100
+Processing by PostsController#new as JS
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  Rendered posts/_form.html.haml (170.0ms)
+  Rendered posts/new.js.erb (196.0ms)
+Completed 200 OK in 345ms (Views: 236.0ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/posts" for ::1 at 2015-12-05 18:50:59 +0100
+Processing by PostsController#create as JS
+  Parameters: {"utf8"=>"✓", "post"=>{"title"=>"tet", "content"=>"etryt"}, "commit"=>"Create Post"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (3.0ms)[0m  INSERT INTO "posts" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "tet"], ["content", "etryt"], ["user_id", 2], ["created_at", "2015-12-05 17:50:59.989143"], ["updated_at", "2015-12-05 17:50:59.989143"]]
+  [1m[36m (13.0ms)[0m  [1mcommit transaction[0m
+  Rendered posts/_post.html.haml (32.0ms)
+  [1m[35m (1.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 58]]
+  [1m[36mComment Load (1.0ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 58]]
+  Rendered collection (1.0ms)
+  Rendered comments/_form.html.haml (117.0ms)
+  Rendered posts/show.html.haml (284.0ms)
+  Rendered posts/create.js.erb (352.0ms)
+Completed 200 OK in 693ms (Views: 381.0ms | ActiveRecord: 20.0ms)
+
+
+Started GET "/posts/41" for ::1 at 2015-12-05 18:58:16 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"41"}
+  [1m[35mPost Load (1.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 41]]
+  [1m[36m (2.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 41]]
+  [1m[35mComment Load (2.0ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 41]]
+  [1m[36mUser Load (2.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered comments/_comment.html.haml (372.0ms)
+  Rendered comments/_form.html.haml (110.0ms)
+  Rendered posts/show.html.haml within layouts/application (658.0ms)
+  Rendered layouts/_header.html.haml (9.0ms)
+Completed 200 OK in 2568ms (Views: 2443.1ms | ActiveRecord: 10.0ms)
+
+
+Started GET "/posts/new" for ::1 at 2015-12-05 18:58:20 +0100
+Processing by PostsController#new as JS
+  [1m[35mUser Load (2.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  Rendered posts/_form.html.haml (177.0ms)
+  Rendered posts/new.js.erb (213.0ms)
+Completed 200 OK in 365ms (Views: 257.0ms | ActiveRecord: 2.0ms)
+
+
+Started POST "/posts" for ::1 at 2015-12-05 18:58:22 +0100
+Processing by PostsController#create as JS
+  Parameters: {"utf8"=>"✓", "post"=>{"title"=>"fgfg", "content"=>"fgfgd"}, "commit"=>"Create Post"}
+  [1m[36mUser Load (2.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35m (1.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "posts" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "fgfg"], ["content", "fgfgd"], ["user_id", 2], ["created_at", "2015-12-05 17:58:22.836395"], ["updated_at", "2015-12-05 17:58:22.836395"]]
+  [1m[35m (12.0ms)[0m  commit transaction
+  Rendered posts/_post.html.haml (16.0ms)
+  [1m[36m (1.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 59]]
+  [1m[35mComment Load (0.0ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 59]]
+  Rendered collection (0.0ms)
+  Rendered comments/_form.html.haml (99.0ms)
+  Rendered posts/show.html.haml (262.0ms)
+  Rendered posts/create.js.erb (315.0ms)
+Completed 200 OK in 640ms (Views: 356.0ms | ActiveRecord: 18.0ms)
+
+
+Started GET "/posts/41" for ::1 at 2015-12-05 19:08:06 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"41"}
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 41]]
+  [1m[35m (2.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 41]]
+  [1m[36mComment Load (2.0ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 41]]
+  [1m[35mUser Load (2.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (14.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered comments/_comment.html.haml (436.0ms)
+  Rendered comments/_form.html.haml (125.0ms)
+  Rendered posts/show.html.haml within layouts/application (794.0ms)
+  Rendered layouts/_header.html.haml (26.0ms)
+Completed 200 OK in 3333ms (Views: 3255.2ms | ActiveRecord: 23.0ms)
+
+
+Started GET "/posts/41" for ::1 at 2015-12-05 19:20:58 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"41"}
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 41]]
+  [1m[35m (1.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 41]]
+  [1m[36mComment Load (1.0ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 41]]
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered comments/_comment.html.haml (300.0ms)
+  Rendered comments/_form.html.haml (82.0ms)
+  Rendered posts/show.html.haml within layouts/application (522.0ms)
+  Rendered layouts/_header.html.haml (8.0ms)
+Completed 200 OK in 2078ms (Views: 2028.1ms | ActiveRecord: 7.0ms)
+
+
+Started GET "/posts/41" for ::1 at 2015-12-05 19:21:10 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"41"}
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 41]]
+  [1m[35m (1.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 41]]
+  [1m[36mComment Load (1.0ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 41]]
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered comments/_comment.html.haml (291.0ms)
+  Rendered comments/_form.html.haml (98.0ms)
+  Rendered posts/show.html.haml within layouts/application (533.0ms)
+  Rendered layouts/_header.html.haml (7.0ms)
+Completed 200 OK in 1919ms (Views: 1871.1ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/posts/45" for ::1 at 2015-12-05 19:25:05 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"45"}
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 45]]
+  [1m[35m (1.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 45]]
+  [1m[36mComment Load (1.0ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 45]]
+  Rendered collection (0.0ms)
+  Rendered comments/_form.html.haml (83.0ms)
+  Rendered posts/show.html.haml within layouts/application (215.0ms)
+  [1m[35mUser Load (2.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  Rendered layouts/_header.html.haml (71.0ms)
+Completed 200 OK in 1754ms (Views: 1690.1ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/posts/45" for ::1 at 2015-12-05 19:34:59 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"45"}
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 45]]
+  [1m[35m (1.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 45]]
+  [1m[36mComment Load (1.0ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 45]]
+  Rendered collection (0.0ms)
+  Rendered comments/_form.html.haml (137.0ms)
+  Rendered posts/show.html.haml within layouts/application (315.0ms)
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  Rendered layouts/_header.html.haml (85.0ms)
+Completed 200 OK in 2368ms (Views: 2301.1ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/" for ::1 at 2015-12-05 20:46:21 +0100
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (25.0ms)[0m  [1mSELECT "posts".* FROM "posts"  ORDER BY created_at DESC[0m
+  [1m[35mUser Load (2.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  Rendered posts/_post.html.haml (201.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered posts/_post.html.haml (118.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered posts/_post.html.haml (93.0ms)
+  [1m[35mCACHE (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered posts/_post.html.haml (94.0ms)
+  [1m[36mCACHE (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered posts/_post.html.haml (105.0ms)
+  [1m[35mCACHE (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered posts/_post.html.haml (96.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered posts/_post.html.haml (118.0ms)
+  [1m[35mCACHE (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered posts/_post.html.haml (102.0ms)
+  [1m[36mCACHE (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered posts/_post.html.haml (109.0ms)
+  [1m[35mCACHE (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered posts/_post.html.haml (96.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered posts/_post.html.haml (116.0ms)
+  [1m[35mCACHE (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered posts/_post.html.haml (98.0ms)
+  [1m[36mCACHE (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered posts/_post.html.haml (100.0ms)
+  [1m[35mCACHE (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered posts/_post.html.haml (95.0ms)
+  [1m[36mCACHE (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered posts/_post.html.haml (131.0ms)
+  [1m[35mCACHE (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered posts/_post.html.haml (106.0ms)
+  [1m[36mCACHE (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered posts/_post.html.haml (116.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered posts/_post.html.haml (103.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered posts/_post.html.haml (107.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered posts/_post.html.haml (227.0ms)
+  [1m[36mCACHE (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered posts/_post.html.haml (96.0ms)
+  Rendered posts/_posts.html.haml (3020.2ms)
+  Rendered posts/index.html.haml within layouts/application (3102.2ms)
+  Rendered layouts/_header.html.haml (7.0ms)
+Completed 200 OK in 5680ms (Views: 5623.3ms | ActiveRecord: 41.0ms)
+
+
+Started GET "/" for ::1 at 2015-12-05 20:46:31 +0100
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (3.0ms)[0m  SELECT "posts".* FROM "posts"  ORDER BY created_at DESC
+  [1m[36mUser Load (9.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  Rendered posts/_post.html.haml (275.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered posts/_post.html.haml (91.0ms)
+  [1m[35mCACHE (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered posts/_post.html.haml (87.0ms)
+  [1m[36mCACHE (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered posts/_post.html.haml (89.0ms)
+  [1m[35mCACHE (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered posts/_post.html.haml (91.0ms)
+  [1m[36mCACHE (2.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered posts/_post.html.haml (93.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered posts/_post.html.haml (94.0ms)
+  [1m[36mCACHE (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered posts/_post.html.haml (92.0ms)
+  [1m[35mCACHE (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered posts/_post.html.haml (95.0ms)
+  [1m[36mCACHE (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered posts/_post.html.haml (91.0ms)
+  [1m[35mCACHE (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered posts/_post.html.haml (160.0ms)
+  [1m[36mCACHE (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered posts/_post.html.haml (75.0ms)
+  [1m[35mCACHE (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered posts/_post.html.haml (83.0ms)
+  [1m[36mCACHE (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered posts/_post.html.haml (84.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered posts/_post.html.haml (82.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered posts/_post.html.haml (85.0ms)
+  [1m[35mCACHE (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered posts/_post.html.haml (101.0ms)
+  [1m[36mCACHE (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered posts/_post.html.haml (89.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered posts/_post.html.haml (86.0ms)
+  [1m[36mCACHE (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered posts/_post.html.haml (86.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered posts/_post.html.haml (86.0ms)
+  Rendered posts/_posts.html.haml (3719.2ms)
+  Rendered posts/index.html.haml within layouts/application (3737.2ms)
+  Rendered layouts/_header.html.haml (9.0ms)
+Completed 200 OK in 5577ms (Views: 5533.3ms | ActiveRecord: 28.0ms)
+
+
+Started GET "/posts/new" for ::1 at 2015-12-05 20:46:44 +0100
+Processing by PostsController#new as JS
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  Rendered posts/_form.html.haml (190.0ms)
+  Rendered posts/new.js.erb (221.0ms)
+Completed 200 OK in 411ms (Views: 285.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/posts/59" for ::1 at 2015-12-05 20:46:47 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"59"}
+  [1m[35mPost Load (1.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 59]]
+  [1m[36m (1.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 59]]
+  [1m[35mComment Load (2.0ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 59]]
+  Rendered collection (1.0ms)
+  Rendered comments/_form.html.haml (99.0ms)
+  Rendered posts/show.html.haml within layouts/application (300.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  Rendered layouts/_header.html.haml (68.0ms)
+Completed 200 OK in 1841ms (Views: 1765.9ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/posts/new" for ::1 at 2015-12-05 20:48:45 +0100
+Processing by PostsController#new as JS
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  Rendered posts/_form.html.haml (155.0ms)
+  Rendered posts/new.js.erb (184.0ms)
+Completed 200 OK in 327ms (Views: 227.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/posts" for ::1 at 2015-12-05 20:48:48 +0100
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (2.0ms)[0m  [1mSELECT "posts".* FROM "posts"  ORDER BY created_at DESC[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  Rendered posts/_post.html.haml (125.0ms)
+  [1m[35mCACHE (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered posts/_post.html.haml (57.0ms)
+  [1m[36mCACHE (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered posts/_post.html.haml (58.0ms)
+  [1m[35mCACHE (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered posts/_post.html.haml (69.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered posts/_post.html.haml (71.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered posts/_post.html.haml (58.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered posts/_post.html.haml (71.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered posts/_post.html.haml (61.6ms)
+  [1m[36mCACHE (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered posts/_post.html.haml (69.6ms)
+  [1m[35mCACHE (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered posts/_post.html.haml (69.0ms)
+  [1m[36mCACHE (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered posts/_post.html.haml (70.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered posts/_post.html.haml (57.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered posts/_post.html.haml (69.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered posts/_post.html.haml (70.0ms)
+  [1m[36mCACHE (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered posts/_post.html.haml (59.0ms)
+  [1m[35mCACHE (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered posts/_post.html.haml (56.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered posts/_post.html.haml (68.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered posts/_post.html.haml (68.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered posts/_post.html.haml (56.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered posts/_post.html.haml (70.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered posts/_post.html.haml (70.0ms)
+  Rendered posts/_posts.html.haml (1811.9ms)
+  Rendered posts/index.html.haml within layouts/application (1825.9ms)
+  Rendered layouts/_header.html.haml (7.0ms)
+Completed 200 OK in 3127ms (Views: 3107.0ms | ActiveRecord: 11.0ms)
+
+
+Started GET "/posts/59" for ::1 at 2015-12-05 20:48:53 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"59"}
+  [1m[35mPost Load (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 59]]
+  [1m[36m (1.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 59]]
+  [1m[35mComment Load (1.0ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 59]]
+  Rendered collection (1.0ms)
+  Rendered comments/_form.html.haml (80.0ms)
+  Rendered posts/show.html.haml within layouts/application (207.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  Rendered layouts/_header.html.haml (70.0ms)
+Completed 200 OK in 1608ms (Views: 1556.1ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/posts/new" for ::1 at 2015-12-05 20:48:58 +0100
+Processing by PostsController#new as JS
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  Rendered posts/_form.html.haml (128.0ms)
+  Rendered posts/new.js.erb (151.0ms)
+Completed 200 OK in 271ms (Views: 192.0ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/posts" for ::1 at 2015-12-05 20:49:01 +0100
+Processing by PostsController#create as JS
+  Parameters: {"utf8"=>"✓", "post"=>{"title"=>"gfg", "content"=>"fgdgdf"}, "commit"=>"Create Post"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35m (1.0ms)[0m  begin transaction
+  [1m[36mSQL (18.0ms)[0m  [1mINSERT INTO "posts" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "gfg"], ["content", "fgdgdf"], ["user_id", 2], ["created_at", "2015-12-05 19:49:01.491206"], ["updated_at", "2015-12-05 19:49:01.491206"]]
+  [1m[35m (12.0ms)[0m  commit transaction
+  Rendered posts/_post.html.haml (23.0ms)
+  [1m[36m (1.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 60]]
+  [1m[35mComment Load (1.0ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 60]]
+  Rendered collection (1.0ms)
+  Rendered comments/_form.html.haml (84.0ms)
+  Rendered posts/show.html.haml (215.0ms)
+  Rendered posts/create.js.erb (279.0ms)
+Completed 200 OK in 572ms (Views: 316.0ms | ActiveRecord: 34.0ms)
+
+
+Started GET "/posts" for ::1 at 2015-12-05 20:49:32 +0100
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (2.0ms)[0m  [1mSELECT "posts".* FROM "posts"  ORDER BY created_at DESC[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (2.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  Rendered posts/_post.html.haml (164.0ms)
+  [1m[35mCACHE (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered posts/_post.html.haml (63.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered posts/_post.html.haml (84.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered posts/_post.html.haml (89.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered posts/_post.html.haml (89.0ms)
+  [1m[35mCACHE (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered posts/_post.html.haml (59.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered posts/_post.html.haml (58.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered posts/_post.html.haml (71.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered posts/_post.html.haml (70.0ms)
+  [1m[35mCACHE (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered posts/_post.html.haml (70.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered posts/_post.html.haml (54.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered posts/_post.html.haml (72.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered posts/_post.html.haml (71.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered posts/_post.html.haml (72.0ms)
+  [1m[36mCACHE (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered posts/_post.html.haml (59.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered posts/_post.html.haml (71.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered posts/_post.html.haml (71.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered posts/_post.html.haml (71.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered posts/_post.html.haml (59.0ms)
+  [1m[35mCACHE (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered posts/_post.html.haml (57.0ms)
+  [1m[36mCACHE (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered posts/_post.html.haml (70.0ms)
+  [1m[35mCACHE (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered posts/_post.html.haml (70.0ms)
+  Rendered posts/_posts.html.haml (1995.1ms)
+  Rendered posts/index.html.haml within layouts/application (2014.1ms)
+  Rendered layouts/_header.html.haml (7.0ms)
+Completed 200 OK in 3408ms (Views: 3384.2ms | ActiveRecord: 12.0ms)
+
+
+Started DELETE "/posts/60" for ::1 at 2015-12-05 20:49:39 +0100
+Processing by PostsController#destroy as JS
+  Parameters: {"id"=>"60"}
+  [1m[36mPost Load (2.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 60]]
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (22.0ms)[0m  DELETE FROM "posts" WHERE "posts"."id" = ?  [["id", 60]]
+  [1m[36m (12.0ms)[0m  [1mcommit transaction[0m
+  Rendered application/_flashes.html.haml (61.0ms)
+  Rendered application/_flashes.html.haml (3.0ms)
+  Rendered posts/destroy.js.erb (152.0ms)
+Completed 200 OK in 582ms (Views: 268.0ms | ActiveRecord: 38.0ms)
+
+
+Started DELETE "/posts/59" for ::1 at 2015-12-05 20:49:43 +0100
+Processing by PostsController#destroy as JS
+  Parameters: {"id"=>"59"}
+  [1m[35mPost Load (2.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 59]]
+  [1m[36mUser Load (2.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 59]]
+  [1m[35m (12.0ms)[0m  commit transaction
+  Rendered application/_flashes.html.haml (2.0ms)
+  Rendered application/_flashes.html.haml (2.0ms)
+  Rendered posts/destroy.js.erb (41.0ms)
+Completed 200 OK in 315ms (Views: 91.0ms | ActiveRecord: 18.0ms)
+
+
+Started DELETE "/posts/58" for ::1 at 2015-12-05 20:49:46 +0100
+Processing by PostsController#destroy as JS
+  Parameters: {"id"=>"58"}
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 58]]
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  DELETE FROM "posts" WHERE "posts"."id" = ?  [["id", 58]]
+  [1m[36m (14.0ms)[0m  [1mcommit transaction[0m
+  Rendered application/_flashes.html.haml (2.0ms)
+  Rendered application/_flashes.html.haml (2.0ms)
+  Rendered posts/destroy.js.erb (42.0ms)
+Completed 200 OK in 331ms (Views: 69.0ms | ActiveRecord: 18.0ms)
+
+
+Started DELETE "/posts/57" for ::1 at 2015-12-05 20:49:49 +0100
+Processing by PostsController#destroy as JS
+  Parameters: {"id"=>"57"}
+  [1m[35mPost Load (1.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 57]]
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35m (1.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 57]]
+  [1m[35m (14.0ms)[0m  commit transaction
+  Rendered application/_flashes.html.haml (2.0ms)
+  Rendered application/_flashes.html.haml (2.0ms)
+  Rendered posts/destroy.js.erb (43.0ms)
+Completed 200 OK in 363ms (Views: 88.0ms | ActiveRecord: 19.0ms)
+
+
+Started DELETE "/posts/56" for ::1 at 2015-12-05 20:49:52 +0100
+Processing by PostsController#destroy as JS
+  Parameters: {"id"=>"56"}
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 56]]
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  DELETE FROM "posts" WHERE "posts"."id" = ?  [["id", 56]]
+  [1m[36m (12.0ms)[0m  [1mcommit transaction[0m
+  Rendered application/_flashes.html.haml (2.0ms)
+  Rendered application/_flashes.html.haml (2.0ms)
+  Rendered posts/destroy.js.erb (56.0ms)
+Completed 200 OK in 336ms (Views: 84.0ms | ActiveRecord: 16.0ms)
+
+
+Started DELETE "/posts/53" for ::1 at 2015-12-05 20:49:57 +0100
+Processing by PostsController#destroy as JS
+  Parameters: {"id"=>"53"}
+  [1m[35mPost Load (1.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 53]]
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35m (1.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 53]]
+  [1m[35m (13.0ms)[0m  commit transaction
+  Rendered application/_flashes.html.haml (2.0ms)
+  Rendered application/_flashes.html.haml (3.0ms)
+  Rendered posts/destroy.js.erb (43.0ms)
+Completed 200 OK in 347ms (Views: 74.0ms | ActiveRecord: 18.0ms)
+
+
+Started DELETE "/posts/50" for ::1 at 2015-12-05 20:50:01 +0100
+Processing by PostsController#destroy as JS
+  Parameters: {"id"=>"50"}
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 50]]
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  DELETE FROM "posts" WHERE "posts"."id" = ?  [["id", 50]]
+  [1m[36m (12.0ms)[0m  [1mcommit transaction[0m
+  Rendered application/_flashes.html.haml (2.0ms)
+  Rendered application/_flashes.html.haml (2.0ms)
+  Rendered posts/destroy.js.erb (46.0ms)
+Completed 200 OK in 326ms (Views: 93.0ms | ActiveRecord: 17.0ms)
+
+
+Started GET "/posts/54" for ::1 at 2015-12-05 20:50:03 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"54"}
+  [1m[35mPost Load (1.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 54]]
+  [1m[36m (2.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 54]]
+  [1m[35mComment Load (1.0ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 54]]
+  Rendered collection (0.0ms)
+  Rendered comments/_form.html.haml (82.0ms)
+  Rendered posts/show.html.haml within layouts/application (242.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  Rendered layouts/_header.html.haml (67.0ms)
+Completed 200 OK in 1747ms (Views: 1618.1ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/posts/new" for ::1 at 2015-12-05 20:50:07 +0100
+Processing by PostsController#new as JS
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  Rendered posts/_form.html.haml (120.0ms)
+  Rendered posts/new.js.erb (145.0ms)
+Completed 200 OK in 256ms (Views: 182.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new" for ::1 at 2015-12-05 20:50:07 +0100
+Processing by PostsController#new as JS
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  Rendered posts/_form.html.haml (136.0ms)
+  Rendered posts/new.js.erb (173.0ms)
+Completed 200 OK in 293ms (Views: 226.0ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/posts" for ::1 at 2015-12-05 20:50:10 +0100
+Processing by PostsController#create as JS
+  Parameters: {"utf8"=>"✓", "post"=>{"title"=>"fdggd", "content"=>"fgfdfdd"}, "commit"=>"Create Post"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  INSERT INTO "posts" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "fdggd"], ["content", "fgfdfdd"], ["user_id", 2], ["created_at", "2015-12-05 19:50:10.386733"], ["updated_at", "2015-12-05 19:50:10.386733"]]
+  [1m[36m (11.0ms)[0m  [1mcommit transaction[0m
+  Rendered posts/_post.html.haml (28.0ms)
+  [1m[35m (1.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 61]]
+  [1m[36mComment Load (0.0ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 61]]
+  Rendered collection (0.0ms)
+  Rendered comments/_form.html.haml (80.0ms)
+  Rendered posts/show.html.haml (208.0ms)
+  Rendered posts/create.js.erb (268.0ms)
+Completed 200 OK in 539ms (Views: 296.0ms | ActiveRecord: 16.0ms)
+
+
+Started GET "/posts/new" for ::1 at 2015-12-05 20:50:15 +0100
+Processing by PostsController#new as JS
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  Rendered posts/_form.html.haml (128.0ms)
+  Rendered posts/new.js.erb (153.0ms)
+Completed 200 OK in 256ms (Views: 191.0ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/posts" for ::1 at 2015-12-05 20:50:17 +0100
+Processing by PostsController#create as JS
+  Parameters: {"utf8"=>"✓", "post"=>{"title"=>"e", "content"=>"trytrwtrwwe"}, "commit"=>"Create Post"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "posts" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "e"], ["content", "trytrwtrwwe"], ["user_id", 2], ["created_at", "2015-12-05 19:50:18.064172"], ["updated_at", "2015-12-05 19:50:18.064172"]]
+  [1m[35m (11.0ms)[0m  commit transaction
+  Rendered posts/_post.html.haml (13.0ms)
+  [1m[36m (1.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 62]]
+  [1m[35mComment Load (1.0ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 62]]
+  Rendered collection (0.0ms)
+  Rendered comments/_form.html.haml (79.0ms)
+  Rendered posts/show.html.haml (211.0ms)
+  Rendered posts/create.js.erb (254.0ms)
+Completed 200 OK in 531ms (Views: 290.0ms | ActiveRecord: 16.0ms)
+
+
+Started GET "/posts/62" for ::1 at 2015-12-05 20:50:21 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"62"}
+  [1m[36mPost Load (2.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 62]]
+  [1m[35m (1.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 62]]
+  [1m[36mComment Load (1.0ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 62]]
+  Rendered collection (1.0ms)
+  Rendered comments/_form.html.haml (105.0ms)
+  Rendered posts/show.html.haml within layouts/application (275.0ms)
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  Rendered layouts/_header.html.haml (85.0ms)
+Completed 200 OK in 2189ms (Views: 2135.1ms | ActiveRecord: 5.0ms)
+
+
+Started POST "/posts/62/comments" for ::1 at 2015-12-05 20:50:30 +0100
+Processing by CommentsController#create as JS
+  Parameters: {"utf8"=>"✓", "comment"=>{"comment"=>"sgfgfdfgfg"}, "commit"=>"Create Comment", "post_id"=>"62"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mPost Load (1.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 62]]
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  INSERT INTO "comments" ("comment", "post_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["comment", "sgfgfdfgfg"], ["post_id", 62], ["user_id", 2], ["created_at", "2015-12-05 19:50:30.779899"], ["updated_at", "2015-12-05 19:50:30.779899"]]
+  [1m[36m (37.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered comments/_comment.html.haml (77.0ms)
+  [1m[36m (1.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 62]]
+  Rendered comments/create.js.erb (162.0ms)
+Completed 200 OK in 570ms (Views: 179.0ms | ActiveRecord: 44.0ms)
+
+
+Started GET "/posts/62" for ::1 at 2015-12-05 20:54:11 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"62"}
+  [1m[35mPost Load (1.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 62]]
+  [1m[36m (1.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 62]]
+  [1m[35mComment Load (1.0ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 62]]
+  [1m[36mUser Load (2.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  Rendered comments/_comment.html.haml (167.0ms)
+  Rendered comments/_form.html.haml (118.0ms)
+  Rendered posts/show.html.haml within layouts/application (551.0ms)
+  Rendered layouts/_header.html.haml (9.0ms)
+Completed 200 OK in 2528ms (Views: 2472.1ms | ActiveRecord: 6.0ms)
+
+
+Started POST "/posts/62/comments" for ::1 at 2015-12-05 20:54:17 +0100
+Processing by CommentsController#create as JS
+  Parameters: {"utf8"=>"✓", "comment"=>{"comment"=>"fg"}, "commit"=>"Create Comment", "post_id"=>"62"}
+  [1m[36mUser Load (2.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mPost Load (17.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 62]]
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  INSERT INTO "comments" ("comment", "post_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["comment", "fg"], ["post_id", 62], ["user_id", 2], ["created_at", "2015-12-05 19:54:17.993227"], ["updated_at", "2015-12-05 19:54:17.993227"]]
+  [1m[36m (58.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered comments/_comment.html.haml (80.0ms)
+  [1m[36m (1.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 62]]
+  Rendered comments/create.js.erb (195.0ms)
+Completed 200 OK in 601ms (Views: 213.0ms | ActiveRecord: 82.0ms)
+
+
+Started GET "/posts" for ::1 at 2015-12-05 20:54:22 +0100
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (3.0ms)[0m  SELECT "posts".* FROM "posts"  ORDER BY created_at DESC
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  Rendered posts/_post.html.haml (152.0ms)
+  [1m[36mCACHE (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered posts/_post.html.haml (86.0ms)
+  [1m[35mCACHE (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered posts/_post.html.haml (91.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered posts/_post.html.haml (84.0ms)
+  [1m[35mCACHE (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered posts/_post.html.haml (84.0ms)
+  [1m[36mCACHE (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered posts/_post.html.haml (85.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered posts/_post.html.haml (84.0ms)
+  [1m[36mCACHE (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered posts/_post.html.haml (87.0ms)
+  [1m[35mCACHE (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered posts/_post.html.haml (83.0ms)
+  [1m[36mCACHE (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered posts/_post.html.haml (85.0ms)
+  [1m[35mCACHE (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered posts/_post.html.haml (84.0ms)
+  [1m[36mCACHE (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered posts/_post.html.haml (99.6ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered posts/_post.html.haml (83.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered posts/_post.html.haml (86.0ms)
+  [1m[35mCACHE (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered posts/_post.html.haml (83.0ms)
+  [1m[36mCACHE (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered posts/_post.html.haml (85.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered posts/_post.html.haml (85.0ms)
+  Rendered posts/_posts.html.haml (1880.7ms)
+  Rendered posts/index.html.haml within layouts/application (1897.7ms)
+  Rendered layouts/_header.html.haml (9.0ms)
+Completed 200 OK in 3749ms (Views: 3705.8ms | ActiveRecord: 16.0ms)
+
+
+Started GET "/posts/new" for ::1 at 2015-12-05 20:55:37 +0100
+Processing by PostsController#new as JS
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  Rendered posts/_form.html.haml (179.0ms)
+  Rendered posts/new.js.erb (206.0ms)
+Completed 200 OK in 349ms (Views: 244.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/posts/62" for ::1 at 2015-12-05 20:55:40 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"62"}
+  [1m[35mPost Load (2.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 62]]
+  [1m[36m (3.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 62]]
+  [1m[35mComment Load (1.0ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 62]]
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered comments/_comment.html.haml (224.0ms)
+  Rendered comments/_form.html.haml (81.0ms)
+  Rendered posts/show.html.haml within layouts/application (560.0ms)
+  Rendered layouts/_header.html.haml (7.0ms)
+Completed 200 OK in 2338ms (Views: 2281.1ms | ActiveRecord: 8.0ms)
+
+
+Started GET "/posts" for ::1 at 2015-12-05 20:56:29 +0100
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (3.0ms)[0m  SELECT "posts".* FROM "posts"  ORDER BY created_at DESC
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  Rendered posts/_post.html.haml (125.6ms)
+  [1m[36mCACHE (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered posts/_post.html.haml (76.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered posts/_post.html.haml (72.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered posts/_post.html.haml (75.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered posts/_post.html.haml (56.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered posts/_post.html.haml (58.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered posts/_post.html.haml (71.0ms)
+  [1m[36mCACHE (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered posts/_post.html.haml (72.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered posts/_post.html.haml (75.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered posts/_post.html.haml (79.0ms)
+  [1m[35mCACHE (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered posts/_post.html.haml (62.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered posts/_post.html.haml (71.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered posts/_post.html.haml (70.0ms)
+  [1m[36mCACHE (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered posts/_post.html.haml (74.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered posts/_post.html.haml (74.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered posts/_post.html.haml (63.0ms)
+  [1m[35mCACHE (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered posts/_post.html.haml (56.0ms)
+  Rendered posts/_posts.html.haml (1565.7ms)
+  Rendered posts/index.html.haml within layouts/application (1580.7ms)
+  Rendered layouts/_header.html.haml (7.0ms)
+Completed 200 OK in 2986ms (Views: 2968.8ms | ActiveRecord: 9.0ms)
+
+
+Started GET "/posts/62" for ::1 at 2015-12-05 20:56:34 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"62"}
+  [1m[36mPost Load (2.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 62]]
+  [1m[35m (1.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 62]]
+  [1m[36mComment Load (1.0ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 62]]
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered comments/_comment.html.haml (165.0ms)
+  Rendered comments/_form.html.haml (65.0ms)
+  Rendered posts/show.html.haml within layouts/application (380.0ms)
+  Rendered layouts/_header.html.haml (7.0ms)
+Completed 200 OK in 1642ms (Views: 1596.1ms | ActiveRecord: 7.0ms)
+
+
+Started GET "/posts/62/comments/49/edit" for ::1 at 2015-12-05 20:56:37 +0100
+Processing by CommentsController#edit as HTML
+  Parameters: {"post_id"=>"62", "id"=>"49"}
+  [1m[36mComment Load (1.0ms)[0m  [1mSELECT  "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT 1[0m  [["id", 49]]
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 62]]
+  [1m[35mComment Load (1.0ms)[0m  SELECT  "comments".* FROM "comments" WHERE "comments"."post_id" = ? AND "comments"."id" = ? LIMIT 1  [["post_id", 62], ["id", 49]]
+  Rendered comments/edit.html.haml within layouts/application (85.0ms)
+  Rendered layouts/_header.html.haml (7.0ms)
+Completed 200 OK in 1553ms (Views: 1313.1ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/posts" for ::1 at 2015-12-05 20:56:41 +0100
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts"  ORDER BY created_at DESC[0m
+  [1m[35mUser Load (2.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  Rendered posts/_post.html.haml (127.0ms)
+  [1m[35mCACHE (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered posts/_post.html.haml (70.0ms)
+  [1m[36mCACHE (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered posts/_post.html.haml (69.0ms)
+  [1m[35mCACHE (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered posts/_post.html.haml (58.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered posts/_post.html.haml (69.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered posts/_post.html.haml (70.0ms)
+  [1m[36mCACHE (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered posts/_post.html.haml (57.0ms)
+  [1m[35mCACHE (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered posts/_post.html.haml (71.0ms)
+  [1m[36mCACHE (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered posts/_post.html.haml (72.0ms)
+  [1m[35mCACHE (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered posts/_post.html.haml (58.0ms)
+  [1m[36mCACHE (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered posts/_post.html.haml (69.0ms)
+  [1m[35mCACHE (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered posts/_post.html.haml (68.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered posts/_post.html.haml (58.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered posts/_post.html.haml (69.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered posts/_post.html.haml (69.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered posts/_post.html.haml (57.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered posts/_post.html.haml (68.0ms)
+  Rendered posts/_posts.html.haml (1452.1ms)
+  Rendered posts/index.html.haml within layouts/application (1468.1ms)
+  Rendered layouts/_header.html.haml (7.0ms)
+Completed 200 OK in 2729ms (Views: 2697.2ms | ActiveRecord: 12.0ms)
+
+
+Started DELETE "/posts/62" for ::1 at 2015-12-05 20:56:50 +0100
+Processing by PostsController#destroy as JS
+  Parameters: {"id"=>"62"}
+  [1m[35mPost Load (1.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 62]]
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35m (1.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 62]]
+  [1m[35m (14.0ms)[0m  commit transaction
+  Rendered application/_flashes.html.haml (3.0ms)
+  Rendered application/_flashes.html.haml (2.0ms)
+  Rendered posts/destroy.js.erb (53.0ms)
+Completed 200 OK in 315ms (Views: 86.0ms | ActiveRecord: 19.0ms)
+
+
+Started DELETE "/posts/61" for ::1 at 2015-12-05 20:56:53 +0100
+Processing by PostsController#destroy as JS
+  Parameters: {"id"=>"61"}
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 61]]
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  DELETE FROM "posts" WHERE "posts"."id" = ?  [["id", 61]]
+  [1m[36m (15.0ms)[0m  [1mcommit transaction[0m
+  Rendered application/_flashes.html.haml (2.0ms)
+  Rendered application/_flashes.html.haml (3.0ms)
+  Rendered posts/destroy.js.erb (52.0ms)
+Completed 200 OK in 315ms (Views: 82.0ms | ActiveRecord: 20.0ms)
+
+
+Started DELETE "/posts/54" for ::1 at 2015-12-05 20:56:56 +0100
+Processing by PostsController#destroy as JS
+  Parameters: {"id"=>"54"}
+  [1m[35mPost Load (1.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 54]]
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35m (1.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 54]]
+  [1m[35m (13.0ms)[0m  commit transaction
+  Rendered application/_flashes.html.haml (2.0ms)
+  Rendered application/_flashes.html.haml (2.0ms)
+  Rendered posts/destroy.js.erb (42.0ms)
+Completed 200 OK in 316ms (Views: 92.0ms | ActiveRecord: 18.0ms)
+
+
+Started DELETE "/posts/49" for ::1 at 2015-12-05 20:57:00 +0100
+Processing by PostsController#destroy as JS
+  Parameters: {"id"=>"49"}
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 49]]
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  DELETE FROM "posts" WHERE "posts"."id" = ?  [["id", 49]]
+  [1m[36m (12.0ms)[0m  [1mcommit transaction[0m
+  Rendered application/_flashes.html.haml (3.0ms)
+  Rendered application/_flashes.html.haml (14.0ms)
+  Rendered posts/destroy.js.erb (68.0ms)
+Completed 200 OK in 312ms (Views: 99.0ms | ActiveRecord: 17.0ms)
+
+
+Started DELETE "/posts/55" for ::1 at 2015-12-05 20:57:05 +0100
+Processing by PostsController#destroy as JS
+  Parameters: {"id"=>"55"}
+  [1m[35mPost Load (3.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 55]]
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35m (1.0ms)[0m  begin transaction
+  [1m[36mSQL (3.0ms)[0m  [1mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 55]]
+  [1m[35m (12.0ms)[0m  commit transaction
+  Rendered application/_flashes.html.haml (2.0ms)
+  Rendered application/_flashes.html.haml (2.0ms)
+  Rendered posts/destroy.js.erb (46.0ms)
+Completed 200 OK in 315ms (Views: 80.0ms | ActiveRecord: 20.0ms)
+
+
+Started DELETE "/posts/40" for ::1 at 2015-12-05 20:57:09 +0100
+Processing by PostsController#destroy as JS
+  Parameters: {"id"=>"40"}
+  [1m[36mPost Load (5.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 40]]
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (3.0ms)[0m  DELETE FROM "posts" WHERE "posts"."id" = ?  [["id", 40]]
+  [1m[36m (13.0ms)[0m  [1mcommit transaction[0m
+  Rendered application/_flashes.html.haml (2.0ms)
+  Rendered application/_flashes.html.haml (3.0ms)
+  Rendered posts/destroy.js.erb (47.0ms)
+Completed 200 OK in 331ms (Views: 89.0ms | ActiveRecord: 23.0ms)
+
+
+Started DELETE "/posts/42" for ::1 at 2015-12-05 20:57:12 +0100
+Processing by PostsController#destroy as JS
+  Parameters: {"id"=>"42"}
+  [1m[35mPost Load (1.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 42]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 42]]
+  [1m[35m (13.0ms)[0m  commit transaction
+  Rendered application/_flashes.html.haml (2.0ms)
+  Rendered application/_flashes.html.haml (2.0ms)
+  Rendered posts/destroy.js.erb (55.0ms)
+Completed 200 OK in 316ms (Views: 88.0ms | ActiveRecord: 15.0ms)
+
+
+Started DELETE "/posts/44" for ::1 at 2015-12-05 20:57:15 +0100
+Processing by PostsController#destroy as JS
+  Parameters: {"id"=>"44"}
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 44]]
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  DELETE FROM "posts" WHERE "posts"."id" = ?  [["id", 44]]
+  [1m[36m (12.0ms)[0m  [1mcommit transaction[0m
+  Rendered application/_flashes.html.haml (2.0ms)
+  Rendered application/_flashes.html.haml (2.0ms)
+  Rendered posts/destroy.js.erb (44.0ms)
+Completed 200 OK in 315ms (Views: 78.0ms | ActiveRecord: 16.0ms)
+
+
+Started DELETE "/posts/47" for ::1 at 2015-12-05 20:57:18 +0100
+Processing by PostsController#destroy as JS
+  Parameters: {"id"=>"47"}
+  [1m[35mPost Load (1.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 47]]
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 47]]
+  [1m[35m (27.0ms)[0m  commit transaction
+  Rendered application/_flashes.html.haml (2.0ms)
+  Rendered application/_flashes.html.haml (2.0ms)
+  Rendered posts/destroy.js.erb (46.0ms)
+Completed 200 OK in 319ms (Views: 87.0ms | ActiveRecord: 31.0ms)
+
+
+Started DELETE "/posts/48" for ::1 at 2015-12-05 20:57:20 +0100
+Processing by PostsController#destroy as JS
+  Parameters: {"id"=>"48"}
+  [1m[36mPost Load (2.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 48]]
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  DELETE FROM "posts" WHERE "posts"."id" = ?  [["id", 48]]
+  [1m[36m (12.0ms)[0m  [1mcommit transaction[0m
+  Rendered application/_flashes.html.haml (2.0ms)
+  Rendered application/_flashes.html.haml (2.0ms)
+  Rendered posts/destroy.js.erb (43.0ms)
+Completed 200 OK in 323ms (Views: 72.0ms | ActiveRecord: 18.0ms)
+
+
+Started DELETE "/posts/51" for ::1 at 2015-12-05 20:57:24 +0100
+Processing by PostsController#destroy as JS
+  Parameters: {"id"=>"51"}
+  [1m[35mPost Load (1.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 51]]
+  [1m[36mUser Load (2.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35m (2.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 51]]
+  [1m[35m (10.0ms)[0m  commit transaction
+  Rendered application/_flashes.html.haml (2.0ms)
+  Rendered application/_flashes.html.haml (2.0ms)
+  Rendered posts/destroy.js.erb (56.0ms)
+Completed 200 OK in 342ms (Views: 88.0ms | ActiveRecord: 17.0ms)
+
+
+Started DELETE "/posts/52" for ::1 at 2015-12-05 20:57:27 +0100
+Processing by PostsController#destroy as JS
+  Parameters: {"id"=>"52"}
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 52]]
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  DELETE FROM "posts" WHERE "posts"."id" = ?  [["id", 52]]
+  [1m[36m (14.0ms)[0m  [1mcommit transaction[0m
+  Rendered application/_flashes.html.haml (3.0ms)
+  Rendered application/_flashes.html.haml (2.0ms)
+  Rendered posts/destroy.js.erb (54.0ms)
+Completed 200 OK in 308ms (Views: 84.0ms | ActiveRecord: 17.0ms)
+
+
+Started DELETE "/posts/45" for ::1 at 2015-12-05 20:57:30 +0100
+Processing by PostsController#destroy as JS
+  Parameters: {"id"=>"45"}
+  [1m[35mPost Load (1.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 45]]
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35m (2.0ms)[0m  begin transaction
+  [1m[36mSQL (3.0ms)[0m  [1mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 45]]
+  [1m[35m (15.0ms)[0m  commit transaction
+  Rendered application/_flashes.html.haml (2.0ms)
+  Rendered application/_flashes.html.haml (2.0ms)
+  Rendered posts/destroy.js.erb (42.0ms)
+Completed 200 OK in 316ms (Views: 70.0ms | ActiveRecord: 22.0ms)
+
+
+Started DELETE "/posts/41" for ::1 at 2015-12-05 20:57:33 +0100
+Processing by PostsController#destroy as JS
+  Parameters: {"id"=>"41"}
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 41]]
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  DELETE FROM "posts" WHERE "posts"."id" = ?  [["id", 41]]
+  [1m[36m (13.0ms)[0m  [1mcommit transaction[0m
+  Rendered application/_flashes.html.haml (2.0ms)
+  Rendered application/_flashes.html.haml (2.0ms)
+  Rendered posts/destroy.js.erb (43.0ms)
+Completed 200 OK in 297ms (Views: 78.0ms | ActiveRecord: 17.0ms)
+
+
+Started DELETE "/posts/39" for ::1 at 2015-12-05 20:57:37 +0100
+Processing by PostsController#destroy as JS
+  Parameters: {"id"=>"39"}
+  [1m[35mPost Load (1.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 39]]
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35m (1.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 39]]
+  [1m[35m (78.0ms)[0m  commit transaction
+  Rendered application/_flashes.html.haml (2.0ms)
+  Rendered application/_flashes.html.haml (2.0ms)
+  Rendered posts/destroy.js.erb (42.0ms)
+Completed 200 OK in 345ms (Views: 70.0ms | ActiveRecord: 83.0ms)
+
+
+Started DELETE "/posts/43" for ::1 at 2015-12-05 20:57:41 +0100
+Processing by PostsController#destroy as JS
+  Parameters: {"id"=>"43"}
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 43]]
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  DELETE FROM "posts" WHERE "posts"."id" = ?  [["id", 43]]
+  [1m[36m (12.0ms)[0m  [1mcommit transaction[0m
+  Rendered application/_flashes.html.haml (3.0ms)
+  Rendered application/_flashes.html.haml (2.0ms)
+  Rendered posts/destroy.js.erb (44.0ms)
+Completed 200 OK in 306ms (Views: 73.0ms | ActiveRecord: 17.0ms)
+
+
+Started GET "/posts/46" for ::1 at 2015-12-05 20:57:46 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"46"}
+  [1m[35mPost Load (1.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 46]]
+  [1m[36m (1.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 46]]
+  [1m[35mComment Load (1.0ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 46]]
+  Rendered collection (1.0ms)
+  Rendered comments/_form.html.haml (93.0ms)
+  Rendered posts/show.html.haml within layouts/application (225.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  Rendered layouts/_header.html.haml (68.0ms)
+Completed 200 OK in 1657ms (Views: 1614.1ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/posts/new" for ::1 at 2015-12-05 20:57:51 +0100
+Processing by PostsController#new as JS
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  Rendered posts/_form.html.haml (131.0ms)
+  Rendered posts/new.js.erb (156.0ms)
+Completed 200 OK in 275ms (Views: 193.0ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/posts" for ::1 at 2015-12-05 20:57:55 +0100
+Processing by PostsController#create as JS
+  Parameters: {"utf8"=>"✓", "post"=>{"title"=>"sfdfsdfsd", "content"=>"cuhdfe"}, "commit"=>"Create Post"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (14.0ms)[0m  [1mINSERT INTO "posts" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "sfdfsdfsd"], ["content", "cuhdfe"], ["user_id", 2], ["created_at", "2015-12-05 19:57:55.925265"], ["updated_at", "2015-12-05 19:57:55.925265"]]
+  [1m[35m (13.0ms)[0m  commit transaction
+  Rendered posts/_post.html.haml (12.0ms)
+  [1m[36m (1.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 63]]
+  [1m[35mComment Load (1.0ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 63]]
+  Rendered collection (0.0ms)
+  Rendered comments/_form.html.haml (96.0ms)
+  Rendered posts/show.html.haml (252.0ms)
+  Rendered posts/create.js.erb (294.0ms)
+Completed 200 OK in 584ms (Views: 334.0ms | ActiveRecord: 30.0ms)
+
+
+Started POST "/posts/63/comments" for ::1 at 2015-12-05 20:58:00 +0100
+Processing by CommentsController#create as JS
+  Parameters: {"utf8"=>"✓", "comment"=>{"comment"=>"ciao"}, "commit"=>"Create Comment", "post_id"=>"63"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mPost Load (2.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 63]]
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  INSERT INTO "comments" ("comment", "post_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["comment", "ciao"], ["post_id", 63], ["user_id", 2], ["created_at", "2015-12-05 19:58:00.502527"], ["updated_at", "2015-12-05 19:58:00.502527"]]
+  [1m[36m (167.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered comments/_comment.html.haml (56.0ms)
+  [1m[36m (1.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 63]]
+  Rendered comments/create.js.erb (128.0ms)
+Completed 200 OK in 603ms (Views: 143.0ms | ActiveRecord: 175.0ms)
+
+
+Started GET "/posts/63/comments/50/edit" for ::1 at 2015-12-05 20:58:04 +0100
+Processing by CommentsController#edit as HTML
+  Parameters: {"post_id"=>"63", "id"=>"50"}
+  [1m[35mComment Load (1.0ms)[0m  SELECT  "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT 1  [["id", 50]]
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mPost Load (1.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 63]]
+  [1m[36mComment Load (0.0ms)[0m  [1mSELECT  "comments".* FROM "comments" WHERE "comments"."post_id" = ? AND "comments"."id" = ? LIMIT 1[0m  [["post_id", 63], ["id", 50]]
+  Rendered comments/edit.html.haml within layouts/application (75.0ms)
+  Rendered layouts/_header.html.haml (7.0ms)
+Completed 200 OK in 1644ms (Views: 1441.1ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/posts" for ::1 at 2015-12-05 20:58:14 +0100
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (3.0ms)[0m  SELECT "posts".* FROM "posts"  ORDER BY created_at DESC
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (2.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  Rendered posts/_post.html.haml (171.0ms)
+  [1m[36mCACHE (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered posts/_post.html.haml (86.0ms)
+  Rendered posts/_posts.html.haml (348.0ms)
+  Rendered posts/index.html.haml within layouts/application (364.0ms)
+  Rendered layouts/_header.html.haml (9.0ms)
+Completed 200 OK in 2116ms (Views: 2098.1ms | ActiveRecord: 7.0ms)

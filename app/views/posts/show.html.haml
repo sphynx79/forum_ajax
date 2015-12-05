@@ -6,7 +6,7 @@
     %h2= @post.comments.count
     = render @post.comments
 
-    %h3 Reply to thread
+    %h3#comment_form_header Reply to thread
     = render "comments/form"
 
  
