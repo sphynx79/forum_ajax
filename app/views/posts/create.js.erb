@@ -1,18 +1,20 @@
-$("#modal-window").modal("hide")
-
-
-if( $('#posts').length )        
-{
-    $("<%= j(render @post) %>").hide().appendTo('#posts').show().addClass('magictime puffIn'); 
-} else { 
+<% if @post.errors.any? %>
+   $( ".error" ).remove();
+   <% if @post.errors[:title]%>
+      $( "<div class='error'><%= @post.errors[:title].first %> </div>" ).insertAfter( $("#post_title"));
+   <% end %>
+   <% if @post.errors[:content]%>
+      $( "<div class='error'><%= @post.errors[:content].first %> </div>" ).insertAfter( $("#post_content"));
+   <% end %>
+<% else %>
+   $("#modal-window").modal("hide")
+   if( $('#posts').length )        
+      {$("<%= j(render @post) %>").hide().appendTo('#posts').show().addClass('magictime puffIn'); } 
+   else { 
     var post = $('<%= j(render :file => 'posts/show') %>').hide();
     $('#post_contents').replaceWith(post);
     $('#post_contents').show().addClass('magictime spaceInUp')
-    // window.location.hash = "<%= @post.id %>";
-    // var curloc = document.location.href.split('/');
-    // curloc = curloc.splice(0,curloc.length-1).join('/')+"/ciao";
     window.history.pushState('','',"<%= @post.id %>");
-    // var curloc = location.href; 
-    // curloc = curloc.replace(/www/g,"cp");
-    // var curloc = document.location.href.split('/');
-}
+    }
+<% end %>
+

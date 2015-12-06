@@ -4,6 +4,6 @@
     %p.comment_author=  comment.user.email
     - if user_signed_in?
       .buttons.btn-group.btn-group-xs
-        = link_to 'Edit', edit_post_comment_path(comment.post, comment), class: "btn btn-default"
+        = link_to 'Edit', edit_post_comment_path(comment.post, comment),  remote: true, class: "btn btn-default"
         = link_to "Delete", post_comment_path(comment.post, comment), method: :delete, data: { confirm: "Delete comment?" }, remote: true, class: "btn btn-default"
 

@@ -5,14 +5,12 @@
         %span ×
       %h4.modal-title 
         =action_name.capitalize 
-        Post
+        Comment
 
     .modal-body
-      = simple_form_for @post, remote: true do |f|
+      = simple_form_for( [@post, @comment], remote: true) do |f|
         = f.error_notification
         .form-inputs
-          = f.input :title
-        .form-inputs
-          = f.input :content, :as => :text, :input_html => { 'rows' => 6}
+          = f.input :comment
         .form-actions
           = f.button :submit
