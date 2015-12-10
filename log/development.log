@@ -58865,3 +58865,31 @@ method=PATCH path=/posts/195 format=js controller=posts action=update status=200
   [1m[36mSQL (1.0ms)[0m  [1mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 194]]
   [1m[35m (12.0ms)[0m  commit transaction
 method=DELETE path=/posts/194 format=js controller=posts action=destroy status=200 duration=129.01 view=22.00 db=19.00 params={"id"=>"194"}
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts"  ORDER BY created_at DESC
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 22]]
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 22]]
+method=GET path=/posts format=html controller=posts action=index status=200 duration=3718.21 view=3440.20 db=6.00 params={}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 22]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+method=DELETE path=/users/sign_out format=html controller=sessions action=destroy status=302 duration=56.00 view=0.00 db=1.00 location=http://localhost:3000/ params={"_method"=>"delete", "authenticity_token"=>"e2L3eHRhnTnDEo42bWwC5vRjSfzVPx8bWGFwcNnjjtsZLsj3AkGiTo7vhkIEXhEnjk1CAml6HO9n+2dxWjahrQ=="}
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts"  ORDER BY created_at DESC
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 22]]
+method=GET path=/ format=html controller=posts action=index status=200 duration=725.04 view=721.04 db=1.00 params={}
+method=GET path=/remote_sign_up format=js controller=remote_content action=remote_sign_up status=200 duration=640.04 view=638.04 db=0.00 params={}
+method=GET path=/remote_sign_in format=js controller=remote_content action=remote_sign_in status=200 duration=294.02 view=292.02 db=0.00 params={}
+  [1m[35mUser Load (2.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["email", "sphynx77@gmail.com"]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  UPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["last_sign_in_at", "2015-12-10 00:18:47.008936"], ["current_sign_in_at", "2015-12-10 00:29:42.295416"], ["sign_in_count", 3], ["updated_at", "2015-12-10 00:29:42.306417"], ["id", 21]]
+  [1m[36m (14.0ms)[0m  [1mcommit transaction[0m
+method=POST path=/users/sign_in format=js controller=sessions action=create status=200 duration=535.03 view=30.00 db=17.00 params={"utf8"=>"✓", "user"=>{"email"=>"sphynx77@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts"  ORDER BY created_at DESC
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 22]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 21]]
+method=GET path=/ format=html controller=posts action=index status=200 duration=570.03 view=567.03 db=0.00 params={}
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 195]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 195]]
+  [1m[36mComment Load (1.0ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 195]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 21]]
+method=GET path=/posts/195 format=html controller=posts action=show status=200 duration=780.05 view=718.04 db=30.00 params={"id"=>"195"}
