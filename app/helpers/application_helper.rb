@@ -15,6 +15,7 @@ module ApplicationHelper
       render "flashes"
    end
 
+
    def twitterized_type(type)
       case type
       when :errors
@@ -24,6 +25,8 @@ module ApplicationHelper
       when :error
          "alert-error"
       when :notice
+         "alert-success"
+      when :info
          "alert-success"
       else
          "alert-info"

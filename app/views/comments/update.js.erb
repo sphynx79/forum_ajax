@@ -1,4 +1,4 @@
-
+<%  unless @comment.errors.any?  %>
 $("#modal-window").modal("hide")
 $("#comment_<%= @comment.id %>").replaceWith("<%= escape_javascript(render partial: 'comment', locals: { comment: @comment } ) %>"); 
 
@@ -13,4 +13,7 @@ var el = $("#comment_<%= @comment.id %> .comment_content");
       "opacity": ".9"   
    })
 .fadeOut(500);
+<% end  %>
 
+
+<%= render 'notification', formats: [:js] %>

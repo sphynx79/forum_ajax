@@ -1,7 +1,1 @@
-if($('#flash').length > 0) {
-  $('#flash').remove();
-  $('.modal-body').prepend("<%= escape_javascript raw(flash_normal) %>");
-}
-else {
-  $('.modal-body').prepend("<%= escape_javascript raw(flash_normal) %>");
-}
+<%= render 'notification', formats: [:js] %>

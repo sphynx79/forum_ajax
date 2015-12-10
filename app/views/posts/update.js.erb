@@ -1,3 +1,4 @@
 $("#modal-window").modal("hide") 
 $("#post_<%= @post.id %>").replaceWith("<%= escape_javascript(render partial: 'post', locals: { post: @post } ) %>"); 
 
+<%= render 'notification', formats: [:js] %>

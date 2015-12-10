@@ -1,15 +1,8 @@
 $('#post_<%= @post.id %>').addClass('magictime spaceOutLeft')
 setTimeout(function () { 
-    $('#post_<%= @post.id %>').remove();
+   $('#post_<%= @post.id %>').remove();
 }, 800);
 
+<%= render 'notification', formats: [:js] %>
 
-setTimeout(function(){
-if($('#flash').length > 0) {
-  $('#flash').remove();
-  $('#wrap_error').prepend("<%= escape_javascript raw(flash_normal) %>");
-}
-else {
-  $('#wrap_error').prepend("<%= escape_javascript raw(flash_normal) %>");
-}
-},1800); 
+

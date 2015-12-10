@@ -16,5 +16,6 @@
     $('#post_contents').show().addClass('magictime spaceInUp')
     window.history.pushState('','',"<%= @post.id %>");
     }
+    <%= render 'notification', formats: [:js] %>
 <% end %>
 

@@ -35,6 +35,8 @@ gem 'simple_form', '~> 3.2.0'
 
 gem 'bootbox-rails' 
 
+gem 'puma', '~> 2.15.3'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -54,6 +56,7 @@ group :development, :test do
    gem 'web-console', '~> 2.0'
    gem 'meta_request'
    gem 'better_errors'
+   gem "lograge"
    gem 'annotate'
 end
 

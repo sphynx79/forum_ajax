@@ -1,0 +1,18 @@
+<% if request.xhr? %>
+<% timeout = 500 %>
+<% flash.each do |type, message| %>
+setTimeout(function() {
+
+  $.toast({
+    heading: "<%= type %>",
+    text: "<%= message %>",
+    icon: "<%= type %>"
+}); 
+
+}, <%= timeout %> )
+<% timeout += 1400 %>
+<% end %>
+<% end %>
+
+
+

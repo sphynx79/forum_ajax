@@ -1,2 +1,6 @@
 - @posts.each do |post|
   =render post
+
+<script type='text/javascript'>
+= render(:partial => 'notification', :handlers => [:erb], :formats => [:js])
+</script>

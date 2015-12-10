@@ -1,12 +1,3 @@
 $('.modal').modal('hide')
 
-if($('#flash').length > 0) {
-  $('#flash').remove();
-  $('#wrap_error').prepend("<%= escape_javascript raw(flash_normal) %>");
-}
-else {
-  $('.modal').modal('hide')
-  $('#wrap_error').prepend("<%= escape_javascript raw(flash_normal) %>");
-}
-
-
+<%= render 'notification', formats: [:js] %>

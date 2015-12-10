@@ -19,14 +19,14 @@ class CommentsController < ApplicationController
          @comment.user_id = current_user.id if current_user
          respond_to do |format|
             if @comment.save
-               format.html { redirect_to post_path(@post), notice: 'Comment was successfully created.' }
-               format.js{render :layout => false}
+               flash.now[:success] = 'Comment was successfully created.'
+               format.html { redirect_to post_path(@post)}
+               format.js{}
             else
                format.html { render :new }
                format.js {
-                  flash[:alert] = @comment.errors.full_messages.to_sentence
-                  render "comments/errors.js.erb"
-                  flash.discard
+                  flash.now[:error] = @comment.errors.full_messages.to_sentence
+                  
                }
             end
          end
@@ -45,8 +45,8 @@ class CommentsController < ApplicationController
 
       respond_to do |format|
          if @comment.update(comment_params)
-            flash.now[:notice] =  'Comment was successfully updated.'
-            format.html { redirect_to post_path(@post), notice: 'Comment was successfully updated.' }
+            flash.now[:success] =  'Comment was successfully updated.'
+            format.html { redirect_to post_path(@post) }
             format.js {}
          else
             flash.now[:notice] = "Comment could not be update" 
@@ -64,7 +64,8 @@ class CommentsController < ApplicationController
 
       @comment.destroy
       respond_to do |format|
-         format.html { redirect_to post_path(@post), notice: 'Comment was successfully destroyed.' }
+         flash.now[:info] = 'Comment was successfully destroyed.'
+         format.html { redirect_to post_path(@post) }
          format.js # JavaScript response
       end
    end

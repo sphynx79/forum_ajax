@@ -19,8 +19,9 @@ class RegistrationsController < Devise::RegistrationsController
           end
         }
         format.js {
-          flash[:notice] = "Account creato, effettua il login."
-          return render :js => "window.location.href = '#{root_path}'"
+          flash.now[:success] = "Account creato, effettua il login."
+          # return render :js => "window.location.href = '#{root_path}'"
+          render :template => "remote_content/devise_success_sign_up.js.erb"
         }
       end
     else
@@ -30,9 +31,8 @@ class RegistrationsController < Devise::RegistrationsController
           respond_with resource
         }
         format.js {
-          flash[:alert] = @user.errors.full_messages.to_sentence
+          flash.now[:error] = @user.errors.full_messages.to_sentence
           render :template => "remote_content/devise_errors.js.erb"
-          flash.discard
         }
       end
     end
