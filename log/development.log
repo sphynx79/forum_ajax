@@ -58893,3 +58893,837 @@ method=GET path=/ format=html controller=posts action=index status=200 duration=
   [1m[36mComment Load (1.0ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 195]]
   [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 21]]
 method=GET path=/posts/195 format=html controller=posts action=show status=200 duration=780.05 view=718.04 db=30.00 params={"id"=>"195"}
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts"  ORDER BY created_at DESC
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 22]]
+method=GET path=/ format=html controller=posts action=index status=200 duration=3551.20 view=3415.20 db=4.00 params={}
+  [1m[35mPost Load (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 195]]
+  [1m[36m (1.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 195]]
+  [1m[35mComment Load (0.0ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 195]]
+method=GET path=/posts/195 format=html controller=posts action=show status=200 duration=1619.69 view=1490.69 db=2.00 params={"id"=>"195"}
+method=POST path=/posts/195/comments format=js controller=comments action=create status=302 duration=3.00 view=0.00 db=0.00 location=http://localhost:3000/remote_sign_in params={"utf8"=>"✓", "comment"=>{"comment"=>""}, "commit"=>"Create Comment", "post_id"=>"195"}
+method=GET path=/remote_sign_in format=js controller=remote_content action=remote_sign_in status=200 duration=161.01 view=158.01 db=0.00 params={}
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts"  ORDER BY created_at DESC[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 22]]
+method=GET path=/posts format=html controller=posts action=index status=200 duration=224.01 view=220.01 db=2.00 params={}
+method=GET path=/remote_sign_up format=js controller=remote_content action=remote_sign_up status=200 duration=104.01 view=102.01 db=0.00 params={}
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (1.0ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'sphynx1@gmail.com' LIMIT 1
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "sphynx1@gmail.com"], ["encrypted_password", "$2a$10$Gu9tsE9k5TOmASVbRSWtSOo7tqoAUJiref2oAbVTLxIq8bN7vdqs6"], ["created_at", "2015-12-10 07:12:05.089840"], ["updated_at", "2015-12-10 07:12:05.089840"]]
+  [1m[35m (13.0ms)[0m  commit transaction
+method=POST path=/users format=js controller=registrations action=create status=200 duration=606.03 view=66.00 db=15.00 params={"utf8"=>"✓", "user"=>{"email"=>"sphynx1@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+method=GET path=/remote_sign_in format=js controller=remote_content action=remote_sign_in status=200 duration=24.00 view=23.00 db=0.00 params={}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["email", "sphynx1@gmail.com"]]
+method=POST path=/users/sign_in format=js controller=sessions action=create status=0 duration=202.01 view=0.00 db=1.00 params={"utf8"=>"✓", "user"=>{"email"=>"sphynx1@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+method=POST path=/users/sign_in format=js controller=sessions action=create status=200 duration=140.01 view=138.01 db=0.00 params={"utf8"=>"✓", "user"=>{"email"=>"sphynx1@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["email", "sphynx1@gmail.com"]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  UPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "last_sign_in_ip" = ?, "current_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["last_sign_in_at", "2015-12-10 07:12:30.194073"], ["current_sign_in_at", "2015-12-10 07:12:30.194073"], ["last_sign_in_ip", "::1"], ["current_sign_in_ip", "::1"], ["sign_in_count", 1], ["updated_at", "2015-12-10 07:12:30.206074"], ["id", 23]]
+  [1m[36m (15.0ms)[0m  [1mcommit transaction[0m
+method=POST path=/users/sign_in format=js controller=sessions action=create status=200 duration=337.02 view=36.00 db=16.00 params={"utf8"=>"✓", "user"=>{"email"=>"sphynx1@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts"  ORDER BY created_at DESC
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 22]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 23]]
+method=GET path=/posts format=html controller=posts action=index status=200 duration=278.02 view=276.02 db=1.00 params={}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 23]]
+method=GET path=/posts/new format=js controller=posts action=new status=200 duration=92.01 view=57.00 db=0.00 params={}
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 23]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "posts" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "Imparare Ajax & Rails"], ["content", "Devo imparare Ajax con Rails"], ["user_id", 23], ["created_at", "2015-12-10 07:12:57.907055"], ["updated_at", "2015-12-10 07:12:57.907055"]]
+  [1m[36m (12.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (1.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 196]]
+  [1m[36mComment Load (0.0ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 196]]
+method=POST path=/posts format=js controller=posts action=create status=200 duration=230.01 view=96.01 db=14.00 params={"utf8"=>"✓", "post"=>{"title"=>"Imparare Ajax & Rails", "content"=>"Devo imparare Ajax con Rails"}, "commit"=>"Create Post"}
+  [1m[35mPost Load (1.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 196]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 196]]
+  [1m[35mComment Load (0.0ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 196]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 23]]
+method=GET path=/posts/196 format=html controller=posts action=show status=200 duration=282.02 view=259.02 db=1.00 params={"id"=>"196"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 23]]
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 196]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "comments" ("comment", "post_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["comment", "si è facile"], ["post_id", 196], ["user_id", 23], ["created_at", "2015-12-10 07:13:09.709126"], ["updated_at", "2015-12-10 07:13:09.709126"]]
+  [1m[35m (9.0ms)[0m  commit transaction
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 23]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 196]]
+method=POST path=/posts/196/comments format=js controller=comments action=create status=200 duration=211.01 view=75.00 db=11.00 params={"utf8"=>"✓", "comment"=>{"comment"=>"si è facile"}, "commit"=>"Create Comment", "post_id"=>"196"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 23]]
+  [1m[35mPost Load (1.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 196]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (31.0ms)[0m  INSERT INTO "comments" ("comment", "post_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["comment", "no è difficile"], ["post_id", 196], ["user_id", 23], ["created_at", "2015-12-10 07:13:16.441511"], ["updated_at", "2015-12-10 07:13:16.441511"]]
+  [1m[36m (11.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 23]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 196]]
+method=POST path=/posts/196/comments format=js controller=comments action=create status=200 duration=228.01 view=56.00 db=44.00 params={"utf8"=>"✓", "comment"=>{"comment"=>"no è difficile"}, "commit"=>"Create Comment", "post_id"=>"196"}
+  [1m[35mComment Load (0.0ms)[0m  SELECT  "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT 1  [["id", 98]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 23]]
+  [1m[35mPost Load (1.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 196]]
+  [1m[36mComment Load (1.0ms)[0m  [1mSELECT  "comments".* FROM "comments" WHERE "comments"."post_id" = ? AND "comments"."id" = ? LIMIT 1[0m  [["post_id", 196], ["id", 98]]
+method=GET path=/posts/196/comments/98/edit format=js controller=comments action=edit status=200 duration=135.01 view=56.00 db=2.00 params={"post_id"=>"196", "id"=>"98"}
+  [1m[35mComment Load (3.0ms)[0m  SELECT  "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT 1  [["id", 98]]
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 23]]
+  [1m[35mPost Load (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 196]]
+  [1m[36mComment Load (0.0ms)[0m  [1mSELECT  "comments".* FROM "comments" WHERE "comments"."post_id" = ? AND "comments"."id" = ? LIMIT 1[0m  [["post_id", 196], ["id", 98]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mUPDATE "comments" SET "comment" = ?, "updated_at" = ? WHERE "comments"."id" = ?[0m  [["comment", "anche per me è facile"], ["updated_at", "2015-12-10 07:13:26.655492"], ["id", 98]]
+  [1m[35m (17.0ms)[0m  commit transaction
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 23]]
+method=PATCH path=/posts/196/comments/98 format=js controller=comments action=update status=200 duration=244.01 view=45.00 db=22.00 params={"utf8"=>"✓", "_method"=>"patch", "comment"=>{"comment"=>"anche per me è facile"}, "commit"=>"Update Comment", "post_id"=>"196", "id"=>"98"}
+  [1m[35mComment Load (1.0ms)[0m  SELECT  "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT 1  [["id", 98]]
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 23]]
+  [1m[35mPost Load (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 196]]
+  [1m[36mComment Load (1.0ms)[0m  [1mSELECT  "comments".* FROM "comments" WHERE "comments"."post_id" = ? AND "comments"."id" = ? LIMIT 1[0m  [["post_id", 196], ["id", 98]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mDELETE FROM "comments" WHERE "comments"."id" = ?[0m  [["id", 98]]
+  [1m[35m (11.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 196]]
+method=DELETE path=/posts/196/comments/98 format=js controller=comments action=destroy status=200 duration=201.01 view=52.00 db=15.00 params={"post_id"=>"196", "id"=>"98"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 23]]
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 196]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+method=POST path=/posts/196/comments format=js controller=comments action=create status=200 duration=78.00 view=16.00 db=1.00 params={"utf8"=>"✓", "comment"=>{"comment"=>""}, "commit"=>"Create Comment", "post_id"=>"196"}
+  [1m[35mComment Load (1.0ms)[0m  SELECT  "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT 1  [["id", 97]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 23]]
+  [1m[35mPost Load (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 196]]
+  [1m[36mComment Load (0.0ms)[0m  [1mSELECT  "comments".* FROM "comments" WHERE "comments"."post_id" = ? AND "comments"."id" = ? LIMIT 1[0m  [["post_id", 196], ["id", 97]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (39.0ms)[0m  [1mDELETE FROM "comments" WHERE "comments"."id" = ?[0m  [["id", 97]]
+  [1m[35m (10.0ms)[0m  commit transaction
+  [1m[36m (3.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 196]]
+method=DELETE path=/posts/196/comments/97 format=js controller=comments action=destroy status=200 duration=199.01 view=35.00 db=53.00 params={"post_id"=>"196", "id"=>"97"}
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts"  ORDER BY created_at DESC
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 23]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 23]]
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 22]]
+method=GET path=/posts format=html controller=posts action=index status=200 duration=306.02 view=304.02 db=1.00 params={}
+  [1m[35mPost Load (1.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 196]]
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 23]]
+method=GET path=/posts/196/edit format=js controller=posts action=edit status=200 duration=90.01 view=51.00 db=2.00 params={"id"=>"196"}
+  [1m[35mPost Load (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 196]]
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 23]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mUPDATE "posts" SET "title" = ?, "updated_at" = ? WHERE "posts"."id" = ?[0m  [["title", "Imparare Ajax & Rails 4"], ["updated_at", "2015-12-10 07:13:53.750839"], ["id", 196]]
+  [1m[35m (13.0ms)[0m  commit transaction
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 23]]
+method=PATCH path=/posts/196 format=js controller=posts action=update status=200 duration=181.01 view=52.00 db=15.00 params={"utf8"=>"✓", "_method"=>"patch", "post"=>{"title"=>"Imparare Ajax & Rails 4", "content"=>"Devo imparare Ajax con Rails"}, "commit"=>"Update Post", "id"=>"196"}
+  [1m[35mPost Load (7.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 195]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 23]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 195]]
+  [1m[35m (13.0ms)[0m  commit transaction
+method=DELETE path=/posts/195 format=js controller=posts action=destroy status=200 duration=139.01 view=22.00 db=21.00 params={"id"=>"195"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 23]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+method=DELETE path=/users/sign_out format=html controller=sessions action=destroy status=302 duration=605.04 view=0.00 db=1.00 location=http://localhost:3000/ params={"_method"=>"delete", "authenticity_token"=>"ENWKlFiEVeQRTsLxQo2Z/sw6ARwnzQ9ytK5DjYPbe6E2YajX8KpE0oGUCrLsxAE+dGhVjpS1qugn3pv1EkeWpQ=="}
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts"  ORDER BY created_at DESC
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 23]]
+method=GET path=/ format=html controller=posts action=index status=200 duration=269.02 view=266.02 db=1.00 params={}
+method=GET path=/remote_sign_in format=js controller=remote_content action=remote_sign_in status=200 duration=31.00 view=30.00 db=0.00 params={}
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["email", "sphynx1@gmail.com"]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  UPDATE "users" SET "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["current_sign_in_at", "2015-12-10 07:16:29.359916"], ["sign_in_count", 2], ["updated_at", "2015-12-10 07:16:29.372917"], ["id", 23]]
+  [1m[36m (20.0ms)[0m  [1mcommit transaction[0m
+method=POST path=/users/sign_in format=js controller=sessions action=create status=200 duration=331.02 view=34.00 db=22.00 params={"utf8"=>"✓", "user"=>{"email"=>"sphynx1@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts"  ORDER BY created_at DESC
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 23]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 23]]
+method=GET path=/ format=html controller=posts action=index status=200 duration=424.02 view=423.02 db=0.00 params={}
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 196]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 23]]
+method=GET path=/posts/196/edit format=js controller=posts action=edit status=200 duration=108.01 view=58.00 db=1.00 params={"id"=>"196"}
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 196]]
+  [1m[35mUser Load (6.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 23]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (36.0ms)[0m  UPDATE "posts" SET "title" = ?, "updated_at" = ? WHERE "posts"."id" = ?  [["title", "Imparare  Rails"], ["updated_at", "2015-12-10 07:16:36.863345"], ["id", 196]]
+  [1m[36m (17.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 23]]
+method=PATCH path=/posts/196 format=js controller=posts action=update status=200 duration=257.01 view=54.00 db=60.00 params={"utf8"=>"✓", "_method"=>"patch", "post"=>{"title"=>"Imparare  Rails", "content"=>"Devo imparare Ajax con Rails"}, "commit"=>"Update Post", "id"=>"196"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 23]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+method=DELETE path=/users/sign_out format=html controller=sessions action=destroy status=302 duration=48.00 view=0.00 db=0.00 location=http://localhost:3000/ params={"_method"=>"delete", "authenticity_token"=>"zaZ4okP7SkeEs3k6prkIzREdhjdu3J+oAw82xoxnHdEAU4nFGlCqNf0oPrgCSvObEy836t5ITHfWmQLbWGjyAA=="}
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts"  ORDER BY created_at DESC
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 23]]
+method=GET path=/ format=html controller=posts action=index status=200 duration=233.01 view=229.01 db=1.00 params={}
+  [1m[35mPost Load (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 196]]
+  [1m[36m (1.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 196]]
+  [1m[35mComment Load (0.0ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 196]]
+method=GET path=/posts/196 format=html controller=posts action=show status=200 duration=557.03 view=538.03 db=1.00 params={"id"=>"196"}
+method=POST path=/posts/196/comments format=js controller=comments action=create status=302 duration=3.00 view=0.00 db=0.00 location=http://localhost:3000/remote_sign_in params={"utf8"=>"✓", "comment"=>{"comment"=>"sddsds"}, "commit"=>"Create Comment", "post_id"=>"196"}
+method=GET path=/remote_sign_in format=js controller=remote_content action=remote_sign_in status=200 duration=28.00 view=27.00 db=0.00 params={}
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts"  ORDER BY created_at DESC[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 23]]
+method=GET path=/posts format=html controller=posts action=index status=200 duration=251.02 view=247.01 db=1.00 params={}
+method=GET path=/remote_sign_up format=js controller=remote_content action=remote_sign_up status=200 duration=29.00 view=28.00 db=0.00 params={}
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (1.0ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'sphynx2@gmail.com' LIMIT 1
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "sphynx2@gmail.com"], ["encrypted_password", "$2a$10$ZYIZvgyFoba3tQ2m2N5cAeZsctmiEi1EYyEVbt0UIt6fFTdAWKuUK"], ["created_at", "2015-12-10 07:17:45.308252"], ["updated_at", "2015-12-10 07:17:45.308252"]]
+  [1m[35m (48.0ms)[0m  commit transaction
+method=POST path=/users format=js controller=registrations action=create status=200 duration=355.02 view=32.00 db=50.00 params={"utf8"=>"✓", "user"=>{"email"=>"sphynx2@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+method=GET path=/remote_sign_in format=js controller=remote_content action=remote_sign_in status=200 duration=36.00 view=33.00 db=0.00 params={}
+  [1m[36mUser Load (3.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["email", "sphynx2@gmail.com"]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "last_sign_in_ip" = ?, "current_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["last_sign_in_at", "2015-12-10 07:17:55.809852"], ["current_sign_in_at", "2015-12-10 07:17:55.809852"], ["last_sign_in_ip", "::1"], ["current_sign_in_ip", "::1"], ["sign_in_count", 1], ["updated_at", "2015-12-10 07:17:55.819853"], ["id", 24]]
+  [1m[35m (16.0ms)[0m  commit transaction
+method=POST path=/users/sign_in format=js controller=sessions action=create status=200 duration=345.02 view=38.00 db=20.00 params={"utf8"=>"✓", "user"=>{"email"=>"sphynx2@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts".* FROM "posts"  ORDER BY created_at DESC[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 23]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 24]]
+method=GET path=/posts format=html controller=posts action=index status=200 duration=293.02 view=291.02 db=0.00 params={}
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 24]]
+method=GET path=/posts/new format=js controller=posts action=new status=200 duration=64.00 view=41.00 db=0.00 params={}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 24]]
+  [1m[35m (1.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "posts" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Imparare Ajax & Rails"], ["content", "Devo imparare Rails & Ajax"], ["user_id", 24], ["created_at", "2015-12-10 07:18:16.677839"], ["updated_at", "2015-12-10 07:18:16.677839"]]
+  [1m[35m (18.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 197]]
+  [1m[35mComment Load (0.0ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 197]]
+method=POST path=/posts format=js controller=posts action=create status=200 duration=216.01 view=76.00 db=21.00 params={"utf8"=>"✓", "post"=>{"title"=>"Imparare Ajax & Rails", "content"=>"Devo imparare Rails & Ajax"}, "commit"=>"Create Post"}
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 197]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 197]]
+  [1m[36mComment Load (1.0ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 197]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 24]]
+method=GET path=/posts/197 format=html controller=posts action=show status=200 duration=307.02 view=288.02 db=1.00 params={"id"=>"197"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 24]]
+  [1m[35mPost Load (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 197]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (4.0ms)[0m  INSERT INTO "comments" ("comment", "post_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["comment", "si è facile"], ["post_id", 197], ["user_id", 24], ["created_at", "2015-12-10 07:18:26.348383"], ["updated_at", "2015-12-10 07:18:26.348383"]]
+  [1m[36m (59.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 24]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 197]]
+method=POST path=/posts/197/comments format=js controller=comments action=create status=200 duration=243.01 view=60.00 db=64.00 params={"utf8"=>"✓", "comment"=>{"comment"=>"si è facile"}, "commit"=>"Create Comment", "post_id"=>"197"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 24]]
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 197]]
+  [1m[35m (1.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "comments" ("comment", "post_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["comment", "no è difficile"], ["post_id", 197], ["user_id", 24], ["created_at", "2015-12-10 07:18:33.073165"], ["updated_at", "2015-12-10 07:18:33.073165"]]
+  [1m[35m (48.0ms)[0m  commit transaction
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 24]]
+  [1m[35m (1.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 197]]
+method=POST path=/posts/197/comments format=js controller=comments action=create status=200 duration=254.01 view=64.00 db=54.00 params={"utf8"=>"✓", "comment"=>{"comment"=>"no è difficile"}, "commit"=>"Create Comment", "post_id"=>"197"}
+  [1m[36mComment Load (1.0ms)[0m  [1mSELECT  "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT 1[0m  [["id", 100]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 24]]
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 197]]
+  [1m[35mComment Load (1.0ms)[0m  SELECT  "comments".* FROM "comments" WHERE "comments"."post_id" = ? AND "comments"."id" = ? LIMIT 1  [["post_id", 197], ["id", 100]]
+method=GET path=/posts/197/comments/100/edit format=js controller=comments action=edit status=200 duration=119.01 view=40.00 db=2.00 params={"post_id"=>"197", "id"=>"100"}
+  [1m[36mComment Load (2.0ms)[0m  [1mSELECT  "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT 1[0m  [["id", 100]]
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 24]]
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 197]]
+  [1m[35mComment Load (0.0ms)[0m  SELECT  "comments".* FROM "comments" WHERE "comments"."post_id" = ? AND "comments"."id" = ? LIMIT 1  [["post_id", 197], ["id", 100]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  UPDATE "comments" SET "comment" = ?, "updated_at" = ? WHERE "comments"."id" = ?  [["comment", "anche per me è facile"], ["updated_at", "2015-12-10 07:18:44.010790"], ["id", 100]]
+  [1m[36m (16.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 24]]
+method=PATCH path=/posts/197/comments/100 format=js controller=comments action=update status=200 duration=239.01 view=52.00 db=20.00 params={"utf8"=>"✓", "_method"=>"patch", "comment"=>{"comment"=>"anche per me è facile"}, "commit"=>"Update Comment", "post_id"=>"197", "id"=>"100"}
+  [1m[36mComment Load (0.0ms)[0m  [1mSELECT  "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT 1[0m  [["id", 100]]
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 24]]
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 197]]
+  [1m[35mComment Load (0.0ms)[0m  SELECT  "comments".* FROM "comments" WHERE "comments"."post_id" = ? AND "comments"."id" = ? LIMIT 1  [["post_id", 197], ["id", 100]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  DELETE FROM "comments" WHERE "comments"."id" = ?  [["id", 100]]
+  [1m[36m (10.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (1.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 197]]
+method=DELETE path=/posts/197/comments/100 format=js controller=comments action=destroy status=200 duration=217.01 view=52.00 db=13.00 params={"post_id"=>"197", "id"=>"100"}
+  [1m[36mComment Load (1.0ms)[0m  [1mSELECT  "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT 1[0m  [["id", 99]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 24]]
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 197]]
+  [1m[35mComment Load (0.0ms)[0m  SELECT  "comments".* FROM "comments" WHERE "comments"."post_id" = ? AND "comments"."id" = ? LIMIT 1  [["post_id", 197], ["id", 99]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  DELETE FROM "comments" WHERE "comments"."id" = ?  [["id", 99]]
+  [1m[36m (11.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 197]]
+method=DELETE path=/posts/197/comments/99 format=js controller=comments action=destroy status=200 duration=190.01 view=40.00 db=14.00 params={"post_id"=>"197", "id"=>"99"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 24]]
+  [1m[35mPost Load (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 197]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+method=POST path=/posts/197/comments format=js controller=comments action=create status=200 duration=87.01 view=21.00 db=0.00 params={"utf8"=>"✓", "comment"=>{"comment"=>""}, "commit"=>"Create Comment", "post_id"=>"197"}
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts".* FROM "posts"  ORDER BY created_at DESC[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 24]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 24]]
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 23]]
+method=GET path=/posts format=html controller=posts action=index status=200 duration=284.02 view=281.02 db=1.00 params={}
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 197]]
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 24]]
+method=GET path=/posts/197/edit format=js controller=posts action=edit status=200 duration=89.01 view=39.00 db=1.00 params={"id"=>"197"}
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 197]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 24]]
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  UPDATE "posts" SET "title" = ?, "updated_at" = ? WHERE "posts"."id" = ?  [["title", "Imparare Ajax & Rails 4"], ["updated_at", "2015-12-10 07:19:13.664680"], ["id", 197]]
+  [1m[36m (14.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 24]]
+method=PATCH path=/posts/197 format=js controller=posts action=update status=200 duration=193.01 view=47.00 db=18.00 params={"utf8"=>"✓", "_method"=>"patch", "post"=>{"title"=>"Imparare Ajax & Rails 4", "content"=>"Devo imparare Rails & Ajax"}, "commit"=>"Update Post", "id"=>"197"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 24]]
+method=GET path=/posts/new format=js controller=posts action=new status=200 duration=87.01 view=43.00 db=1.00 params={}
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 24]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+method=POST path=/posts format=js controller=posts action=create status=200 duration=56.00 view=9.00 db=0.00 params={"utf8"=>"✓", "post"=>{"title"=>"", "content"=>""}, "commit"=>"Create Post"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 24]]
+  [1m[35m (1.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "posts" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Imparare Python"], ["content", "devo imparare Python"], ["user_id", 24], ["created_at", "2015-12-10 07:19:44.698852"], ["updated_at", "2015-12-10 07:19:44.698852"]]
+  [1m[35m (14.0ms)[0m  commit transaction
+  [1m[36m (1.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 198]]
+  [1m[35mComment Load (0.0ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 198]]
+method=POST path=/posts format=js controller=posts action=create status=200 duration=230.01 view=85.01 db=17.00 params={"utf8"=>"✓", "post"=>{"title"=>"Imparare Python", "content"=>"devo imparare Python"}, "commit"=>"Create Post"}
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 198]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 24]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  DELETE FROM "posts" WHERE "posts"."id" = ?  [["id", 198]]
+  [1m[36m (17.0ms)[0m  [1mcommit transaction[0m
+method=DELETE path=/posts/198 format=js controller=posts action=destroy status=200 duration=116.01 view=15.00 db=18.00 params={"id"=>"198"}
+  [1m[35mPost Load (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 196]]
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 24]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 196]]
+  [1m[35m (11.0ms)[0m  commit transaction
+method=DELETE path=/posts/196 format=js controller=posts action=destroy status=200 duration=115.01 view=14.00 db=13.00 params={"id"=>"196"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 24]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+method=DELETE path=/users/sign_out format=html controller=sessions action=destroy status=302 duration=66.00 view=0.00 db=0.00 location=http://localhost:3000/ params={"_method"=>"delete", "authenticity_token"=>"nBWgGI8HNLQ7BZK+1mAQ0nWZJ/k3PqSl2lOLaN1OLUvTlEGj2QDn4k8VeZMmF1jRT9XjKk19MxH3DE/CdXctPA=="}
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts"  ORDER BY created_at DESC
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 24]]
+method=GET path=/ format=html controller=posts action=index status=200 duration=295.02 view=294.02 db=0.00 params={}
+  [1m[35mPost Load (1.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 197]]
+  [1m[36m (1.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 197]]
+  [1m[35mComment Load (0.0ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 197]]
+method=GET path=/posts/197 format=html controller=posts action=show status=200 duration=466.03 view=444.03 db=2.00 params={"id"=>"197"}
+method=POST path=/posts/197/comments format=js controller=comments action=create status=302 duration=3.00 view=0.00 db=0.00 location=http://localhost:3000/remote_sign_in params={"utf8"=>"✓", "comment"=>{"comment"=>""}, "commit"=>"Create Comment", "post_id"=>"197"}
+method=GET path=/remote_sign_in format=js controller=remote_content action=remote_sign_in status=200 duration=32.00 view=31.00 db=0.00 params={}
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts".* FROM "posts"  ORDER BY created_at DESC[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 24]]
+method=GET path=/posts format=html controller=posts action=index status=200 duration=232.01 view=230.01 db=0.00 params={}
+method=GET path=/remote_sign_up format=js controller=remote_content action=remote_sign_up status=200 duration=26.00 view=25.00 db=0.00 params={}
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'sphynx3@gmail.com' LIMIT 1
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "sphynx3@gmail.com"], ["encrypted_password", "$2a$10$elMBBpZi39.dI7tGLjzv1emE6Wp1LPSMrhl0NuChUklBgAS81Fl8e"], ["created_at", "2015-12-10 07:23:01.816467"], ["updated_at", "2015-12-10 07:23:01.816467"]]
+  [1m[35m (26.0ms)[0m  commit transaction
+method=POST path=/users format=js controller=registrations action=create status=200 duration=343.02 view=29.00 db=27.00 params={"utf8"=>"✓", "user"=>{"email"=>"sphynx3@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+method=GET path=/remote_sign_in format=js controller=remote_content action=remote_sign_in status=200 duration=30.00 view=29.00 db=0.00 params={}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["email", "sphynx3@gmail.com"]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "last_sign_in_ip" = ?, "current_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["last_sign_in_at", "2015-12-10 07:23:11.931843"], ["current_sign_in_at", "2015-12-10 07:23:11.931843"], ["last_sign_in_ip", "::1"], ["current_sign_in_ip", "::1"], ["sign_in_count", 1], ["updated_at", "2015-12-10 07:23:11.942843"], ["id", 25]]
+  [1m[35m (14.0ms)[0m  commit transaction
+method=POST path=/users/sign_in format=js controller=sessions action=create status=200 duration=344.02 view=32.00 db=16.00 params={"utf8"=>"✓", "user"=>{"email"=>"sphynx3@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts".* FROM "posts"  ORDER BY created_at DESC[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 24]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 25]]
+method=GET path=/posts format=html controller=posts action=index status=200 duration=301.02 view=298.02 db=1.00 params={}
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 25]]
+method=GET path=/posts/new format=js controller=posts action=new status=200 duration=65.00 view=38.00 db=1.00 params={}
+  [1m[36mUser Load (3.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 25]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "posts" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Imparare Ruby on Rails"], ["content", "imparare come integrare ajax con Rails"], ["user_id", 25], ["created_at", "2015-12-10 07:23:46.057583"], ["updated_at", "2015-12-10 07:23:46.057583"]]
+  [1m[35m (15.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 199]]
+  [1m[35mComment Load (0.0ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 199]]
+method=POST path=/posts format=js controller=posts action=create status=200 duration=264.02 view=95.01 db=19.00 params={"utf8"=>"✓", "post"=>{"title"=>"Imparare Ruby on Rails", "content"=>"imparare come integrare ajax con Rails"}, "commit"=>"Create Post"}
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 199]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 199]]
+  [1m[36mComment Load (0.0ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 199]]
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 25]]
+method=GET path=/posts/199 format=html controller=posts action=show status=200 duration=344.02 view=322.02 db=1.00 params={"id"=>"199"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 25]]
+  [1m[35mPost Load (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 199]]
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (1.0ms)[0m  rollback transaction
+method=POST path=/posts/199/comments format=js controller=comments action=create status=200 duration=79.00 view=19.00 db=2.00 params={"utf8"=>"✓", "comment"=>{"comment"=>""}, "commit"=>"Create Comment", "post_id"=>"199"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 25]]
+  [1m[35mPost Load (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 199]]
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  INSERT INTO "comments" ("comment", "post_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["comment", "si è facile"], ["post_id", 199], ["user_id", 25], ["created_at", "2015-12-10 07:23:59.890374"], ["updated_at", "2015-12-10 07:23:59.890374"]]
+  [1m[36m (28.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 25]]
+  [1m[36m (1.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 199]]
+method=POST path=/posts/199/comments format=js controller=comments action=create status=200 duration=215.01 view=58.00 db=33.00 params={"utf8"=>"✓", "comment"=>{"comment"=>"si è facile"}, "commit"=>"Create Comment", "post_id"=>"199"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 25]]
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 199]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "comments" ("comment", "post_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["comment", "no è difficile"], ["post_id", 199], ["user_id", 25], ["created_at", "2015-12-10 07:24:06.053524"], ["updated_at", "2015-12-10 07:24:06.053524"]]
+  [1m[35m (28.0ms)[0m  commit transaction
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 25]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 199]]
+method=POST path=/posts/199/comments format=js controller=comments action=create status=200 duration=245.01 view=65.00 db=30.00 params={"utf8"=>"✓", "comment"=>{"comment"=>"no è difficile"}, "commit"=>"Create Comment", "post_id"=>"199"}
+  [1m[36mComment Load (2.0ms)[0m  [1mSELECT  "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT 1[0m  [["id", 102]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 25]]
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 199]]
+  [1m[35mComment Load (0.0ms)[0m  SELECT  "comments".* FROM "comments" WHERE "comments"."post_id" = ? AND "comments"."id" = ? LIMIT 1  [["post_id", 199], ["id", 102]]
+method=GET path=/posts/199/comments/102/edit format=js controller=comments action=edit status=200 duration=147.01 view=43.00 db=2.00 params={"post_id"=>"199", "id"=>"102"}
+  [1m[36mComment Load (20.0ms)[0m  [1mSELECT  "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT 1[0m  [["id", 102]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 25]]
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 199]]
+  [1m[35mComment Load (1.0ms)[0m  SELECT  "comments".* FROM "comments" WHERE "comments"."post_id" = ? AND "comments"."id" = ? LIMIT 1  [["post_id", 199], ["id", 102]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  UPDATE "comments" SET "comment" = ?, "updated_at" = ? WHERE "comments"."id" = ?  [["comment", "anche per me è facile"], ["updated_at", "2015-12-10 07:24:15.101240"], ["id", 102]]
+  [1m[36m (15.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 25]]
+method=PATCH path=/posts/199/comments/102 format=js controller=comments action=update status=200 duration=253.01 view=44.00 db=38.00 params={"utf8"=>"✓", "_method"=>"patch", "comment"=>{"comment"=>"anche per me è facile"}, "commit"=>"Update Comment", "post_id"=>"199", "id"=>"102"}
+  [1m[36mComment Load (3.0ms)[0m  [1mSELECT  "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT 1[0m  [["id", 102]]
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 25]]
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 199]]
+  [1m[35mComment Load (0.0ms)[0m  SELECT  "comments".* FROM "comments" WHERE "comments"."post_id" = ? AND "comments"."id" = ? LIMIT 1  [["post_id", 199], ["id", 102]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  DELETE FROM "comments" WHERE "comments"."id" = ?  [["id", 102]]
+  [1m[36m (23.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (1.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 199]]
+method=DELETE path=/posts/199/comments/102 format=js controller=comments action=destroy status=200 duration=220.01 view=47.00 db=29.00 params={"post_id"=>"199", "id"=>"102"}
+  [1m[36mComment Load (0.0ms)[0m  [1mSELECT  "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT 1[0m  [["id", 101]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 25]]
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 199]]
+  [1m[35mComment Load (0.0ms)[0m  SELECT  "comments".* FROM "comments" WHERE "comments"."post_id" = ? AND "comments"."id" = ? LIMIT 1  [["post_id", 199], ["id", 101]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  DELETE FROM "comments" WHERE "comments"."id" = ?  [["id", 101]]
+  [1m[36m (16.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (1.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 199]]
+method=DELETE path=/posts/199/comments/101 format=js controller=comments action=destroy status=200 duration=200.01 view=36.00 db=18.00 params={"post_id"=>"199", "id"=>"101"}
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts".* FROM "posts"  ORDER BY created_at DESC[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 25]]
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 25]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 24]]
+method=GET path=/posts format=html controller=posts action=index status=200 duration=343.02 view=339.02 db=2.00 params={}
+  [1m[36mPost Load (3.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 199]]
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 25]]
+method=GET path=/posts/199/edit format=js controller=posts action=edit status=200 duration=82.01 view=39.00 db=4.00 params={"id"=>"199"}
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 199]]
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 25]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  UPDATE "posts" SET "title" = ?, "updated_at" = ? WHERE "posts"."id" = ?  [["title", "Imparare Ruby on Rails 4"], ["updated_at", "2015-12-10 07:24:37.895341"], ["id", 199]]
+  [1m[36m (13.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 25]]
+method=PATCH path=/posts/199 format=js controller=posts action=update status=200 duration=188.01 view=44.00 db=17.00 params={"utf8"=>"✓", "_method"=>"patch", "post"=>{"title"=>"Imparare Ruby on Rails 4", "content"=>"imparare come integrare ajax con Rails"}, "commit"=>"Update Post", "id"=>"199"}
+  [1m[36mPost Load (3.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 197]]
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 25]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  DELETE FROM "posts" WHERE "posts"."id" = ?  [["id", 197]]
+  [1m[36m (12.0ms)[0m  [1mcommit transaction[0m
+method=DELETE path=/posts/197 format=js controller=posts action=destroy status=200 duration=135.01 view=15.00 db=17.00 params={"id"=>"197"}
+  [1m[35mUser Load (2.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 25]]
+method=GET path=/posts/new format=js controller=posts action=new status=200 duration=68.00 view=41.00 db=2.00 params={}
+  [1m[36mUser Load (4.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 25]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+method=POST path=/posts format=js controller=posts action=create status=200 duration=89.01 view=14.00 db=4.00 params={"utf8"=>"✓", "post"=>{"title"=>"", "content"=>""}, "commit"=>"Create Post"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 25]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+method=POST path=/posts format=js controller=posts action=create status=200 duration=93.01 view=13.00 db=1.00 params={"utf8"=>"✓", "post"=>{"title"=>"Imparare Python", "content"=>""}, "commit"=>"Create Post"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 25]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "posts" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Imparare Python"], ["content", "devo imparare python"], ["user_id", 25], ["created_at", "2015-12-10 07:25:09.246324"], ["updated_at", "2015-12-10 07:25:09.246324"]]
+  [1m[35m (13.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 200]]
+  [1m[35mComment Load (0.0ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 200]]
+method=POST path=/posts format=js controller=posts action=create status=200 duration=246.01 view=88.01 db=15.00 params={"utf8"=>"✓", "post"=>{"title"=>"Imparare Python", "content"=>"devo imparare python"}, "commit"=>"Create Post"}
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 200]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 25]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "posts" WHERE "posts"."id" = ?  [["id", 200]]
+  [1m[36m (11.0ms)[0m  [1mcommit transaction[0m
+method=DELETE path=/posts/200 format=js controller=posts action=destroy status=200 duration=118.01 view=15.00 db=12.00 params={"id"=>"200"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 25]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+method=DELETE path=/users/sign_out format=html controller=sessions action=destroy status=302 duration=44.00 view=0.00 db=0.00 location=http://localhost:3000/ params={"_method"=>"delete", "authenticity_token"=>"fwcV5upXqcnNaSu+PXggJoFjSegjUp3u5s9gG6uGqOidrkSTliqr592okRnRs7Zc0zwklYP/qWMgQQkMJQWTCA=="}
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts".* FROM "posts"  ORDER BY created_at DESC[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 25]]
+method=GET path=/ format=html controller=posts action=index status=200 duration=474.03 view=472.03 db=0.00 params={}
+method=GET path=/remote_sign_in format=js controller=remote_content action=remote_sign_in status=200 duration=28.00 view=27.00 db=0.00 params={}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["email", "sphynx1@gmail.com"]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["last_sign_in_at", "2015-12-10 07:16:29.359916"], ["current_sign_in_at", "2015-12-10 07:28:46.565517"], ["sign_in_count", 3], ["updated_at", "2015-12-10 07:28:46.576517"], ["id", 23]]
+  [1m[35m (11.0ms)[0m  commit transaction
+method=POST path=/users/sign_in format=js controller=sessions action=create status=200 duration=314.02 view=34.00 db=12.00 params={"utf8"=>"✓", "user"=>{"email"=>"sphynx1@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts".* FROM "posts"  ORDER BY created_at DESC[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 25]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 23]]
+method=GET path=/ format=html controller=posts action=index status=200 duration=358.02 view=355.02 db=0.00 params={}
+  [1m[35mPost Load (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 199]]
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 23]]
+method=GET path=/posts/199/edit format=js controller=posts action=edit status=200 duration=86.01 view=48.00 db=1.00 params={"id"=>"199"}
+  [1m[35mPost Load (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 199]]
+  [1m[36m (1.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 199]]
+  [1m[35mComment Load (1.0ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 199]]
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 23]]
+method=GET path=/posts/199 format=html controller=posts action=show status=200 duration=288.02 view=265.02 db=3.00 params={"id"=>"199"}
+  [1m[35mUser Load (14.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 23]]
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 199]]
+  [1m[35m (1.0ms)[0m  begin transaction
+  [1m[36mSQL (6.0ms)[0m  [1mINSERT INTO "comments" ("comment", "post_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["comment", "fsfssdf"], ["post_id", 199], ["user_id", 23], ["created_at", "2015-12-10 07:28:58.606205"], ["updated_at", "2015-12-10 07:28:58.606205"]]
+  [1m[35m (74.0ms)[0m  commit transaction
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 23]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 199]]
+method=POST path=/posts/199/comments format=js controller=comments action=create status=200 duration=269.02 view=61.00 db=96.01 params={"utf8"=>"✓", "comment"=>{"comment"=>"fsfssdf"}, "commit"=>"Create Comment", "post_id"=>"199"}
+  [1m[36mComment Load (1.0ms)[0m  [1mSELECT  "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT 1[0m  [["id", 103]]
+  [1m[35mUser Load (2.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 23]]
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 199]]
+  [1m[35mComment Load (1.0ms)[0m  SELECT  "comments".* FROM "comments" WHERE "comments"."post_id" = ? AND "comments"."id" = ? LIMIT 1  [["post_id", 199], ["id", 103]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  DELETE FROM "comments" WHERE "comments"."id" = ?  [["id", 103]]
+  [1m[36m (12.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (1.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 199]]
+method=DELETE path=/posts/199/comments/103 format=js controller=comments action=destroy status=200 duration=217.01 view=49.00 db=18.00 params={"post_id"=>"199", "id"=>"103"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 23]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+method=DELETE path=/users/sign_out format=html controller=sessions action=destroy status=302 duration=48.00 view=0.00 db=1.00 location=http://localhost:3000/ params={"_method"=>"delete", "authenticity_token"=>"qCK/rDXCdHk4Y3zG/6ZzfotEB5fhZz+6ayfnftKWyEy+msruKgwQJkuFS58jAYHLzi4FP2nmxS1tXiWMjaWDCg=="}
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts"  ORDER BY created_at DESC
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 25]]
+method=GET path=/ format=html controller=posts action=index status=200 duration=290.02 view=288.02 db=1.00 params={}
+  [1m[35mPost Load (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 199]]
+  [1m[36m (1.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 199]]
+  [1m[35mComment Load (1.0ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 199]]
+method=GET path=/posts/199 format=html controller=posts action=show status=200 duration=230.81 view=207.81 db=2.00 params={"id"=>"199"}
+method=POST path=/posts/199/comments format=js controller=comments action=create status=302 duration=3.00 view=0.00 db=0.00 location=http://localhost:3000/remote_sign_in params={"utf8"=>"✓", "comment"=>{"comment"=>""}, "commit"=>"Create Comment", "post_id"=>"199"}
+method=GET path=/remote_sign_in format=js controller=remote_content action=remote_sign_in status=200 duration=27.00 view=25.00 db=0.00 params={}
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts"  ORDER BY created_at DESC[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 25]]
+method=GET path=/posts format=html controller=posts action=index status=200 duration=381.02 view=378.02 db=1.00 params={}
+method=GET path=/remote_sign_up format=js controller=remote_content action=remote_sign_up status=200 duration=65.00 view=63.00 db=0.00 params={}
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'sphynx4@gmail.com' LIMIT 1
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "sphynx4@gmail.com"], ["encrypted_password", "$2a$10$QMW3h3OTHbTTkUJn4kWNQ.A4DrVnpw0qKxk0SfEnHz/qRbrnOAO52"], ["created_at", "2015-12-10 07:46:14.130606"], ["updated_at", "2015-12-10 07:46:14.130606"]]
+  [1m[35m (16.0ms)[0m  commit transaction
+method=POST path=/users format=js controller=registrations action=create status=200 duration=659.64 view=341.02 db=17.00 params={"utf8"=>"✓", "user"=>{"email"=>"sphynx4@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+method=GET path=/remote_sign_in format=js controller=remote_content action=remote_sign_in status=200 duration=24.60 view=23.60 db=0.00 params={}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["email", "sphynx4@gmail.com"]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "last_sign_in_ip" = ?, "current_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["last_sign_in_at", "2015-12-10 07:46:26.243096"], ["current_sign_in_at", "2015-12-10 07:46:26.243096"], ["last_sign_in_ip", "::1"], ["current_sign_in_ip", "::1"], ["sign_in_count", 1], ["updated_at", "2015-12-10 07:46:26.257097"], ["id", 26]]
+  [1m[35m (19.0ms)[0m  commit transaction
+method=POST path=/users/sign_in format=js controller=sessions action=create status=200 duration=328.02 view=32.00 db=20.00 params={"utf8"=>"✓", "user"=>{"email"=>"sphynx4@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts".* FROM "posts"  ORDER BY created_at DESC[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 25]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 26]]
+method=GET path=/posts format=html controller=posts action=index status=200 duration=391.02 view=390.02 db=0.00 params={}
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 26]]
+method=GET path=/posts/new format=js controller=posts action=new status=200 duration=73.00 view=48.00 db=0.00 params={}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 26]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "posts" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Imparare Ajax & Rails"], ["content", "Imparare come usare Ajax con Rails"], ["user_id", 26], ["created_at", "2015-12-10 07:46:49.922847"], ["updated_at", "2015-12-10 07:46:49.922847"]]
+  [1m[35m (13.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 201]]
+  [1m[35mComment Load (1.0ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 201]]
+method=POST path=/posts format=js controller=posts action=create status=200 duration=353.02 view=157.01 db=16.00 params={"utf8"=>"✓", "post"=>{"title"=>"Imparare Ajax & Rails", "content"=>"Imparare come usare Ajax con Rails"}, "commit"=>"Create Post"}
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 201]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 201]]
+  [1m[36mComment Load (0.0ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 201]]
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 26]]
+method=GET path=/posts/201 format=html controller=posts action=show status=200 duration=336.02 view=311.02 db=1.00 params={"id"=>"201"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 26]]
+  [1m[35mPost Load (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 201]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+method=POST path=/posts/201/comments format=js controller=comments action=create status=200 duration=89.01 view=16.00 db=1.00 params={"utf8"=>"✓", "comment"=>{"comment"=>""}, "commit"=>"Create Comment", "post_id"=>"201"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 26]]
+  [1m[35mPost Load (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 201]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "comments" ("comment", "post_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["comment", "si è facile"], ["post_id", 201], ["user_id", 26], ["created_at", "2015-12-10 07:47:01.427505"], ["updated_at", "2015-12-10 07:47:01.427505"]]
+  [1m[36m (66.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 26]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 201]]
+method=POST path=/posts/201/comments format=js controller=comments action=create status=200 duration=302.02 view=68.00 db=68.00 params={"utf8"=>"✓", "comment"=>{"comment"=>"si è facile"}, "commit"=>"Create Comment", "post_id"=>"201"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 26]]
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 201]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "comments" ("comment", "post_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["comment", "no è difficile"], ["post_id", 201], ["user_id", 26], ["created_at", "2015-12-10 07:47:08.843925"], ["updated_at", "2015-12-10 07:47:08.843925"]]
+  [1m[35m (85.0ms)[0m  commit transaction
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 26]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 201]]
+method=POST path=/posts/201/comments format=js controller=comments action=create status=200 duration=270.02 view=65.00 db=88.01 params={"utf8"=>"✓", "comment"=>{"comment"=>"no è difficile"}, "commit"=>"Create Comment", "post_id"=>"201"}
+  [1m[36mComment Load (1.0ms)[0m  [1mSELECT  "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT 1[0m  [["id", 105]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 26]]
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 201]]
+  [1m[35mComment Load (0.0ms)[0m  SELECT  "comments".* FROM "comments" WHERE "comments"."post_id" = ? AND "comments"."id" = ? LIMIT 1  [["post_id", 201], ["id", 105]]
+method=GET path=/posts/201/comments/105/edit format=js controller=comments action=edit status=200 duration=128.01 view=51.00 db=1.00 params={"post_id"=>"201", "id"=>"105"}
+  [1m[36mComment Load (0.0ms)[0m  [1mSELECT  "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT 1[0m  [["id", 105]]
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 26]]
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 201]]
+  [1m[35mComment Load (0.0ms)[0m  SELECT  "comments".* FROM "comments" WHERE "comments"."post_id" = ? AND "comments"."id" = ? LIMIT 1  [["post_id", 201], ["id", 105]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  UPDATE "comments" SET "comment" = ?, "updated_at" = ? WHERE "comments"."id" = ?  [["comment", "è facile anche per me"], ["updated_at", "2015-12-10 07:47:21.716458"], ["id", 105]]
+  [1m[36m (11.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 26]]
+method=PATCH path=/posts/201/comments/105 format=js controller=comments action=update status=200 duration=267.02 view=44.00 db=13.00 params={"utf8"=>"✓", "_method"=>"patch", "comment"=>{"comment"=>"è facile anche per me"}, "commit"=>"Update Comment", "post_id"=>"201", "id"=>"105"}
+  [1m[36mComment Load (1.0ms)[0m  [1mSELECT  "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT 1[0m  [["id", 105]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 26]]
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 201]]
+  [1m[35mComment Load (0.0ms)[0m  SELECT  "comments".* FROM "comments" WHERE "comments"."post_id" = ? AND "comments"."id" = ? LIMIT 1  [["post_id", 201], ["id", 105]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  DELETE FROM "comments" WHERE "comments"."id" = ?  [["id", 105]]
+  [1m[36m (12.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 201]]
+method=DELETE path=/posts/201/comments/105 format=js controller=comments action=destroy status=200 duration=206.01 view=49.00 db=14.00 params={"post_id"=>"201", "id"=>"105"}
+  [1m[36mComment Load (1.0ms)[0m  [1mSELECT  "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT 1[0m  [["id", 104]]
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 26]]
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 201]]
+  [1m[35mComment Load (1.0ms)[0m  SELECT  "comments".* FROM "comments" WHERE "comments"."post_id" = ? AND "comments"."id" = ? LIMIT 1  [["post_id", 201], ["id", 104]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  DELETE FROM "comments" WHERE "comments"."id" = ?  [["id", 104]]
+  [1m[36m (14.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (3.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 201]]
+method=DELETE path=/posts/201/comments/104 format=js controller=comments action=destroy status=200 duration=220.01 view=41.00 db=22.00 params={"post_id"=>"201", "id"=>"104"}
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts".* FROM "posts"  ORDER BY created_at DESC[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 26]]
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 26]]
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 25]]
+method=GET path=/posts format=html controller=posts action=index status=200 duration=329.02 view=325.02 db=2.00 params={}
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 201]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 26]]
+method=GET path=/posts/201/edit format=js controller=posts action=edit status=200 duration=101.01 view=56.00 db=1.00 params={"id"=>"201"}
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 201]]
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 26]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  UPDATE "posts" SET "title" = ?, "updated_at" = ? WHERE "posts"."id" = ?  [["title", "Imparare Ajax & Rails 4"], ["updated_at", "2015-12-10 07:47:40.363521"], ["id", 201]]
+  [1m[36m (14.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 26]]
+method=PATCH path=/posts/201 format=js controller=posts action=update status=200 duration=178.01 view=46.00 db=16.00 params={"utf8"=>"✓", "_method"=>"patch", "post"=>{"title"=>"Imparare Ajax & Rails 4", "content"=>"Imparare come usare Ajax con Rails"}, "commit"=>"Update Post", "id"=>"201"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 26]]
+method=GET path=/posts/new format=js controller=posts action=new status=200 duration=57.00 view=37.00 db=1.00 params={}
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 26]]
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "posts" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "Imparare Python"], ["content", "devo imparare python"], ["user_id", 26], ["created_at", "2015-12-10 07:48:05.179337"], ["updated_at", "2015-12-10 07:48:05.179337"]]
+  [1m[36m (12.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 202]]
+  [1m[36mComment Load (1.0ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 202]]
+method=POST path=/posts format=js controller=posts action=create status=200 duration=204.01 view=77.01 db=16.00 params={"utf8"=>"✓", "post"=>{"title"=>"Imparare Python", "content"=>"devo imparare python"}, "commit"=>"Create Post"}
+  [1m[35mPost Load (1.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 202]]
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 26]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 202]]
+  [1m[35m (11.0ms)[0m  commit transaction
+method=DELETE path=/posts/202 format=js controller=posts action=destroy status=200 duration=130.01 view=24.00 db=14.00 params={"id"=>"202"}
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 199]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 26]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  DELETE FROM "posts" WHERE "posts"."id" = ?  [["id", 199]]
+  [1m[36m (12.0ms)[0m  [1mcommit transaction[0m
+method=DELETE path=/posts/199 format=js controller=posts action=destroy status=200 duration=158.01 view=25.00 db=13.00 params={"id"=>"199"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 26]]
+method=GET path=/posts/new format=js controller=posts action=new status=200 duration=81.01 view=55.00 db=1.00 params={}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 26]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+method=POST path=/posts format=js controller=posts action=create status=200 duration=84.00 view=15.00 db=0.00 params={"utf8"=>"✓", "post"=>{"title"=>"", "content"=>""}, "commit"=>"Create Post"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 26]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+method=POST path=/posts format=js controller=posts action=create status=200 duration=71.00 view=12.00 db=0.00 params={"utf8"=>"✓", "post"=>{"title"=>"Imparare Java", "content"=>""}, "commit"=>"Create Post"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 26]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "posts" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Imparare Java"], ["content", "devo imparare Java"], ["user_id", 26], ["created_at", "2015-12-10 07:48:37.640387"], ["updated_at", "2015-12-10 07:48:37.640387"]]
+  [1m[35m (13.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 203]]
+  [1m[35mComment Load (1.0ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 203]]
+method=POST path=/posts format=js controller=posts action=create status=200 duration=250.02 view=137.01 db=16.00 params={"utf8"=>"✓", "post"=>{"title"=>"Imparare Java", "content"=>"devo imparare Java"}, "commit"=>"Create Post"}
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 203]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 26]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  DELETE FROM "posts" WHERE "posts"."id" = ?  [["id", 203]]
+  [1m[36m (10.0ms)[0m  [1mcommit transaction[0m
+method=DELETE path=/posts/203 format=js controller=posts action=destroy status=200 duration=131.01 view=21.00 db=11.00 params={"id"=>"203"}
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts"  ORDER BY created_at DESC
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 26]]
+method=GET path=/ format=html controller=posts action=index status=200 duration=5419.31 view=5312.30 db=5.00 params={}
+  [1m[35mPost Load (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 201]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 201]]
+  [1m[35mComment Load (0.0ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 201]]
+method=GET path=/posts/201 format=html controller=posts action=show status=200 duration=1828.10 view=1735.10 db=2.00 params={"id"=>"201"}
+method=GET path=/remote_sign_in format=js controller=remote_content action=remote_sign_in status=200 duration=216.01 view=215.01 db=0.00 params={}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["email", "browserino@gmail.com"]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["last_sign_in_at", "2015-12-09 23:52:52.827042"], ["current_sign_in_at", "2015-12-11 13:35:14.821949"], ["sign_in_count", 81], ["updated_at", "2015-12-11 13:35:14.832950"], ["id", 2]]
+  [1m[35m (13.0ms)[0m  commit transaction
+method=POST path=/users/sign_in format=js controller=sessions action=create status=200 duration=543.23 view=69.00 db=14.00 params={"utf8"=>"✓", "user"=>{"email"=>"browserino@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 201]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 201]]
+  [1m[36mComment Load (1.0ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 201]]
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+method=GET path=/posts/201 format=html controller=posts action=show status=200 duration=285.02 view=255.01 db=3.00 params={"id"=>"201"}
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts".* FROM "posts"  ORDER BY created_at DESC[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 26]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+method=GET path=/posts format=html controller=posts action=index status=200 duration=302.22 view=301.22 db=0.00 params={}
+  [1m[35mPost Load (1.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 201]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+method=GET path=/posts/201/edit format=js controller=posts action=edit status=200 duration=170.01 view=106.01 db=1.00 params={"id"=>"201"}
+  [1m[35mPost Load (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 201]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mUPDATE "posts" SET "title" = ?, "content" = ?, "updated_at" = ? WHERE "posts"."id" = ?[0m  [["title", "Imparare Ruby on Rails"], ["content", "Imparare come usare Ruby on Rails"], ["updated_at", "2015-12-11 13:35:41.972679"], ["id", 201]]
+  [1m[35m (12.0ms)[0m  commit transaction
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 26]]
+method=PATCH path=/posts/201 format=js controller=posts action=update status=200 duration=184.01 view=48.00 db=13.00 params={"utf8"=>"✓", "_method"=>"patch", "post"=>{"title"=>"Imparare Ruby on Rails", "content"=>"Imparare come usare Ruby on Rails"}, "commit"=>"Update Post", "id"=>"201"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+method=DELETE path=/users/sign_out format=html controller=sessions action=destroy status=302 duration=147.01 view=0.00 db=1.00 location=http://localhost:3000/ params={"_method"=>"delete", "authenticity_token"=>"P/oXO4Th7yaDopJXH0xOB8ws39Vd3quVlTinOjnvHIuo/MIZ1sehtPSOr2Hl4H8AHwfLNn02+ZXso1gu2oYP+g=="}
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts"  ORDER BY created_at DESC[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 26]]
+method=GET path=/ format=html controller=posts action=index status=200 duration=274.02 view=271.02 db=1.00 params={}
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 201]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 201]]
+  [1m[36mComment Load (0.0ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 201]]
+method=GET path=/posts/201 format=html controller=posts action=show status=200 duration=284.02 view=264.02 db=0.00 params={"id"=>"201"}
+method=POST path=/posts/201/comments format=js controller=comments action=create status=302 duration=3.00 view=0.00 db=0.00 location=http://localhost:3000/remote_sign_in params={"utf8"=>"✓", "comment"=>{"comment"=>""}, "commit"=>"Create Comment", "post_id"=>"201"}
+method=GET path=/remote_sign_in format=js controller=remote_content action=remote_sign_in status=200 duration=38.00 view=36.00 db=0.00 params={}
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts"  ORDER BY created_at DESC
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 26]]
+method=GET path=/posts format=html controller=posts action=index status=200 duration=267.02 view=264.02 db=0.00 params={}
+method=GET path=/remote_sign_up format=js controller=remote_content action=remote_sign_up status=200 duration=159.01 view=158.01 db=0.00 params={}
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUser Exists (1.0ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'browserino1@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["email", "browserino1@gmail.com"], ["encrypted_password", "$2a$10$KBRgbeXz1Q7zoCAVMSa/heI0ouMGa2kp9UfTAj8Qh9JuMC.gKaU.i"], ["created_at", "2015-12-11 13:36:25.257939"], ["updated_at", "2015-12-11 13:36:25.257939"]]
+  [1m[36m (27.0ms)[0m  [1mcommit transaction[0m
+method=POST path=/users format=js controller=registrations action=create status=200 duration=527.03 view=60.00 db=29.00 params={"utf8"=>"✓", "user"=>{"email"=>"Browserino1@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+method=GET path=/remote_sign_in format=js controller=remote_content action=remote_sign_in status=200 duration=36.00 view=31.00 db=0.00 params={}
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["email", "browserino1@gmail.com"]]
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  UPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "last_sign_in_ip" = ?, "current_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["last_sign_in_at", "2015-12-11 13:36:36.290570"], ["current_sign_in_at", "2015-12-11 13:36:36.290570"], ["last_sign_in_ip", "::1"], ["current_sign_in_ip", "::1"], ["sign_in_count", 1], ["updated_at", "2015-12-11 13:36:36.302570"], ["id", 27]]
+  [1m[36m (17.0ms)[0m  [1mcommit transaction[0m
+method=POST path=/users/sign_in format=js controller=sessions action=create status=200 duration=331.02 view=40.00 db=20.00 params={"utf8"=>"✓", "user"=>{"email"=>"Browserino1@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts"  ORDER BY created_at DESC
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 26]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 27]]
+method=GET path=/posts format=html controller=posts action=index status=200 duration=360.02 view=356.02 db=1.00 params={}
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 201]]
+  [1m[35m (1.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 201]]
+  [1m[36mComment Load (0.0ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 201]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 27]]
+method=GET path=/posts/201 format=html controller=posts action=show status=200 duration=314.02 view=296.02 db=1.00 params={"id"=>"201"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 27]]
+  [1m[35mPost Load (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 201]]
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "comments" ("comment", "post_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["comment", "si è facile"], ["post_id", 201], ["user_id", 27], ["created_at", "2015-12-11 13:36:48.464266"], ["updated_at", "2015-12-11 13:36:48.464266"]]
+  [1m[36m (14.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 27]]
+  [1m[36m (1.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 201]]
+method=POST path=/posts/201/comments format=js controller=comments action=create status=200 duration=297.02 view=141.01 db=17.00 params={"utf8"=>"✓", "comment"=>{"comment"=>"si è facile"}, "commit"=>"Create Comment", "post_id"=>"201"}
+  [1m[35mUser Load (4.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 27]]
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 201]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "comments" ("comment", "post_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["comment", "no è difficile"], ["post_id", 201], ["user_id", 27], ["created_at", "2015-12-11 13:36:59.044871"], ["updated_at", "2015-12-11 13:36:59.044871"]]
+  [1m[35m (27.0ms)[0m  commit transaction
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 27]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 201]]
+method=POST path=/posts/201/comments format=js controller=comments action=create status=200 duration=293.02 view=82.01 db=32.00 params={"utf8"=>"✓", "comment"=>{"comment"=>"no è difficile"}, "commit"=>"Create Comment", "post_id"=>"201"}
+  [1m[36mComment Load (3.0ms)[0m  [1mSELECT  "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT 1[0m  [["id", 107]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 27]]
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 201]]
+  [1m[35mComment Load (1.0ms)[0m  SELECT  "comments".* FROM "comments" WHERE "comments"."post_id" = ? AND "comments"."id" = ? LIMIT 1  [["post_id", 201], ["id", 107]]
+method=GET path=/posts/201/comments/107/edit format=js controller=comments action=edit status=200 duration=281.02 view=172.01 db=5.00 params={"post_id"=>"201", "id"=>"107"}
+  [1m[36mComment Load (0.0ms)[0m  [1mSELECT  "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT 1[0m  [["id", 107]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 27]]
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 201]]
+  [1m[35mComment Load (1.0ms)[0m  SELECT  "comments".* FROM "comments" WHERE "comments"."post_id" = ? AND "comments"."id" = ? LIMIT 1  [["post_id", 201], ["id", 107]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  UPDATE "comments" SET "comment" = ?, "updated_at" = ? WHERE "comments"."id" = ?  [["comment", "anche per me è facile"], ["updated_at", "2015-12-11 13:37:10.478525"], ["id", 107]]
+  [1m[36m (18.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 27]]
+method=PATCH path=/posts/201/comments/107 format=js controller=comments action=update status=200 duration=254.01 view=66.00 db=21.00 params={"utf8"=>"✓", "_method"=>"patch", "comment"=>{"comment"=>"anche per me è facile"}, "commit"=>"Update Comment", "post_id"=>"201", "id"=>"107"}
+  [1m[36mComment Load (1.0ms)[0m  [1mSELECT  "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT 1[0m  [["id", 107]]
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 27]]
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 201]]
+  [1m[35mComment Load (1.0ms)[0m  SELECT  "comments".* FROM "comments" WHERE "comments"."post_id" = ? AND "comments"."id" = ? LIMIT 1  [["post_id", 201], ["id", 107]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (3.0ms)[0m  DELETE FROM "comments" WHERE "comments"."id" = ?  [["id", 107]]
+  [1m[36m (12.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 201]]
+method=DELETE path=/posts/201/comments/107 format=js controller=comments action=destroy status=200 duration=286.02 view=86.01 db=18.00 params={"post_id"=>"201", "id"=>"107"}
+  [1m[36mComment Load (5.0ms)[0m  [1mSELECT  "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT 1[0m  [["id", 106]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 27]]
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 201]]
+  [1m[35mComment Load (0.0ms)[0m  SELECT  "comments".* FROM "comments" WHERE "comments"."post_id" = ? AND "comments"."id" = ? LIMIT 1  [["post_id", 201], ["id", 106]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  DELETE FROM "comments" WHERE "comments"."id" = ?  [["id", 106]]
+  [1m[36m (12.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 201]]
+method=DELETE path=/posts/201/comments/106 format=js controller=comments action=destroy status=200 duration=257.01 view=48.00 db=19.00 params={"post_id"=>"201", "id"=>"106"}
+  [1m[36mUser Load (2.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 27]]
+  [1m[35mPost Load (1.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 201]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+method=POST path=/posts/201/comments format=js controller=comments action=create status=200 duration=173.01 view=39.00 db=3.00 params={"utf8"=>"✓", "comment"=>{"comment"=>""}, "commit"=>"Create Comment", "post_id"=>"201"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 27]]
+  [1m[35mPost Load (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 201]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "comments" ("comment", "post_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["comment", "ok è facile"], ["post_id", 201], ["user_id", 27], ["created_at", "2015-12-11 13:37:31.348719"], ["updated_at", "2015-12-11 13:37:31.348719"]]
+  [1m[36m (31.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 27]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 201]]
+method=POST path=/posts/201/comments format=js controller=comments action=create status=200 duration=215.01 view=57.00 db=32.00 params={"utf8"=>"✓", "comment"=>{"comment"=>"ok è facile"}, "commit"=>"Create Comment", "post_id"=>"201"}
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts"  ORDER BY created_at DESC
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 26]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 27]]
+method=GET path=/posts format=html controller=posts action=index status=200 duration=315.02 view=312.02 db=2.00 params={}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 27]]
+method=GET path=/posts/new format=js controller=posts action=new status=200 duration=103.01 view=72.00 db=0.00 params={}
+  [1m[35mUser Load (6.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 27]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  INSERT INTO "posts" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "Imparare Ruby on Rails & Ajax"], ["content", "devo imparare Ajax"], ["user_id", 27], ["created_at", "2015-12-11 13:38:07.698798"], ["updated_at", "2015-12-11 13:38:07.698798"]]
+  [1m[36m (12.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 204]]
+  [1m[36mComment Load (0.0ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 204]]
+method=POST path=/posts format=js controller=posts action=create status=200 duration=367.02 view=237.01 db=20.00 params={"utf8"=>"✓", "post"=>{"title"=>"Imparare Ruby on Rails & Ajax", "content"=>"devo imparare Ajax"}, "commit"=>"Create Post"}
+  [1m[35mPost Load (1.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 204]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 204]]
+  [1m[35mComment Load (1.0ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 204]]
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 27]]
+method=GET path=/posts/204 format=html controller=posts action=show status=200 duration=333.02 view=309.02 db=3.00 params={"id"=>"204"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 27]]
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 204]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "comments" ("comment", "post_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["comment", "facile"], ["post_id", 204], ["user_id", 27], ["created_at", "2015-12-11 13:38:16.157282"], ["updated_at", "2015-12-11 13:38:16.157282"]]
+  [1m[35m (49.0ms)[0m  commit transaction
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 27]]
+  [1m[35m (1.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 204]]
+method=POST path=/posts/204/comments format=js controller=comments action=create status=200 duration=254.02 view=68.00 db=52.00 params={"utf8"=>"✓", "comment"=>{"comment"=>"facile"}, "commit"=>"Create Comment", "post_id"=>"204"}
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts"  ORDER BY created_at DESC[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 27]]
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 27]]
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 26]]
+method=GET path=/posts format=html controller=posts action=index status=200 duration=441.03 view=437.03 db=3.00 params={}
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 201]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 27]]
+method=GET path=/posts/201/edit format=js controller=posts action=edit status=200 duration=158.01 view=55.00 db=0.00 params={"id"=>"201"}
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 201]]
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 27]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  UPDATE "posts" SET "title" = ?, "updated_at" = ? WHERE "posts"."id" = ?  [["title", "Imparare Ruby on Rails 4"], ["updated_at", "2015-12-11 13:38:25.108794"], ["id", 201]]
+  [1m[36m (11.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 26]]
+method=PATCH path=/posts/201 format=js controller=posts action=update status=200 duration=182.01 view=39.00 db=16.00 params={"utf8"=>"✓", "_method"=>"patch", "post"=>{"title"=>"Imparare Ruby on Rails 4", "content"=>"Imparare come usare Ruby on Rails"}, "commit"=>"Update Post", "id"=>"201"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 27]]
+method=GET path=/posts/new format=js controller=posts action=new status=200 duration=96.01 view=73.00 db=1.00 params={}
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 27]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+method=POST path=/posts format=js controller=posts action=create status=200 duration=85.01 view=20.00 db=1.00 params={"utf8"=>"✓", "post"=>{"title"=>"", "content"=>""}, "commit"=>"Create Post"}
+  [1m[36mUser Load (8.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 27]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+method=POST path=/posts format=js controller=posts action=create status=200 duration=146.01 view=9.00 db=8.00 params={"utf8"=>"✓", "post"=>{"title"=>"Imparare PHP", "content"=>""}, "commit"=>"Create Post"}
+  [1m[35mUser Load (5.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 27]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "posts" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "Imparare PHP"], ["content", "devo imparare PHP"], ["user_id", 27], ["created_at", "2015-12-11 13:38:51.416299"], ["updated_at", "2015-12-11 13:38:51.416299"]]
+  [1m[36m (16.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (1.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 205]]
+  [1m[36mComment Load (0.0ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 205]]
+method=POST path=/posts format=js controller=posts action=create status=200 duration=247.01 view=79.00 db=23.00 params={"utf8"=>"✓", "post"=>{"title"=>"Imparare PHP", "content"=>"devo imparare PHP"}, "commit"=>"Create Post"}
+  [1m[35mPost Load (1.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 205]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 27]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 205]]
+  [1m[35m (12.0ms)[0m  commit transaction
+method=DELETE path=/posts/205 format=js controller=posts action=destroy status=200 duration=258.01 view=33.00 db=14.00 params={"id"=>"205"}
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 201]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 27]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  DELETE FROM "posts" WHERE "posts"."id" = ?  [["id", 201]]
+  [1m[36m (11.0ms)[0m  [1mcommit transaction[0m
+method=DELETE path=/posts/201 format=js controller=posts action=destroy status=200 duration=122.01 view=30.00 db=13.00 params={"id"=>"201"}
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts"  ORDER BY created_at DESC
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 27]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 27]]
+method=GET path=/ format=html controller=posts action=index status=200 duration=309.02 view=307.02 db=0.00 params={}
